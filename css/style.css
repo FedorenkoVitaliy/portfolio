@@ -82,6 +82,10 @@ body > * {
   background: url("../img/waves.png") no-repeat;
 }
 
+.to-Top {
+  display: none;
+}
+
 .to-Top .big-arrow {
   display: block;
   position: fixed;
