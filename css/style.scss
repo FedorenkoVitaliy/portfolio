@@ -1,16 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 
 @font-face{
 font-family: "Myriad-Pro";
 src : url("../fonts/Myriad-Pro-Regular.ttf");
 }
+
 @font-face{
     font-family: "StrokeyBacon";
     src : url("../fonts/StrokeyBacon.ttf");
 }
+
 $main-indent:0 5%;
 $main-color: orange;
+
+@import 'keyframes';
+
 body {
     margin: 0;
     padding: 0;
@@ -57,6 +63,75 @@ body>*{
     height: 8px;
     background:url("../img/waves.png") no-repeat;
 }
+
+.to-Top {
+    
+    .big-arrow {
+        display: block;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: 31px;
+        height: 31px;
+         transform: rotate(45deg);
+        border: 3px solid orange;
+        border-right: none;
+        border-bottom: none;
+        padding: 0;
+        margin: 0;
+        z-index: 99;
+         
+    animation: linear 2s big-arrow  infinite;
+}
+    
+    .midlle-arrow {
+          display: block;
+        position: fixed;
+        bottom: 12px;
+        right: 18px;
+        width: 15px;
+        height: 15px;
+         transform: rotate(45deg);
+        border: 3px solid orange;
+        border-right: none;
+        border-bottom: none;
+        padding: 0;
+        margin: 0;
+        z-index: 100;
+        
+        animation: linear 2s midlle-arrow infinite;
+    }
+    
+    .small-arrow {
+          display: block;
+        position: fixed;
+            bottom: 5px;
+    right: 22px;
+        width: 7px;
+        height: 7px;
+         transform: rotate(45deg);
+        border: 3px solid orange;
+        border-right: none;
+        border-bottom: none;
+        padding: 0;
+        margin: 0;
+        z-index: 100;
+        
+        animation: linear 2s small-arrow  infinite;
+    }
+    .zzz {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        padding: 20px;
+        z-index: 150;
+        transform: rotate(45deg);
+    }
+     
+}
+
+
+
 
 //General style for multiple use
 

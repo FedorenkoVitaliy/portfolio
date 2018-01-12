@@ -1,0 +1,29 @@
+@keyframes small-arrow {
+    0% {
+        border-color: orange;
+    }
+    
+    33% {
+        border: none;
+    }
+}
+
+@keyframes midlle-arrow {
+    33% {
+        border-color: orange;
+    }
+    
+    66% {
+        border: none;
+    }
+}
+
+@keyframes big-arrow  {
+    66% {
+        border-color: orange;
+    }
+    
+    99% {
+        border: none;
+    }
+}

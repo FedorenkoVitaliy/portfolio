@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="header">
+    <header id="header" class="header">
         <nav class="nav-bar">
             <img src="img/logo-craft.png" alt="" class="logo">
             <ul class="menu-link">
@@ -17,7 +17,7 @@
               <li><a href="#">portfolio</a></li>
               <li><a href="#">our team</a></li>
               <li><a href="#">review</a></li>
-              <li><a href="#">callback</a></li>
+              <li><a href="#contact" class="to-form">callback</a></li>
             </ul>
             <input type="button" value="call us" class="button--header call-back-link">
         </nav>
@@ -348,7 +348,7 @@
             </div>
         </div>
 
-        <div class="contact">
+        <div id="contact" class="contact">
             <p class="contact-title">contacts<span>Sign up for our newsletter to receive updates</span></p>
 
             <input type="text" name="user-name" class="input user-name" placeholder="Name">
@@ -357,8 +357,13 @@
             <input type="button" value="send" class="button contact-send">
         </div>
     </section>
-
-
+    <div class="to-Top">
+        <a href="#header" class="zzz"></a>
+        <p class="big-arrow"></p>
+        <p class="midlle-arrow"></p>
+        <p class="small-arrow"></p>
+    </div>
+    
     <footer class="footer">
         <p class="footer__contact-name"> WebCraft Studio</p>
         <p class="footer__contact-address">Kiev</p>
@@ -377,5 +382,7 @@
     <script src="js/modal-form.js"></script>
     <script src="js/main.js"></script>
     <script src="js/progresbar.js"></script>
+    <script src="js/toForm.js"></script>
+    <script src="js/toTop.js"></script>
 </body>
 </html>

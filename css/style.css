@@ -11,6 +11,33 @@
   src: url("../fonts/StrokeyBacon.ttf");
 }
 
+@keyframes small-arrow {
+  0% {
+    border-color: orange;
+  }
+  33% {
+    border: none;
+  }
+}
+
+@keyframes midlle-arrow {
+  33% {
+    border-color: orange;
+  }
+  66% {
+    border: none;
+  }
+}
+
+@keyframes big-arrow {
+  66% {
+    border-color: orange;
+  }
+  99% {
+    border: none;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -53,6 +80,66 @@ body > * {
   width: 80px;
   height: 8px;
   background: url("../img/waves.png") no-repeat;
+}
+
+.to-Top .big-arrow {
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 31px;
+  height: 31px;
+  transform: rotate(45deg);
+  border: 3px solid orange;
+  border-right: none;
+  border-bottom: none;
+  padding: 0;
+  margin: 0;
+  z-index: 99;
+  animation: linear 2s big-arrow  infinite;
+}
+
+.to-Top .midlle-arrow {
+  display: block;
+  position: fixed;
+  bottom: 12px;
+  right: 18px;
+  width: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+  border: 3px solid orange;
+  border-right: none;
+  border-bottom: none;
+  padding: 0;
+  margin: 0;
+  z-index: 100;
+  animation: linear 2s midlle-arrow infinite;
+}
+
+.to-Top .small-arrow {
+  display: block;
+  position: fixed;
+  bottom: 5px;
+  right: 22px;
+  width: 7px;
+  height: 7px;
+  transform: rotate(45deg);
+  border: 3px solid orange;
+  border-right: none;
+  border-bottom: none;
+  padding: 0;
+  margin: 0;
+  z-index: 100;
+  animation: linear 2s small-arrow  infinite;
+}
+
+.to-Top .zzz {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 20px;
+  z-index: 150;
+  transform: rotate(45deg);
 }
 
 .header {
