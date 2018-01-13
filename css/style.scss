@@ -1,22 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 
 @font-face{
 font-family: "Myriad-Pro";
 src : url("../fonts/Myriad-Pro-Regular.ttf");
 }
-
 @font-face{
     font-family: "StrokeyBacon";
     src : url("../fonts/StrokeyBacon.ttf");
 }
-
 $main-indent:0 5%;
 $main-color: orange;
-
-@import 'keyframes';
-
 body {
     margin: 0;
     padding: 0;
@@ -63,76 +57,6 @@ body>*{
     height: 8px;
     background:url("../img/waves.png") no-repeat;
 }
-
-.to-Top {
-    display: none;
-    
-    .big-arrow {
-        display: block;
-        position: fixed;
-        bottom: 10px;
-        right: 10px;
-        width: 31px;
-        height: 31px;
-         transform: rotate(45deg);
-        border: 3px solid orange;
-        border-right: none;
-        border-bottom: none;
-        padding: 0;
-        margin: 0;
-        z-index: 99;
-         
-    animation: linear 2s big-arrow  infinite;
-}
-    
-    .midlle-arrow {
-          display: block;
-        position: fixed;
-        bottom: 12px;
-        right: 18px;
-        width: 15px;
-        height: 15px;
-         transform: rotate(45deg);
-        border: 3px solid orange;
-        border-right: none;
-        border-bottom: none;
-        padding: 0;
-        margin: 0;
-        z-index: 100;
-        
-        animation: linear 2s midlle-arrow infinite;
-    }
-    
-    .small-arrow {
-          display: block;
-        position: fixed;
-            bottom: 5px;
-    right: 22px;
-        width: 7px;
-        height: 7px;
-         transform: rotate(45deg);
-        border: 3px solid orange;
-        border-right: none;
-        border-bottom: none;
-        padding: 0;
-        margin: 0;
-        z-index: 100;
-        
-        animation: linear 2s small-arrow  infinite;
-    }
-    .zzz {
-        position: fixed;
-        bottom: 10px;
-        right: 10px;
-        padding: 20px;
-        z-index: 150;
-        transform: rotate(45deg);
-    }
-     
-}
-
-
-
 
 //General style for multiple use
 
@@ -921,7 +845,6 @@ body>*{
         &>div:first-child {
             grid-column: 1/span 3;
             grid-row: 1/span 4;
-            grid-column-gap: 30fr;
         }
 
         &>div:nth-child(2){
@@ -948,17 +871,28 @@ body>*{
 
         &>.project-detailed{
             display:grid;
-            grid-row-gap: 20px;
+            align-content: space-around;
+            padding:10px 20px;
 
-            padding:20px;
             font-family:'Open Sans',sans-serif;
-            background-color: #ECEDEF;
+            color:white;
+            background: url("../img/project-bg.jpg") #333333;
+
             .project-name{
+                font-family:"Bringin",'Pacifico', cursive;
                 font-weight: bold;
                 font-size:30px;
+                letter-spacing: 5px;
             }
 
-            ul{
+            .technology-heading{
+                font-size: 1.2rem;
+                color:$main-color;
+                padding:0;
+                margin-bottom: 10px;
+            }
+
+            .project-technology{
                 display:flex;
                 flex-direction: column;
                 flex-wrap:wrap;
@@ -970,13 +904,6 @@ body>*{
                 padding-left: 20px;
             }
 
-            li:first-child{
-                font-size: 1.2rem;
-                color:$main-color;
-                padding:0;
-                margin-bottom: 10px;
-            }
-
             .button{
                 text-transform: none;
                 width: 140px;
@@ -984,9 +911,6 @@ body>*{
                 font-size: 1rem;
                 letter-spacing: 1px;
             }
-
-
-
         }
     }
 }
@@ -1220,9 +1144,6 @@ body>*{
         padding: 0 4%;
     }
 
-
-    //overflow убрать
-
     .about-us{
         overflow: hidden;
     }
@@ -1253,53 +1174,244 @@ body>*{
         }
 
         .gallery-detailed {
-            grid-template-columns: repeat(4, 180fr);
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 
-    @media screen   and(max-width: 900px){
+    @media screen and(max-width: 900px){
         .portfolio{
             .gallery-normal{
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: 260px 50px 260px 280px;
                 grid-column-gap: 30px;
 
-                div:nth-child(n+1){
+                .examples:nth-child(n+1){
                     grid-column: auto;
                     grid-row: auto;
                 }
 
-                div:nth-child(2){
+                .examples:nth-child(1){
                     grid-row: 1/span 2;
                 }
-                div:nth-child(4){
+                .examples:nth-child(4){
                     grid-row: 2/span 2;
                 }
             }
 
             .gallery-detailed{
-                grid-template-columns: repeat(3, 220fr);
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: repeat(13, 75px);
                 grid-column-gap: 20px;
                 justify-content: center;
 
-                &>div{
-                    grid-row-end: span 2;
+                .examples:nth-child(n+1){
+                    grid-column-end: span 3;
+                    grid-row-end: span 3;
                 }
 
-                &>div:first-child {
-                    grid-column: 1/span 2;
+                .examples:first-child {
+                    grid-column: 1/span 6;
                     grid-row: 1/span 4;
-                    grid-column-gap: 30fr;
                 }
 
-                &>div:nth-child(2){
-                    grid-row-end: span 2;
+                .examples:last-child{
+                    grid-column: 2/span 4;
+                    grid-row-end: span 3;
                 }
 
-                &>div:nth-child(3){
-                    grid-row-end: span 2;
+                .activeElem {
+                    .project-detailed {
+                        .project-technology {
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                        }
+
+                        li {
+                            list-style-type: none;
+                            font-size: 0.9rem;
+                            padding-left: 20px;
+                        }
+
+                        .button {
+                            text-transform: none;
+                            width: 140px;
+                            height: 30px;
+                            font-size: 1rem;
+                            letter-spacing: 1px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and(max-width: 768px){
+        .portfolio{
+            .portfolio-filter{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+                label{
+                    margin:5px 0;
+                }
+            }
+
+            .gallery-detailed{
+                grid-template-rows: repeat(15,75px);
+
+                .activeElem{
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 4fr 1fr;
+
+                    .project-detailed{
+                        grid-template-columns: 5fr 3fr;
+                        grid-template-rows: repeat(3, auto);
+                        grid-row-gap: 5px;
+                        align-items: center;
+
+                        .project-name{
+                            grid-column: 1;
+                            grid-row: 1;
+                        }
+                        .project-description{
+                            grid-column: 1;
+                            grid-row: 2/span 2;
+                        }
+                        .technology-heading{
+                            grid-column: 2;
+                            grid-row: 1;
+                            justify-self: center;
+
+                            margin: 0;
+
+                        }
+                        .project-technology{
+                            grid-column: 2;
+                            grid-row: 2;
+                            justify-self: center;
+                        }
+                        .button{
+                            grid-column: 2;
+                            grid-row: 3;
+                            justify-self: center;
+                        }
+                    }
                 }
 
+                .examples:first-child{
+                    grid-row: 1/span 6;
+                }
+            }
+        }
+    }
+    @media screen and(max-width: 600px) {
+        .portfolio {
+            .gallery-normal{
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6, 230px);
+
+                .examples:nth-child(n+1){
+                    grid-column: 1;
+                    grid-row: auto;
+                }
+            }
+
+            .gallery-detailed {
+                grid-template-rows: repeat(21, 45px);
+                .examples:nth-child(n+1){
+                    grid-row-end:span 4;
+                }
+
+                .examples:first-child{
+                    grid-row-end:span 8;
+                }
+                .examples:last-child{
+                    grid-row-end: span 5;
+                }
+
+                .activeElem .project-detailed {
+                    grid-template-columns: 2fr 3fr;
+                    grid-template-rows: repeat(4, auto);
+
+                    .project-name {
+                        grid-column: 1/span 2;
+                        grid-row: 1;
+                    }
+                    .project-description {
+                        grid-column: 1/span 2;
+                        grid-row: 2;
+                    }
+                    .technology-heading {
+                        grid-column: 1;
+                        grid-row: 3;
+                        justify-self: start;
+
+                        margin: 0;
+
+                    }
+                    .project-technology {
+                        grid-column: 2;
+                        grid-row: 3/span 2;
+                        justify-self: start;
+                    }
+                    .button {
+                        grid-column: 1;
+                        grid-row: 4;
+                        justify-self: start;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and(max-width: 400px) {
+        .portfolio .gallery-detailed {
+            grid-template-columns: 1fr;
+            grid-template-rows: 500px repeat(5, 230px);
+            .activeElem .project-detailed {
+                grid-template-columns: 1fr;
+
+                .project-name {
+                    grid-column: 1;
+                    grid-row: 1;
+
+                    font-size: 22px;
+                }
+                .project-description {
+                    grid-column: 1;
+                    grid-row: 2;
+
+                    font-size: 13px;
+                }
+                .technology-heading {
+                    grid-column: 1;
+                    grid-row: 3;
+
+                }
+                .project-technology {
+                    grid-column: 1;
+                    grid-row: 4;
+
+                    ul{
+                        display: flex;
+                    }
+                }
+                .button {
+                    grid-column: 1;
+                    grid-row: 5;
+                }
+            }
+            .examples:first-child {
+                grid-column: 1;
+                grid-row: 1;
+                grid-row-end: 2;
+            }
+            .examples:nth-child(n+1){
+                grid-column: 1;
+                grid-row: auto;
             }
         }
     }
