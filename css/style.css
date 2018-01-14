@@ -1218,11 +1218,12 @@ body > * {
     border-bottom: 1px solid orange;
   }
   .header .nav-bar .mini-menu-link li a {
+    position: relative;
+    left: -22px;
     text-decoration: none;
     color: #f8f9fa;
     font: bold 0.9rem "proxima nova", "Helvetica Neue", Helvetica, Arial, Sans-serif;
     text-transform: uppercase;
-    text-align: center;
   }
   .header .nav-bar .mini-menu-link li:hover {
     color: orange;

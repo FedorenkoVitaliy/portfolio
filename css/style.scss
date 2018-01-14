@@ -1330,15 +1330,17 @@ body>*{
                         align-items: center;
                         justify-content: center;
 
+
                         background: rgb(64, 64, 64);
                         border-bottom:1px solid $main-color;
 
                         a{
+                            position:relative;
+                            left: -22px;
                             text-decoration: none;
                             color:#f8f9fa;
                             font:bold 0.9rem "proxima nova", "Helvetica Neue", Helvetica, Arial, Sans-serif;
                             text-transform: uppercase;
-                            text-align: center;
                         }
                     }
 
