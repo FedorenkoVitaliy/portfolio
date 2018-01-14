@@ -11,6 +11,33 @@
   src: url("../fonts/StrokeyBacon.ttf");
 }
 
+@keyframes small-arrow {
+  0% {
+    border-color: orange;
+  }
+  33% {
+    border: none;
+  }
+}
+
+@keyframes midlle-arrow {
+  33% {
+    border-color: orange;
+  }
+  66% {
+    border: none;
+  }
+}
+
+@keyframes big-arrow {
+  66% {
+    border-color: orange;
+  }
+  99% {
+    border: none;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -23,7 +50,15 @@ body * {
 }
 
 body > * {
-  padding: 0 5%;
+  padding: 0 80px;
+}
+
+.mini-logo {
+  display: none;
+}
+
+.logo-menu, .logo-description {
+  display: none;
 }
 
 .button, .header .nav-bar .button--header, .about-us-read-more, .order-now .order-now-btn {
@@ -55,9 +90,70 @@ body > * {
   background: url("../img/waves.png") no-repeat;
 }
 
+.to-Top .big-arrow {
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 31px;
+  height: 31px;
+  transform: rotate(45deg);
+  border: 3px solid orange;
+  border-right: none;
+  border-bottom: none;
+  padding: 0;
+  margin: 0;
+  z-index: 99;
+  animation: linear 2s big-arrow  infinite;
+}
+
+.to-Top .midlle-arrow {
+  display: block;
+  position: fixed;
+  bottom: 12px;
+  right: 18px;
+  width: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+  border: 3px solid orange;
+  border-right: none;
+  border-bottom: none;
+  padding: 0;
+  margin: 0;
+  z-index: 100;
+  animation: linear 2s midlle-arrow infinite;
+}
+
+.to-Top .small-arrow {
+  display: block;
+  position: fixed;
+  bottom: 5px;
+  right: 22px;
+  width: 7px;
+  height: 7px;
+  transform: rotate(45deg);
+  border: 3px solid orange;
+  border-right: none;
+  border-bottom: none;
+  padding: 0;
+  margin: 0;
+  z-index: 100;
+  animation: linear 2s small-arrow infinite;
+}
+
+.to-Top .zzz {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 20px;
+  z-index: 150;
+  transform: rotate(45deg);
+}
+
 .header {
   display: grid;
   grid-template-rows: 120px 100px 450px 100px;
+  align-content: center;
   width: 100%;
   padding: 0;
   background: url("../img/main-background.jpg") no-repeat center;
@@ -67,12 +163,12 @@ body > * {
 .header .nav-bar {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  grid-column-gap: 5%;
+  grid-column-gap: 20px;
   justify-content: space-around;
-  padding: 0 5%;
+  padding: 0 80px;
   grid-row: 1;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .header .nav-bar .logo {
@@ -86,18 +182,23 @@ body > * {
   display: grid;
   grid-column: 2;
   grid-template-columns: repeat(6, auto);
-  justify-content: space-between;
+  grid-column-gap: 20px;
+  justify-content: end;
 }
 
 .header .nav-bar .menu-link li {
   display: inline;
+  border-bottom: 2px solid transparent;
+}
+
+.header .nav-bar .menu-link li:hover {
+  border-bottom: 2px solid orange;
 }
 
 .header .nav-bar a {
   text-decoration: none;
-  text-underline: none;
   color: #f8f9fa;
-  font: bold 0.9rem "Open Sans";
+  font: bold 0.9rem "proxima nova", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   text-transform: uppercase;
 }
 
@@ -117,7 +218,7 @@ body > * {
   grid-row: 3;
   border-radius: 30px;
   background-color: rgba(0, 0, 0, 0.05);
-  margin: 0 5%;
+  margin: 0 80px;
   padding: 30px 30px;
 }
 
@@ -759,6 +860,7 @@ body > * {
 .portfolio .gallery-detailed > div:first-child {
   grid-column: 1/span 3;
   grid-row: 1/span 4;
+  grid-column-gap: 30fr;
 }
 
 .portfolio .gallery-detailed > div:nth-child(2) {
@@ -933,7 +1035,7 @@ body > * {
 
 .footer {
   display: grid;
-  padding: 0 5%;
+  padding: 0 80px;
   grid-template-columns: 340fr 58fr 164fr 238fr 160fr;
   grid-template-rows: 50px 22px 15px 25px 25px 60px;
   justify-content: center;
@@ -1030,10 +1132,18 @@ body > * {
 
 @media screen and (max-width: 1024px) {
   body > * {
-    padding: 0 4%;
+    padding: 0 50px;
   }
-  .about-us {
-    overflow: hidden;
+  .header .nav-bar {
+    padding: 0 50px;
+  }
+  .header .nav-bar a {
+    font-size: 1rem;
+    text-transform: none;
+  }
+  .header .nav-bar .button--header {
+    height: 40px;
+    width: 125px;
   }
   .portfolio {
     grid-template-columns: 1fr;
@@ -1061,6 +1171,102 @@ body > * {
 }
 
 @media screen and (max-width: 1024px) and (max-width: 900px) {
+  .logo-description {
+    display: grid;
+    grid-column: 2;
+    width: auto;
+    height: 80px;
+    justify-self: center;
+  }
+  .header {
+    grid-template-rows: 80px 100px 450px 100px;
+  }
+  .header .nav-bar .logo {
+    display: none;
+  }
+  .header .nav-bar .logo-menu {
+    display: grid;
+    grid-column: 1;
+    align-items: center;
+    position: relative;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+  }
+  .header .nav-bar .logo-menu img {
+    position: absolute;
+    height: 34px;
+    width: 75px;
+  }
+  .header .nav-bar .menu-link {
+    display: none;
+  }
+  .header .nav-bar .mini-menu-link {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 40px);
+    width: 100%;
+    position: absolute;
+    top: 80px;
+  }
+  .header .nav-bar .mini-menu-link li {
+    display: flex;
+    border-bottom: 2px solid transparent;
+    align-items: center;
+    justify-content: center;
+    background: #404040;
+    border-bottom: 1px solid orange;
+  }
+  .header .nav-bar .mini-menu-link li a {
+    text-decoration: none;
+    color: #f8f9fa;
+    font: bold 0.9rem "proxima nova", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .header .nav-bar .mini-menu-link li:hover {
+    color: orange;
+  }
+  .header .nav-bar .mini-menu-link li:hover a {
+    color: orange;
+  }
+  .header-small {
+    grid-template-rows: 80px 250px 400px 20px;
+  }
+  .header .header-content {
+    margin: 0 50px;
+  }
+  .header .header-content .heading {
+    font-size: 3.5rem;
+  }
+  .header .header-content .heading-slogan {
+    font-size: 2.3rem;
+  }
+  .header .header-content .description {
+    font-size: 1.2rem;
+  }
+  .hammer {
+    top: 0;
+    right: 0;
+    transition: 1s;
+  }
+  .hatchet {
+    top: 25px;
+    left: 0;
+    transition: 1s;
+  }
+  .hammerRotate {
+    top: 27%;
+    right: 0%;
+    transform: rotate(50deg) scaleX(-1);
+    transition: 1s;
+  }
+  .hatchetRotate {
+    top: 36%;
+    left: 10%;
+    transform: rotate(130deg);
+    transition: 1s;
+  }
   .portfolio .gallery-normal {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 260px 50px 260px 280px;
@@ -1114,6 +1320,9 @@ body > * {
 }
 
 @media screen and (max-width: 1024px) and (max-width: 768px) {
+  .logo-description {
+    height: 70px;
+  }
   .portfolio .portfolio-filter {
     display: flex;
     flex-wrap: wrap;
@@ -1165,6 +1374,33 @@ body > * {
 }
 
 @media screen and (max-width: 1024px) and (max-width: 600px) {
+  .logo-description {
+    height: 40px;
+  }
+  .header {
+    grid-template-rows: 80px 120px 450px 100px;
+  }
+  .header .nav-bar {
+    padding: 0 20px;
+    grid-column-gap: 10px;
+  }
+  .header .nav-bar .button--header {
+    width: 100px;
+  }
+  .header .header-content {
+    grid-template-rows: 2fr 1fr 5fr 1fr 1fr;
+    margin: 0 20px;
+  }
+  .header .header-content .heading {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .header .header-content .heading-slogan {
+    font-size: 1.5rem;
+  }
+  .header .header-content .description {
+    font-size: 1rem;
+  }
   .portfolio .gallery-normal {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 230px);
@@ -1216,6 +1452,19 @@ body > * {
 }
 
 @media screen and (max-width: 1024px) and (max-width: 400px) {
+  .header .logo-description {
+    display: none;
+  }
+  .header .header-content {
+    margin: 0 10px;
+    padding: 30px 10px;
+  }
+  .header .header-content .heading {
+    font-size: 2rem;
+  }
+  .header .header-content .button, .header .header-content .nav-bar .button--header, .header .nav-bar .header-content .button--header, .header .header-content .about-us-read-more, .header .header-content .order-now .order-now-btn, .order-now .header .header-content .order-now-btn {
+    width: 200px;
+  }
   .portfolio .gallery-detailed {
     grid-template-columns: 1fr;
     grid-template-rows: 500px repeat(5, 230px);

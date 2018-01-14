@@ -1,9 +1,17 @@
 
 $(document).ready(function() {
+
     var gallery = $(".portfolio-gallery");
     var galleryElem = $(".examples");
     var iconSites = $(".icon-site");
     var timeoutId;
+
+    $(".logo-menu").click(function () {
+        $(".hatchet").toggleClass("hatchetRotate");
+        $(".hammer").toggleClass("hammerRotate");
+        $(".menu-link").toggleClass("mini-menu-link");
+        $(".header").toggleClass("header-small");
+    })
 
     galleryElem.click(function(){
         if($(this).hasClass("activeElem")){

@@ -8,19 +8,24 @@
     <title>Document</title>
 </head>
 <body>
-<header class="header">
-    <nav class="nav-bar">
-        <img src="img/logo-craft.png" alt="" class="logo">
-        <ul class="menu-link">
-            <li><a href="#">about-use</a></li>
-            <li><a href="#">advantages</a></li>
-            <li><a href="#">portfolio</a></li>
-            <li><a href="#">our team</a></li>
-            <li><a href="#">review</a></li>
-            <li><a href="#">callback</a></li>
-        </ul>
-        <input type="button" value="call us" class="button--header call-back-link">
-    </nav>
+    <header id="header" class="header">
+        <nav class="nav-bar">
+            <img src="img/logo-craft.png" alt="" class="logo">
+            <div class="logo-menu">
+                <img src="img/hatchet.png" alt="" class="hatchet">
+                <img src="img/hammer.png" alt="" class="hammer">
+            </div>
+            <img src="img/logo-description.png" alt="" class="logo-description">
+            <ul class="menu-link">
+              <li><a href="#">about</a></li>
+              <li><a href="#">advantages</a></li>
+              <li><a href="#">portfolio</a></li>
+              <li><a href="#">our team</a></li>
+              <li><a href="#">review</a></li>
+              <li><a href="#contact" class="to-form">callback</a></li>
+            </ul>
+            <input type="button" value="call us" class="button--header call-back-link">
+        </nav>
 
     <div class="header-content">
         <h1 class="heading">WebCraft<span class="heading-slogan">sawing quality studio</span></h1>
@@ -32,10 +37,8 @@
     </div>
 
     <div class="call-back-form-header">
-
-
         <p class="contact-title">contacts</p>
-        <img src="img/vin-dizel.png" class="close-form">
+        <img src="img/x-black.png" class="close-form">
         <p>Sign up for our newsletter to receive updates</p>
 
         <input type="text" name="user-name" class="input user-name" placeholder="Name">
@@ -388,34 +391,41 @@
         </div>
     </div>
 
-    <div class="contact">
-        <p class="contact-title">contacts<span>Sign up for our newsletter to receive updates</span></p>
+        <div id="contact" class="contact">
+            <p class="contact-title">contacts<span>Sign up for our newsletter to receive updates</span></p>
 
-        <input type="text" name="user-name" class="input user-name" placeholder="Name">
-        <input type="text" name="user-phone" class="input user-phone" placeholder="Phone">
-        <input type="text" name="user-mail" class="input user-mail" placeholder="E-mail">
-        <input type="button" value="send" class="button contact-send">
+            <input type="text" name="user-name" class="input user-name" placeholder="Name">
+            <input type="text" name="user-phone" class="input user-phone" placeholder="Phone">
+            <input type="text" name="user-mail" class="input user-mail" placeholder="E-mail">
+            <input type="button" value="send" class="button contact-send">
+        </div>
+    </section>
+    <div class="to-Top">
+        <a href="#header" class="zzz"></a>
+        <p class="big-arrow"></p>
+        <p class="midlle-arrow"></p>
+        <p class="small-arrow"></p>
     </div>
-</section>
 
+    <footer class="footer">
+        <p class="footer__contact-name"> WebCraft Studio</p>
+        <p class="footer__contact-address">Kiev</p>
+        <p class="footer__contact-phone">+38 063 123 45 67</p>
+        <p class="footer__friendly">Social networks</p>
+        <div class="footer__contact-social">
+            <div class="footer__social-img vk"></div>
+            <div class="footer__social-img fb"></div>
+            <div class="footer__social-img insta"></div>
+        </div>
+        <p class="footer__create-by">Разработано:</p>
+        <p class="footer__development-name">WebCraft Studio</p>
+    </footer>
 
-<footer class="footer">
-    <p class="footer__contact-name"> WebCraft Studio</p>
-    <p class="footer__contact-address">Kiev</p>
-    <p class="footer__contact-phone">+38 063 123 45 67</p>
-    <p class="footer__friendly">Social networks</p>
-    <div class="footer__contact-social">
-        <div class="footer__social-img vk"></div>
-        <div class="footer__social-img fb"></div>
-        <div class="footer__social-img insta"></div>
-    </div>
-    <p class="footer__create-by">Разработано:</p>
-    <p class="footer__development-name">WebCraft Studio</p>
-</footer>
-
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="js/modal-form.js"></script>
-<script src="js/main.js"></script>
-<script src="js/progresbar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/modal-form.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/progresbar.js"></script>
+    <script src="js/toForm.js"></script>
+    <script src="js/toTop.js"></script>
 </body>
 </html>
