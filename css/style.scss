@@ -924,7 +924,7 @@ body>*{
 
         .input{
             border:1px solid #CCC;
-            border-radius:10px;
+            border-radius:5px;
             padding: 20px;
             text-align: justify;
             transition: 1s;
@@ -940,10 +940,7 @@ body>*{
             transition: 0.5s;
         }
 
-        .input::-webkit-input-placeholder       {
-            opacity: 1;
-            transition: opacity 0.5s ease;
-        }
+
         .input:focus::-webkit-input-placeholder {
             opacity: 0;
             transition: opacity 0.5s ease;
@@ -967,29 +964,35 @@ body>*{
         .textarea-wrapper{
             grid-column: 4/span 3;
             grid-row: 1/span 3;
+            position: relative;
+
 
             .user-message{
                 height: 100%;
                 width: 100%;
                 resize:none;
+
+                font-size: 16px;
+                font-family: Arial, sans-serif;
             }
 
             &:before, &:after {
                 content:'';
                 display: block;
-                background: red;
+                background: white;
                 height: 10px;
                 position: absolute;
                 left: 4px;
                 right: 18px;
+                border-radius: 10px;
             }
 
             &:before {
-                top: 0px;
+                top: 2px;
             }
 
             &:after {
-                bottom: 0px;
+                bottom: 2px;
             }
         }
 
@@ -1128,7 +1131,7 @@ body>*{
     background: url("../img/fb-icon-small.png") no-repeat center;
 }
 
-.insta{
+.inst{
     background: url("../img/insta-icon-small.png") no-repeat center;
 }
 
