@@ -51,7 +51,7 @@
 
 
 <section class="about-us">
-    <p class="about-us-title">about us</p>
+    <h2 class="about-us-title subheading">about us</h2>
     <p class="about-description1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut quas a similique
         cupiditate. Praesentium quae facilis nihil ex aspernatur consectetur quasi, eligendi. Odit perspiciatis,
         incidunt itaque mollitia hic expedita architecto delectus commodi, voluptatum, illum cum veritatis quaerat culpa
@@ -132,7 +132,6 @@
         </div>
 
         <div class="skillbar" data-percent="80%">
-
             <p class="skillbar-title" style="background-color: orange">JS</p>
             <div class="skillbar-bar" style="background-color: #424242"></div>
             <p class="skillbar-bar-percent">80%</p>
@@ -142,19 +141,8 @@
     </div>
 </section>
 
-
-<section class="order-now">
-    <p class="order-title">do you wanna go?</p>
-    <p class="order-description">Aliquam sed posuere urna, et gravida nisl. Praesent <br> nterdum nisl libero, pretium
-        egestas purus eleifend vitae. Mauris suscipit vel lectus at luctus.</p>
-    <input type="text" class="name">
-    <input type="text" class="phone">
-    <input type="submit" class="order-now-btn">
-    <p class="date">* Your data will not be transferred</p>
-</section>
-
 <section class="team-wrapper">
-    <p class="team-title">our team</p>
+    <h2 class="team-title subheading">our team</h2>
 
     <div class="team">
         <div class="carpathian">
@@ -227,7 +215,7 @@
 
 
 <section class="portfolio">
-    <p class="portfolio-title">gullery</p>
+    <p class="portfolio-title subheading">gullery</p>
 
     <div class="portfolio-filter">
         <input type="checkbox" id="all"><label for="all">all</label>
@@ -371,8 +359,18 @@
 
 
 <section class="feedback">
-    <div class="waves"></div>
-    <h2 class="feedback-title subheading">our clients say</h2>
+    <h2 class="feedback-title subheading">contact us / write</h2>
+
+    <form id="contact" class="contact">
+        <input type="text" name="user-name" class="input user-name" placeholder="Name" required>
+        <input type="text" name="user-phone" class="input user-phone" placeholder="Phone">
+        <input type="text" name="user-mail" class="input user-mail" placeholder="E-mail" required>
+        <div class="textarea-wrapper">
+            <textarea name="user-message" class="input user-message" placeholder="Enter your message" required></textarea>
+        </div>
+
+        <input type="button" value="send" class="button contact-send">
+    </form>
 
     <div class="reviews-wrapper">
         <div class="review">
@@ -391,14 +389,7 @@
         </div>
     </div>
 
-        <div id="contact" class="contact">
-            <p class="contact-title">contacts<span>Sign up for our newsletter to receive updates</span></p>
 
-            <input type="text" name="user-name" class="input user-name" placeholder="Name">
-            <input type="text" name="user-phone" class="input user-phone" placeholder="Phone">
-            <input type="text" name="user-mail" class="input user-mail" placeholder="E-mail">
-            <input type="button" value="send" class="button contact-send">
-        </div>
     </section>
     <div class="to-Top">
         <a href="#header" class="zzz"></a>
@@ -415,7 +406,7 @@
         <div class="footer__contact-social">
             <div class="footer__social-img vk"></div>
             <div class="footer__social-img fb"></div>
-            <div class="footer__social-img insta"></div>
+            <div class="footer__social-img instagram"></div>
         </div>
         <p class="footer__create-by">Разработано:</p>
         <p class="footer__development-name">WebCraft Studio</p>

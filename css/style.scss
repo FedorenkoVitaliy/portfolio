@@ -27,6 +27,7 @@ body * {
      margin: 0;
      padding: 0;
      font-family: Arial, sans-serif;
+    box-sizing: border-box;
  }
 
 body>*{
@@ -59,19 +60,28 @@ body>*{
 }
 
 .subheading{
+    display:flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
-    font-size:1.875rem;
+    font-size:1.7rem;
     font-weight: bold;
     color:black;
     text-transform: uppercase;
 }
 
-.waves{
+.subheading:before{
+    position:absolute;
+    justify-self: center;
+    top: 0px;
     width: 80px;
     height: 8px;
-    background:url("../img/waves.png") no-repeat;
+    content:url("../img/waves.png");
 }
+
+
 
 .to-Top {
 
@@ -344,22 +354,12 @@ body>*{
 .about-us {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 10px repeat(3, 1fr) 10px;
+    grid-template-rows: 110px repeat(3, auto) 100px;
     background-image: url("../img/about-us-background.png");
 
     &-title {
-        display: grid;
-        grid-column: 3 / span 2;
-        grid-row: 2;
-
-        font-family: sans-serif;
-        font-size: 1.875rem;;
-        font-weight: bold;
-        line-height: 40px;
-        text-align: center;
-        text-transform: uppercase;
-        align-content: center;
-
+        grid-column: 1 / span 6;
+        grid-row: 1;
     }
 
     .about-description1 {
@@ -395,18 +395,6 @@ body>*{
         justify-self: end;
         height: 46px;
         width: 153px;
-        /*display: grid;
-        grid-column: 1;
-        grid-row: 5 / 6;
-
-        @extend .about-us-title;
-        color: #ffffff;
-        text-transform: uppercase;
-        align-content: center;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 4px;
-        background-color: $main-color;*/
     }
 
     .big-photo {
@@ -430,87 +418,20 @@ body>*{
   
 }
 
-.order-now {
-    display: grid;
-    grid-template-columns: 245fr 57fr 325fr 232fr;
-    grid-template-rows: 190px 30px 20px 50px 26px 62px 20px 18px 206px;
-    background: url("../img/Curves 4.png") #f6f4f4;
-
-
-    .order-title {
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
-
-        @extend .about-us-title;
-    }
-
-    .order-description {
-        grid-column: 1 / span 4;
-        grid-row: 4 / 5;
-
-        font-family: sans-serif;
-        font-size: 1.25rem;
-        line-height: 26px;
-        color: #949494;
-        align-content: center;
-    }
-
-    .name {
-        grid-column: 1 / span 2;
-        grid-row: 6 / 7;
-        border: 1px solid $main-color;
-        border-right: 1px solid #949494;
-    }
-
-    .phone {
-        grid-column: 3 / 4;
-        grid-row: 6 / 7;
-        border: 1px solid $main-color;
-        border-left: 1px solid #949494;
-    }
-
-    .order-now-btn {
-        grid-column: 4 / 5;
-        grid-row: 6 / 7;
-
-        @extend .about-us-read-more;
-        border: 4px solid #ffffff;
-    }
-
-    .date {
-        grid-column: 1 / span 3;
-        grid-row: 8 / 9;
-
-        position: relative;
-        padding-left: 30px;
-        color: #949494;
-
-        &:after {
-            display: block;
-            position: absolute;
-            content: url("../img/Lock locked.png");
-            top: 3px;
-            left: 0px;
-        }
-    }
-}
-
-
-
 .advantages{
     display:grid;
-    grid-template-rows: 114px 30px 75px 765px;
+    grid-template-rows: 110px 75px auto 100px;
     border:1px solid black;
 
     &-title{
-        grid-row: 2;
+        grid-row: 1;
     }
 
     .quality-wrapper{
         display:grid;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: repeat(2,1fr);
-        grid-row: 4;
+        grid-row: 3;
 
         .quality--1{
             display:grid;
@@ -602,31 +523,23 @@ body>*{
 .skillBar {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 60px 60px 130px 1fr 130px;
+    grid-template-rows: 110px 60px 130px 1fr 130px;
     justify-items: center;
     border:1px solid red;
 
-
-//    .waves{
-//        grid-row: 2;
-//    }
-    
-       img {
-                //grid-column: 1 / 2;
-                grid-row: 3;
-            }
-        
+    img {
+            grid-row: 3;
+        }
 
     .skillBar-title{
-        grid-column: 2 / 3;
-        grid-row: 2;
+        grid-column: 2;
+        grid-row: 1;
     }
 
     .skill-wrapper{
         display: grid;
-//        grid-template-columns: repeat(3,1fr);
         grid-template-rows: repeat(3,1fr);
-       grid-column-gap: 1%;
+        grid-column-gap: 1%;
         grid-column: 1 / span 3;
         grid-row: 4;
         
@@ -690,19 +603,12 @@ body>*{
 
 .team-wrapper {
     display: grid;
-    grid-template-rows: 140px 100px 382px 379px;
+    grid-template-rows: 110px 100px 382px 379px;
 
     background-image: url("../img/worldmap-dots.png");
 
     .team-title {
-        display: grid;
-        font-family: sans-serif;
-        font-size: 1.25rem;
-        font-weight: bold;
-        line-height: 40px;
-        text-align: center;
-        text-transform: uppercase;
-        align-items: flex-end;
+        grid-row: 1;
     }
 
     .team {
@@ -798,22 +704,13 @@ body>*{
 
 .portfolio {
     display: grid;
-    grid-template-columns: 100px 1fr;
-    grid-template-rows: 70px auto;
+    grid-template-columns: 100px  30px 1fr;
+    grid-template-rows: 110px auto auto 150px;
     grid-gap: 20px;
 
     .portfolio-title {
-        display: grid;
-        grid-column: 1/ span 2;
         grid-row: 1;
-
-        font-family: sans-serif;
-        font-size: 1.25rem;
-        font-weight: bold;
-        line-height: 40px;
-        text-align: center;
-        text-transform: uppercase;
-        align-items: flex-end;
+        grid-column: 1/span 3;
     }
 
     .portfolio-filter{
@@ -849,7 +746,7 @@ body>*{
     }
 
     .portfolio-gallery{
-        grid-column: 2;
+        grid-column: 3;
         grid-row: 2;
 
         &>div{
@@ -1006,28 +903,109 @@ body>*{
 
 .feedback{
     display:grid;
-    grid-template-columns: 1fr 267px 267px 1fr;
-    grid-template-rows: 70px 10px 35px 30px 130px 230px 140px 500px 250px;
-    justify-items: center;
-    background-image: url("../img/feedback-bg.png");
-    background-repeat: no-repeat;
-    background-position: bottom;
-
-    .waves{
-        grid-column: 2/span 2;
-        grid-row:2;
-    }
+    grid-template-rows: 110px 70px auto 70px auto 200px;
+    justify-content: center;
+    background: rgb(232, 232, 232);
 
     .feedback-title{
-        grid-column: 2/span 2;
-        grid-row:4;
+        grid-row:1;
+    }
+
+    .contact{
+        display:grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 50px) 60px;
+        grid-gap: 30px;
+        grid-row: 3;
+
+        textarea:focus, input:focus{
+            outline: none;
+        }
+
+        .input{
+            border:1px solid #CCC;
+            border-radius:10px;
+            padding: 20px;
+            text-align: justify;
+            transition: 1s;
+        }
+
+        .input:hover{
+            border:1px solid $main-color;
+            transition: 0.5s;
+        }
+
+        .input:focus{
+            border:2px solid $main-color;
+            transition: 0.5s;
+        }
+
+        .input::-webkit-input-placeholder       {
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+        .input:focus::-webkit-input-placeholder {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .user-name{
+            grid-column: 1/span 3;
+            grid-row: 1;
+        }
+
+        .user-phone{
+            grid-column: 1/span 3;
+            grid-row: 2;
+        }
+
+        .user-mail{
+            grid-column: 1/span 3;
+            grid-row: 3;
+        }
+
+        .textarea-wrapper{
+            grid-column: 4/span 3;
+            grid-row: 1/span 3;
+
+            .user-message{
+                height: 100%;
+                width: 100%;
+                resize:none;
+            }
+
+            &:before, &:after {
+                content:'';
+                display: block;
+                background: red;
+                height: 10px;
+                position: absolute;
+                left: 4px;
+                right: 18px;
+            }
+
+            &:before {
+                top: 0px;
+            }
+
+            &:after {
+                bottom: 0px;
+            }
+        }
+
+        .contact-send{
+            grid-column: 4/span 3;
+            grid-row: 4;
+            justify-self: end;
+            border-radius: 20px;
+            width: 200px;
+        }
     }
 
     .reviews-wrapper{
         display:grid;
         grid-template-columns: 1fr 1fr;
-        grid-column: 1/span 4;
-        grid-row:6;
+        grid-row:5;
     }
 
     .review{
@@ -1071,52 +1049,6 @@ body>*{
             line-height: 33px;
         }
     }
-
-    .contact{
-        display:grid;
-        grid-row-gap: 20px;
-        grid-row: 8;
-        grid-column: 2/span 2;
-
-        background:  url("../img/contacts-bg.png");
-        background-size:100%;
-        padding:40px 30px 50px;
-        border-radius: 10px;
-
-        &-title{
-            height: 75px;
-            font-family: 'Myriad-Pro', sans-serif;
-            font-size: 2.25rem;
-            color:$main-color;
-            text-transform: uppercase;
-            text-align: center;
-            vertical-align: bottom;
-            letter-spacing: 0.15em;
-
-            span{
-                display:inline-block;
-                height: 50px;
-                font-size: 1rem;
-                color:#383e4a;
-                text-transform: none;
-                letter-spacing: 0.05em;
-            }
-        }
-
-        .input{
-            border-radius: 10px;
-            border: 0;
-            padding:20px;
-
-        }
-
-        .contact-send{
-            border-radius: 20px;
-            width: 100%;
-        }
-    }
-
-
 }
 
 
@@ -1129,7 +1061,6 @@ body>*{
     grid-template-columns:340fr 58fr 164fr 238fr 160fr;
     grid-template-rows:50px 22px 15px 25px 25px 60px;
     justify-content: center;
-    text-align: center;
 
     background-color: #292929;
     color:white;
@@ -1190,18 +1121,15 @@ body>*{
 }
 
 .vk{
-    background: url("../img/vk-icon-small.png") no-repeat;
-    background-position: center;
+    background: url("../img/vk-icon-small.png") no-repeat center;
 }
 
 .fb{
-    background: url("../img/fb-icon-small.png") no-repeat;
-    background-position: center;
+    background: url("../img/fb-icon-small.png") no-repeat center;
 }
 
 .insta{
-    background: url("../img/insta-icon-small.png") no-repeat;
-    background-position: center;
+    background: url("../img/insta-icon-small.png") no-repeat center;
 }
 
 
@@ -1225,6 +1153,23 @@ body>*{
     text-transform: uppercase;
     border: 1px solid #3e3e3e;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //media-queries
 
@@ -1252,7 +1197,7 @@ body>*{
     //portfolio
     .portfolio{
         grid-template-columns: 1fr;
-        grid-template-rows: 70px auto auto;
+        grid-template-rows: 110px 15px auto 15px auto 100px;
 
         .portfolio-title{
             grid-column: 1;
@@ -1260,12 +1205,13 @@ body>*{
 
         .portfolio-filter{
             grid-column: 1;
+            grid-row:3;
             justify-content: space-between;
             grid-auto-flow: column;
         }
 
         .portfolio-gallery{
-            grid-row: 3;
+            grid-row: 5;
             grid-column: 1;
         }
 
@@ -1289,7 +1235,7 @@ body>*{
         }
 
         .header{
-            grid-template-rows: 80px 100px 450px 100px;
+            grid-template-rows: 100px 100px 450px 100px;
             .nav-bar{
                 .logo{
                     display:none;
@@ -1569,6 +1515,10 @@ body>*{
             }
         }
 
+        .header-small{
+            grid-template-rows: 80px 250px 400px 20px;
+        }
+
         .portfolio {
             .gallery-normal{
                 grid-template-columns: 1fr;
@@ -1626,6 +1576,24 @@ body>*{
                 }
             }
         }
+        .feedback{
+            grid-template-rows: 110px 70px auto 70px auto 200px;;
+            .contact {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, 50px) 200px 60px;
+                grid-gap: 30px;
+                grid-row: 3;
+
+                .input, .button{
+                    grid-column: 1;
+                    grid-row: auto;
+                }
+            }
+
+            .reviews-wrapper{
+                grid-template-columns: 1fr;
+            }
+        }
     }
 
     @media screen and(max-width: 400px) {
@@ -1643,6 +1611,10 @@ body>*{
                     width: 200px;
                 }
             }
+        }
+
+        .header-small{
+            grid-template-rows: 80px 250px 400px 20px;
         }
 
 
