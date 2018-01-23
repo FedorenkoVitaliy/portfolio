@@ -1,5 +1,4 @@
-
-$(document).ready(function() {
+$(document).ready(function () {
 
     var gallery = $(".portfolio-gallery");
     var galleryElem = $(".examples");
@@ -13,16 +12,16 @@ $(document).ready(function() {
         $(".header").toggleClass("header-small");
     })
 
-    galleryElem.click(function(){
-        if($(this).hasClass("activeElem")){
-            gallery.removeClass("gallery-detailed")&&gallery.addClass("gallery-normal")
-            $(this).removeClass("activeElem")
+    galleryElem.click(function () {
+        if ($(this).hasClass("activeElem")) {
+            gallery.removeClass("gallery-detailed") && gallery.addClass("gallery-normal");
+            $(this).removeClass("activeElem");
         }
 
-        else{
-            gallery.addClass("gallery-detailed")&&gallery.removeClass("gallery-normal");
-            galleryElem.each(function() {
-                $(this).removeClass("activeElem")
+        else {
+            gallery.addClass("gallery-detailed") && gallery.removeClass("gallery-normal");
+            galleryElem.each(function () {
+                $(this).removeClass("activeElem");
             });
             $(this).insertBefore($(".portfolio-gallery>div:first-child"));
             $(this).toggleClass("activeElem");
@@ -30,10 +29,10 @@ $(document).ready(function() {
     });
 
     iconSites.hover(
-        function() {
+        function () {
             var current = $(this);
             if (!timeoutId) {
-                timeoutId = window.setTimeout(function() {
+                timeoutId = window.setTimeout(function () {
                     timeoutId = null;
                     current.addClass("showScroll");
                 }, 1000);
@@ -50,4 +49,67 @@ $(document).ready(function() {
             }
         }
     )
+
+    $("#contact .user-message").on('input', function(){
+        $(".charLeft").text(600-$(this).val().length);
+       ($(".charLeft").text())<180?
+            $(".counter").addClass("counterVisible"):
+            $(".counter").removeClass("counterVisible");
+    });
+
+//feedback
+    var reviewWidth = $(".review").outerWidth();
+    var reviewHeight = $(".review").outerHeight();
+    var iteration=0;
+    if($(window).width() < 900) {
+        $(".activeReview").css("height", reviewHeight * 2 + "px");
+    }
+    $(".arrow").click(function(){
+        $(this).animate({fontSize: "30px"},100).animate({fontSize: "35px"});
+    });
+
+    $(".arrow-up").click(function(){
+        iteration--;
+        if(iteration<0){
+            $(".allReviews").css("top", -reviewHeight*10);
+            iteration=$(".review").length-2;
+        }
+        else{
+            $(".allReviews").css("top", -reviewHeight*iteration);
+        }
+    });
+
+    $(".arrow-down").click(function(){
+        iteration++;
+        if( iteration==$(".review").length-2){
+            $(".allReviews").css("top", 0);
+            iteration=0;
+        }
+        else{
+            $(".allReviews").css("top", -reviewHeight*iteration);
+        }
+    });
+
+    $(".arrow-left").click(function(){
+        iteration--;
+        if(iteration<0){
+            $(".allReviews").css("left", -reviewWidth*(10));
+            iteration=$(".review").length-2;
+        }
+        else{
+            $(".allReviews").css("left", -reviewWidth*iteration);
+        }
+    });
+
+    $(".arrow-right").click(function(){
+        iteration++;
+        if( iteration>$(".review").length-2){
+            $(".allReviews").css("left", 0);
+            iteration=0;
+        }
+        else{
+            $(".allReviews").css("left", -reviewWidth*iteration);
+        }
+    });
+
 });
