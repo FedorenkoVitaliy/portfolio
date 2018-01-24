@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -362,32 +363,122 @@
 <section class="feedback">
     <h2 class="feedback-title subheading">contact us / write</h2>
 
-    <form id="contact" class="contact">
+   <form id="contact" class="contact">
         <input type="text" name="user-name" class="input user-name" placeholder="Name" required>
         <input type="text" name="user-phone" class="input user-phone" placeholder="Phone">
         <input type="text" name="user-mail" class="input user-mail" placeholder="E-mail" required>
         <div class="textarea-wrapper">
-            <textarea name="user-message" class="input user-message" placeholder="Enter your message" required></textarea>
+            <textarea name="user-message" class="user-message" placeholder="Enter your message" required maxlength="600"></textarea>
         </div>
-
+        <p class="counter"> Characters left: <span class="charLeft"></span></p>
         <input type="button" value="send" class="button contact-send">
     </form>
 
-    <div class="reviews-wrapper">
-        <div class="review">
-            <img class="avatar" src="img/pavliv-ava.jpg">
-            <p class="author"><span>Pavliv Yaroslav</span> Web designer</p>
-            <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse </p>
+    <div class="reviews-block">
+        <i class="fas fa-arrow-up fa-2x arrow-up arrow"></i>
+        <i class="fas fa-arrow-left fa-2x arrow-left arrow"></i>
+        <div class="activeReview">
+            <div class="allReviews">
+                <div class="review">
+                    <img class="avatar" src="img/pavliv-ava.jpg">
+                    <p class="author-name">Pavliv Yaroslav 1</p>
+                    <p class="author-position">Web designer</p>
+                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse </p>
+                </div>
+                <div class="review">
+                    <img class="avatar" src="img/scott-ava.jpg">
+                    <p class="author-name">John Scott 2</p>
+                    <p class="author-position">Web designer</p>
+                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse </p>
+                </div>
+                <div class="review">
+                    <img class="avatar" src="img/pavliv-ava.jpg">
+                    <p class="author-name">Pavliv Yaroslav 3</p>
+                    <p class="author-position">Web designer</p>
+                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse </p>
+                </div>
+                <div class="review">
+                    <img class="avatar" src="img/scott-ava.jpg">
+                    <p class="author-name">John Scott 4</p>
+                    <p class="author-position">Web designer</p>
+                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse </p>
+                </div>
+                <div class="review">
+                    <img class="avatar" src="img/pavliv-ava.jpg">
+                    <p class="author-name">Pavliv Yaroslav 5</p>
+                    <p class="author-position">Web designer</p>
+                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse </p>
+                </div>
+                <div class="review">
+                    <img class="avatar" src="img/scott-ava.jpg">
+                    <p class="author-name">John Scott 6</p>
+                    <p class="author-position">Web designer</p>
+                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse </p>
+                </div>
+                <div class="review">
+                    <img class="avatar" src="img/pavliv-ava.jpg">
+                    <p class="author-name">Pavliv Yaroslav 7</p>
+                    <p class="author-position">Web designer</p>
+                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse </p>
+                </div>
+                <div class="review">
+                    <img class="avatar" src="img/scott-ava.jpg">
+                    <p class="author-name">John Scott 8</p>
+                    <p class="author-position">Web designer</p>
+                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse </p>
+                </div>
+                <div class="review">
+                    <img class="avatar" src="img/pavliv-ava.jpg">
+                    <p class="author-name">Pavliv Yaroslav 9</p>
+                    <p class="author-position">Web designer</p>
+                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse </p>
+                </div>
+                <div class="review">
+                    <img class="avatar" src="img/scott-ava.jpg">
+                    <p class="author-name">John Scott 10</p>
+                    <p class="author-position">Web designer</p>
+                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse </p>
+                </div>
+                <div class="review">
+                    <img class="avatar" src="img/pavliv-ava.jpg">
+                    <p class="author-name">Pavliv Yaroslav 11</p>
+                    <p class="author-position">Web designer</p>
+                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse </p>
+                </div>
+                <div class="review">
+                    <img class="avatar" src="img/scott-ava.jpg">
+                    <p class="author-name">John Scott 12</p>
+                    <p class="author-position">Web designer</p>
+                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse </p>
+                </div>
+            </div>
         </div>
-        <div class="review">
-            <img class="avatar" src="img/scott-ava.jpg">
-            <p class="author"><span>John Scott</span> The Fringe</p>
-            <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse </p>
-        </div>
+        <i class="fas fa-arrow-right fa-2x arrow-right arrow"></i>
+        <i class="fas fa-arrow-down fa-2x arrow-down arrow"></i>
     </div>
 
 
@@ -416,7 +507,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="js/modal-form.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/progresbar.js"></script>
+    <script src="js/progressbar.js"></script>
     <script src="js/toForm.js"></script>
     <script src="js/toTop.js"></script>
 </body>
