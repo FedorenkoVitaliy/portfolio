@@ -937,8 +937,9 @@ body>*{
             transition: 0.5s;
         }
 
-        .input:focus, .textarea-wrapper:focus{
-            box-shadow:  0 0 2px 2px rgba(265,165,0, 0.5);
+        .input:focus{
+            border:2px solid $main-color;
+            transition: 0.5s;
         }
 
         .input::-webkit-input-placeholder, textarea-wrapper::-webkit-input-placeholder{
