@@ -78,8 +78,8 @@ body > * {
 }
 
 .subheading {
-  display: flex;
-  align-items: flex-end;
+  display: grid;
+  align-items: end;
   justify-content: center;
   position: relative;
   text-align: center;
@@ -846,6 +846,7 @@ body > * {
 .feedback {
   display: grid;
   grid-template-rows: 110px 70px auto 40px auto 100px;
+  grid-template-columns: 100%;
   justify-content: center;
   background: #e8e8e8;
 }
