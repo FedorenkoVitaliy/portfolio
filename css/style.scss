@@ -74,11 +74,7 @@ body>*{
 }
 
 .subheading:before{
-    position: absolute;
     justify-self: center;
-    top: 15px;
-    width: 80px;
-    height: 8px;
     content:url("../img/waves.png");
 }
 
@@ -604,9 +600,10 @@ body>*{
 
 .team-wrapper {
     display: grid;
-    grid-template-rows: 110px 100px 382px 379px;
+    grid-template-rows: 110px 100px auto 100px;
+    background-color: #e8e8e8;
+    //background-image: url("../img/worldmap-dots.png");
 
-    background-image: url("../img/worldmap-dots.png");
 
     .team-title {
         grid-row: 1;
@@ -616,87 +613,78 @@ body>*{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
         justify-content: space-between;
-        grid-row: 3 / 4;
+        grid-row: 3;
 
-        height: 382px;
 
-        img {
-            width: 50%;
-        }
+        .associate {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            height: 382px;
+            box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.4);;
+            transition: 0.5s;
 
-        .description-travel {
+            .social {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: flex-start;
+                width: 50px;
+
+                margin-bottom: auto;
+                padding: 10px;
+                height: 140px;
+                background-color: rgba(0, 0, 0, 0.4);
+                color: #ffffff;
+
+                i{
+                    cursor: pointer;
+                }
+            }
+
+            .position {
+                font-family: sans-serif;
+                font-size: 1rem;
+                color: $main-color;
+                line-height: 22px;
+                padding: 0 20px;
+            }
 
             .name {
                 font-family: sans-serif;
                 font-size: 1.8rem;
                 font-weight: 400;
                 line-height: 22px;
-                color: #ffffff;
+                background-color: rgba(0, 0, 0, 0.4);
                 text-transform: capitalize;
-                padding: 0 20px;
-
-            }
-
-            span {
-                font-size: 1rem;
-                line-height: 22px;
-                text-transform: none;
+                padding: 20px;
+                color: #ffffff;
             }
         }
 
-        .price {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 62px;
-            color: #ffffff;
-
-            .old-price {
-                font-family: sans-serif;
-                font-size: 1.125rem;
-                text-decoration: line-through;
-            }
-
-            .new-price {
-                font-family: sans-serif;
-                font-size: 1.4rem;
-                font-weight: bold;
-            }
-
+        .sed{
+            background-image: url("../img/sed.jpg");
         }
 
-        .carpathian {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        .zoom{
+             background-image: url("../img/zoom.jpg");
+         }
 
-            border-radius: 4px;
-            background-image: url("../img/carpathyan-bg.jpg");
-            background-size: cover;
+        .backend{
+            background-image: url("../img/jchan.jpg");
         }
 
-        .alps {
-            @extend .carpathian;
-
-            background-image: url("../img/alps-bg.jpg");
+        .design{
+            background-image: url("../img/eniston.jpg");
         }
 
-        .pyrenees {
-            @extend .carpathian;
-
-            background-image: url("../img/perenees-bg.jpg");
-        }
-
-        .rocky {
-            @extend .carpathian;
-
-            background-image: url("../img/rocky-bg.jpg");
-        }
-
-        .kavkaz {
-            @extend .carpathian;
-
-            background-image: url("../img/kavkaz-bg.jpg");
+        .seo{
+            background-image: url("../img/lourens.jpg");
         }
     }
 }
