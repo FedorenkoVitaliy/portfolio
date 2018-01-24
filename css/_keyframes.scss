@@ -27,3 +27,28 @@
         border: none;
     }
 }
+
+@keyframes border  {
+    25% {
+        border-top: 1px solid orange;
+        transition: 1s;
+    }
+
+    50% {
+        border-top: 1px solid orange;
+        border-right: 1px solid orange;
+        transition: 1s;
+    }
+
+    75% {
+        border-top: 1px solid orange;
+        border-right: 1px solid orange;
+        border-bottom: 1px solid orange;
+        transition: 1s;
+    }
+
+    100% {
+        border: 1px solid orange;
+        transition: 1s;
+    }
+}
