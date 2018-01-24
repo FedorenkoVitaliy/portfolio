@@ -120,11 +120,7 @@ body > * {
 }
 
 .subheading:before {
-  position: absolute;
   justify-self: center;
-  top: 15px;
-  width: 80px;
-  height: 8px;
   content: url("../img/waves.png");
 }
 
@@ -578,8 +574,8 @@ body > * {
 
 .team-wrapper {
   display: grid;
-  grid-template-rows: 110px 100px 382px 379px;
-  background-image: url("../img/worldmap-dots.png");
+  grid-template-rows: 110px 100px auto 100px;
+  background-color: #e8e8e8;
 }
 
 .team-wrapper .team-title {
@@ -590,73 +586,77 @@ body > * {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
   justify-content: space-between;
-  grid-row: 3 / 4;
+  grid-row: 3;
+}
+
+.team-wrapper .team .associate {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
   height: 382px;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.5s;
 }
 
-.team-wrapper .team img {
-  width: 50%;
+.team-wrapper .team .associate .social {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 50px;
+  margin-bottom: auto;
+  padding: 10px;
+  height: 140px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
 }
 
-.team-wrapper .team .description-travel .name {
+.team-wrapper .team .associate .social i {
+  cursor: pointer;
+}
+
+.team-wrapper .team .associate .position {
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: orange;
+  line-height: 22px;
+  padding: 0 20px;
+}
+
+.team-wrapper .team .associate .name {
   font-family: sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 22px;
-  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.4);
   text-transform: capitalize;
-  padding: 0 20px;
-}
-
-.team-wrapper .team .description-travel span {
-  font-size: 1rem;
-  line-height: 22px;
-  text-transform: none;
-}
-
-.team-wrapper .team .price {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 62px;
+  padding: 20px;
   color: #ffffff;
 }
 
-.team-wrapper .team .price .old-price {
-  font-family: sans-serif;
-  font-size: 1.125rem;
-  text-decoration: line-through;
+.team-wrapper .team .sed {
+  background-image: url("../img/sed.jpg");
 }
 
-.team-wrapper .team .price .new-price {
-  font-family: sans-serif;
-  font-size: 1.4rem;
-  font-weight: bold;
+.team-wrapper .team .zoom {
+  background-image: url("../img/zoom.jpg");
 }
 
-.team-wrapper .team .carpathian, .team-wrapper .team .alps, .team-wrapper .team .pyrenees, .team-wrapper .team .rocky, .team-wrapper .team .kavkaz {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: 4px;
-  background-image: url("../img/carpathyan-bg.jpg");
-  background-size: cover;
+.team-wrapper .team .backend {
+  background-image: url("../img/jchan.jpg");
 }
 
-.team-wrapper .team .alps {
-  background-image: url("../img/alps-bg.jpg");
+.team-wrapper .team .design {
+  background-image: url("../img/eniston.jpg");
 }
 
-.team-wrapper .team .pyrenees {
-  background-image: url("../img/perenees-bg.jpg");
-}
-
-.team-wrapper .team .rocky {
-  background-image: url("../img/rocky-bg.jpg");
-}
-
-.team-wrapper .team .kavkaz {
-  background-image: url("../img/kavkaz-bg.jpg");
+.team-wrapper .team .seo {
+  background-image: url("../img/lourens.jpg");
 }
 
 .portfolio {
@@ -884,8 +884,9 @@ body > * {
   transition: 0.5s;
 }
 
-.feedback .contact .input:focus, .feedback .contact .textarea-wrapper:focus {
-  box-shadow: 0 0 2px 2px rgba(255, 165, 0, 0.5);
+.feedback .contact .input:focus {
+  border: 2px solid orange;
+  transition: 0.5s;
 }
 
 .feedback .contact .input::-webkit-input-placeholder, .feedback .contact textarea-wrapper::-webkit-input-placeholder {
