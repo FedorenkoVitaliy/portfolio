@@ -1,32 +1,19 @@
-@keyframes small-arrow {
+
+
+@keyframes arrow {
     0% {
         border-color: orange;
     }
-    
-    33% {
+
+    50% {
         border: none;
+    }
+
+    100% {
+        border-color: orange;
     }
 }
 
-@keyframes midlle-arrow {
-    33% {
-        border-color: orange;
-    }
-    
-    66% {
-        border: none;
-    }
-}
-
-@keyframes big-arrow  {
-    66% {
-        border-color: orange;
-    }
-    
-    99% {
-        border: none;
-    }
-}
 
 @keyframes border  {
     25% {
@@ -51,4 +38,10 @@
         border: 1px solid orange;
         transition: 1s;
     }
+}
+
+@keyframes socialColor {
+    30%{ color: white;}
+    50%{ color: $main-color;}
+    70%{ color: white;}
 }

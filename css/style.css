@@ -11,30 +11,15 @@
   src: url("../fonts/StrokeyBacon.ttf");
 }
 
-@keyframes small-arrow {
+@keyframes arrow {
   0% {
     border-color: orange;
   }
-  33% {
+  50% {
     border: none;
   }
-}
-
-@keyframes midlle-arrow {
-  33% {
+  100% {
     border-color: orange;
-  }
-  66% {
-    border: none;
-  }
-}
-
-@keyframes big-arrow {
-  66% {
-    border-color: orange;
-  }
-  99% {
-    border: none;
   }
 }
 
@@ -57,6 +42,18 @@
   100% {
     border: 1px solid orange;
     transition: 1s;
+  }
+}
+
+@keyframes socialColor {
+  30% {
+    color: white;
+  }
+  50% {
+    color: orange;
+  }
+  70% {
+    color: white;
   }
 }
 
@@ -121,6 +118,7 @@ body > * {
 
 .subheading:before {
   position: absolute;
+  top: 0;
   justify-self: center;
   content: url("../img/waves.png");
 }
@@ -139,10 +137,10 @@ body > * {
   padding: 0;
   margin: 0;
   z-index: 99;
-  animation: linear 2s big-arrow  infinite;
+  animation: arrow 2s linear 0.6s infinite;
 }
 
-.to-Top .midlle-arrow {
+.to-Top .middle-arrow {
   display: block;
   position: fixed;
   bottom: 12px;
@@ -156,7 +154,7 @@ body > * {
   padding: 0;
   margin: 0;
   z-index: 100;
-  animation: linear 2s midlle-arrow infinite;
+  animation: arrow 2s linear 0.3s infinite;
 }
 
 .to-Top .small-arrow {
@@ -173,7 +171,7 @@ body > * {
   padding: 0;
   margin: 0;
   z-index: 100;
-  animation: linear 2s small-arrow infinite;
+  animation: arrow 2s linear 0.1s infinite;
 }
 
 .to-Top .zzz {
@@ -430,7 +428,6 @@ body > * {
 .advantages {
   display: grid;
   grid-template-rows: 110px 75px auto 100px;
-  border: 1px solid black;
 }
 
 .advantages-title {
@@ -440,24 +437,81 @@ body > * {
 .advantages .quality-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 300px);
   grid-row: 3;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.4);
 }
 
-.advantages .quality-wrapper .quality--1, .advantages .quality-wrapper .quality--2 {
+.advantages .quality-wrapper .quality {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column: 1/span 2;
+}
+
+.advantages .quality-wrapper .quality .quality__description-block {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  align-items: start;
+  position: relative;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  color: #777777;
+  padding: 47px 40px;
+}
+
+.advantages .quality-wrapper .quality .quality__description-block .quality__epigraph {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: #16b5ef;
+  text-transform: uppercase;
+}
+
+.advantages .quality-wrapper .quality .quality__description-block .quality__title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.advantages .quality-wrapper .quality .quality__description-block .quality__description {
+  font-family: 'Myriad-Pro', sans-serif;
+  font-size: 1.375rem;
+}
+
+.advantages .quality-wrapper .quality .quality__description-block:after {
+  content: '';
+  position: absolute;
+  border: 20px solid transparent;
+}
+
+.advantages .quality-wrapper .quality--1 {
   grid-row: 1;
 }
 
-.advantages .quality-wrapper .quality--1 .quality__image, .advantages .quality-wrapper .quality--2 .quality__image {
+.advantages .quality-wrapper .quality--1 .quality__image {
   grid-column: 1;
-  background: url("../img/quality-img-1.jpg") center;
+  background: url("../img/technology.jpg") center;
+  background-size: cover;
+  transition: 0.5s;
 }
 
-.advantages .quality-wrapper .quality--1 .quality__description-block, .advantages .quality-wrapper .quality--2 .quality__description-block {
+.advantages .quality-wrapper .quality--1 .quality__image:hover {
+  background: url("../img/technology2.jpg") center;
+  background-size: cover;
+  transition: 0.5s;
+}
+
+.advantages .quality-wrapper .quality--1 .quality__description-block {
   grid-column: 2;
+}
+
+.advantages .quality-wrapper .quality--1 .quality__description-block:after {
+  left: -45px;
+  top: 70px;
+  border-right: 25px solid white;
 }
 
 .advantages .quality-wrapper .quality--2 {
@@ -466,7 +520,8 @@ body > * {
 
 .advantages .quality-wrapper .quality--2 .quality__image {
   grid-column: 2;
-  background: url("../img/quality-img-2.jpg") center;
+  background: url("../img/price.jpeg") left;
+  background-size: cover;
 }
 
 .advantages .quality-wrapper .quality--2 .quality__description-block {
@@ -474,8 +529,13 @@ body > * {
   grid-row: 1;
 }
 
+.advantages .quality-wrapper .quality--2 .quality__description-block:after {
+  right: -45px;
+  top: 70px;
+  border-left: 25px solid white;
+}
+
 .advantages .quality-wrapper .quality--3 {
-  display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   grid-column: 3;
@@ -485,7 +545,8 @@ body > * {
 .advantages .quality-wrapper .quality--3 .quality__image {
   grid-column: 1;
   grid-row: 1;
-  background: url("../img/quality-img-3.jpg") center;
+  background: url("../img/clean.jpg") center;
+  background-size: cover;
 }
 
 .advantages .quality-wrapper .quality--3 .quality__description-block {
@@ -493,36 +554,10 @@ body > * {
   grid-row: 2;
 }
 
-.advantages .quality-wrapper .quality__description-block {
-  display: grid;
-  grid-template-rows: auto auto auto;
-  align-items: start;
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.2rem;
-  color: #777777;
-  padding: 47px 40px;
-}
-
-.advantages .quality-wrapper .quality__description-block .quality__epigraph {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  color: #16b5ef;
-  text-transform: uppercase;
-}
-
-.advantages .quality-wrapper .quality__description-block .quality__title {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
-  font-weight: bold;
-  color: black;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-
-.advantages .quality-wrapper .quality__description-block .quality__description {
-  font-family: 'Myriad-Pro', sans-serif;
-  font-size: 1.375rem;
+.advantages .quality-wrapper .quality--3 .quality__description-block:after {
+  left: 70px;
+  top: -40px;
+  border-bottom: 25px solid white;
 }
 
 .tech-bar {
@@ -638,6 +673,18 @@ body > * {
   text-transform: capitalize;
   padding: 20px;
   color: #ffffff;
+}
+
+.team-wrapper .team .associate:hover i:nth-child(1) {
+  animation: socialColor 2s linear infinite;
+}
+
+.team-wrapper .team .associate:hover i:nth-child(2) {
+  animation: socialColor 2s linear 0.7s infinite;
+}
+
+.team-wrapper .team .associate:hover i:nth-child(3) {
+  animation: socialColor 2s linear 1.4s infinite;
 }
 
 .team-wrapper .team .sed {
@@ -852,6 +899,7 @@ body > * {
 .feedback {
   display: grid;
   grid-template-rows: 110px 70px auto 40px auto 100px;
+  grid-template-columns: 100%;
   justify-content: center;
   background: #e8e8e8;
 }
