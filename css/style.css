@@ -1,16 +1,9 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
-@import url("https://fonts.googleapis.com/css?family=Pacifico");
-@font-face {
-  font-family: "Myriad-Pro";
-  src: url("../fonts/Myriad-Pro-Regular.ttf");
-}
-
-@font-face {
-  font-family: "StrokeyBacon";
-  src: url("../fonts/StrokeyBacon.ttf");
-}
-
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url("https://fonts.googleapis.com/css?family=Audiowide");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 @keyframes arrow {
   0% {
     border-color: orange;
@@ -57,15 +50,20 @@
   }
 }
 
+html {
+  font-size: 14px;
+}
+
 body {
   margin: 0;
   padding: 0;
+  font-size: 1.2rem;
 }
 
 body * {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', Verdana, sans-serif;
   box-sizing: border-box;
 }
 
@@ -89,13 +87,13 @@ body > * {
   border: none;
   border-bottom: 10px solid #ad6e00;
   outline: none;
-  font-family: "Raleway";
-  font-size: 0.875rem;
-  font-weight: bold;
   background-color: orange;
   color: white;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.16rem;
 }
 
 .button:active, .header .nav-bar .button--header:active, .about-us-read-more:active {
@@ -108,11 +106,8 @@ body > * {
   align-items: flex-end;
   justify-content: center;
   position: relative;
+  color: #4f4b48;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.7rem;
-  font-weight: bold;
-  color: black;
   text-transform: uppercase;
 }
 
@@ -231,8 +226,7 @@ body > * {
 .header .nav-bar a {
   text-decoration: none;
   color: #f8f9fa;
-  font: bold 0.9rem "proxima nova", "Helvetica Neue", Helvetica, Arial, Sans-serif;
-  text-transform: uppercase;
+  font-size: 1.3rem;
 }
 
 .header .nav-bar .button--header {
@@ -259,10 +253,9 @@ body > * {
   grid-column: 1/span 3;
   grid-row: 1;
   color: white;
-  font-family: 'Pacifico', cursive;
-  font-size: 5rem;
-  font-weight: bold;
   text-transform: uppercase;
+  font-family: 'Audiowide', cursive;
+  font-size: 5rem;
   letter-spacing: 0.09em;
   line-height: 0.65;
 }
@@ -270,20 +263,18 @@ body > * {
 .header .header-content .heading-slogan {
   display: block;
   color: orange;
-  font-family: "Bringin";
-  font-size: 3rem;
-  font-weight: 400;
   letter-spacing: 0.01em;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 3.5rem;
   text-transform: none;
 }
 
 .header .header-content .description {
   grid-row: 3;
   grid-column: 1/span 2;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.7rem;
   color: white;
-  font-family: "Myriad Pro";
-  font-size: 2rem;
-  font-weight: normal;
 }
 
 .header .header-content .button, .header .header-content .nav-bar .button--header, .header .nav-bar .header-content .button--header, .header .header-content .about-us-read-more {
@@ -307,8 +298,6 @@ body > * {
 .header .call-back-form-header .contact-title, .header .close-form .contact-title {
   display: grid;
   height: 35px;
-  font-family: 'Myriad-Pro', sans-serif;
-  font-size: 2.25rem;
   color: orange;
   text-transform: uppercase;
   text-align: center;
@@ -319,8 +308,6 @@ body > * {
 .header .call-back-form-header .close-form, .header .close-form .close-form {
   display: grid;
   width: 30px;
-  font-family: "Myriad-Pro", sans-serif;
-  font-size: 30px;
   line-height: 16px;
   cursor: pointer;
   margin: 0;
@@ -383,8 +370,6 @@ body > * {
   display: grid;
   grid-column: 1 / span 2;
   grid-row: 2;
-  font-family: sans-serif;
-  font-size: 0.875rem;
   line-height: 26px;
   text-align: justify;
   color: #949494;
@@ -454,31 +439,19 @@ body > * {
   align-items: start;
   position: relative;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.2rem;
   color: #777777;
   padding: 47px 40px;
 }
 
 .advantages .quality-wrapper .quality .quality__description-block .quality__epigraph {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  color: #16b5ef;
+  color: orange;
   text-transform: uppercase;
 }
 
 .advantages .quality-wrapper .quality .quality__description-block .quality__title {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
-  font-weight: bold;
   color: black;
   letter-spacing: 0.13em;
   text-transform: uppercase;
-}
-
-.advantages .quality-wrapper .quality .quality__description-block .quality__description {
-  font-family: 'Myriad-Pro', sans-serif;
-  font-size: 1.375rem;
 }
 
 .advantages .quality-wrapper .quality .quality__description-block:after {
@@ -499,7 +472,7 @@ body > * {
 }
 
 .advantages .quality-wrapper .quality--1 .quality__image:hover {
-  background: url("../img/technology2.jpg") center;
+  background: url("../img/technology2.jpg") bottom;
   background-size: cover;
   transition: 0.5s;
 }
@@ -657,17 +630,12 @@ body > * {
 }
 
 .team-wrapper .team .associate .position {
-  font-family: sans-serif;
-  font-size: 1rem;
   color: orange;
   line-height: 22px;
   padding: 0 20px;
 }
 
 .team-wrapper .team .associate .name {
-  font-family: sans-serif;
-  font-size: 1.8rem;
-  font-weight: 400;
   line-height: 22px;
   background-color: rgba(0, 0, 0, 0.4);
   text-transform: capitalize;
@@ -857,21 +825,15 @@ body > * {
   display: grid;
   align-content: space-around;
   padding: 10px 20px;
-  font-family: 'Open Sans',sans-serif;
   color: white;
   background: url("../img/project-bg.jpg") #333333;
 }
 
 .portfolio .activeElem > .project-detailed .project-name {
-  font-family: "Bringin",'Pacifico', cursive;
-  font-weight: bold;
-  font-size: 30px;
   letter-spacing: 5px;
 }
 
 .portfolio .activeElem > .project-detailed .technology-heading {
-  font-size: 1.2rem;
-  color: orange;
   padding: 0;
   margin-bottom: 10px;
 }
@@ -884,7 +846,6 @@ body > * {
 
 .portfolio .activeElem > .project-detailed li {
   list-style-type: none;
-  font-size: 0.9rem;
   padding-left: 20px;
 }
 
@@ -892,7 +853,6 @@ body > * {
   text-transform: none;
   width: 140px;
   height: 30px;
-  font-size: 1rem;
   letter-spacing: 1px;
 }
 
@@ -978,8 +938,6 @@ body > * {
   border: 0;
   padding: 20px 20px;
   text-align: justify;
-  font-size: 16px;
-  font-family: Arial, sans-serif;
 }
 
 .feedback .contact .textarea-wrapper:before, .feedback .contact .textarea-wrapper:after {
@@ -1006,8 +964,6 @@ body > * {
   text-align: right;
   padding-right: 10px;
   color: #9c9c9c;
-  font-size: 16px;
-  font-family: Arial, sans-serif;
   opacity: 0;
   transition: opacity 1s ease;
 }
@@ -1073,8 +1029,6 @@ body > * {
   grid-column-gap: 15px;
   height: auto;
   padding: 0 15px;
-  font-family: 'Myriad-Pro', sans-serif;
-  font-size: 1.25rem;
   color: #bcbcbc;
 }
 
@@ -1088,17 +1042,12 @@ body > * {
   grid-row: 1;
   grid-column: 2;
   display: inline-block;
-  font-family: "Myriad Pro";
-  font-weight: bold;
-  font-size: 1.5rem;
   color: orange;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .feedback .reviews-block .activeReview .allReviews .review .author-position {
   grid-row: 2;
-  font-weight: normal;
-  font-size: 1.2rem;
   color: rgba(255, 165, 0, 0.7);
 }
 
@@ -1117,9 +1066,6 @@ body > * {
   justify-content: space-between;
   background-color: #292929;
   color: white;
-  font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 18px;
-  font-weight: bold;
 }
 
 .footer .footer__contact-name {
@@ -1141,7 +1087,6 @@ body > * {
   grid-column: 2;
   grid-row: 2;
   text-align: center;
-  font-weight: 400;
 }
 
 .footer .footer__contact-social {
@@ -1175,8 +1120,8 @@ body > * {
   display: grid;
   grid-column: 3;
   grid-row: 2;
-  font-weight: normal;
   text-align: center;
+  font-size: 1.3rem;
 }
 
 .footer .footer__development-name {
@@ -1184,6 +1129,8 @@ body > * {
   grid-row: 4/span 2;
   grid-column: 3;
   align-items: center;
+  font-family: 'Audiowide', cursive;
+  font-size: 1.2rem;
   text-align: center;
   text-transform: uppercase;
   border: 1px solid #3e3e3e;
@@ -1225,7 +1172,6 @@ body > * {
     padding: 0 50px;
   }
   .header .nav-bar a {
-    font-size: 1rem;
     text-transform: none;
   }
   .header .nav-bar .button--header {
@@ -1366,7 +1312,6 @@ body > * {
   .header .nav-bar .mini-menu-link li a {
     position: relative;
     left: -22px;
-    font: bold 0.9rem "proxima nova", "Helvetica Neue", "Arial", Sans-serif;
     color: #f8f9fa;
     text-decoration: none;
     text-transform: uppercase;
@@ -1382,15 +1327,6 @@ body > * {
   }
   .header .header-content {
     margin: 0 50px;
-  }
-  .header .header-content .heading {
-    font-size: 3.5rem;
-  }
-  .header .header-content .heading-slogan {
-    font-size: 2.3rem;
-  }
-  .header .header-content .description {
-    font-size: 1.2rem;
   }
   .hammer {
     top: 0;
@@ -1434,15 +1370,6 @@ body > * {
   }
   .portfolio .gallery-normal .header .header-content {
     margin: 0 50px;
-  }
-  .portfolio .gallery-normal .header .header-content .heading {
-    font-size: 3.5rem;
-  }
-  .portfolio .gallery-normal .header .header-content .heading-slogan {
-    font-size: 2.3rem;
-  }
-  .portfolio .gallery-normal .header .header-content .description {
-    font-size: 1.2rem;
   }
   .portfolio .gallery-normal .hammer {
     top: 0;
@@ -1513,14 +1440,12 @@ body > * {
   }
   .portfolio .gallery-detailed .activeElem .project-detailed li {
     list-style-type: none;
-    font-size: 0.9rem;
     padding-left: 20px;
   }
   .portfolio .gallery-detailed .activeElem .project-detailed .button, .portfolio .gallery-detailed .activeElem .project-detailed .header .nav-bar .button--header, .header .nav-bar .portfolio .gallery-detailed .activeElem .project-detailed .button--header, .portfolio .gallery-detailed .activeElem .project-detailed .about-us-read-more {
     text-transform: none;
     width: 140px;
     height: 30px;
-    font-size: 1rem;
     letter-spacing: 1px;
   }
   .feedback .contact {
@@ -1721,14 +1646,7 @@ body > * {
     margin: 0 20px;
   }
   .header .header-content .heading {
-    font-size: 2.5rem;
     text-align: center;
-  }
-  .header .header-content .heading-slogan {
-    font-size: 1.5rem;
-  }
-  .header .header-content .description {
-    font-size: 1rem;
   }
   .about-us {
     display: grid;
@@ -1814,9 +1732,6 @@ body > * {
     margin: 0 10px;
     padding: 30px 10px;
   }
-  .header .header-content .heading {
-    font-size: 2rem;
-  }
   .header .header-content .button, .header .header-content .nav-bar .button--header, .header .nav-bar .header-content .button--header, .header .header-content .about-us-read-more {
     width: 200px;
   }
@@ -1833,12 +1748,10 @@ body > * {
   .portfolio .gallery-detailed .activeElem .project-detailed .project-name {
     grid-column: 1;
     grid-row: 1;
-    font-size: 22px;
   }
   .portfolio .gallery-detailed .activeElem .project-detailed .project-description {
     grid-column: 1;
     grid-row: 2;
-    font-size: 13px;
   }
   .portfolio .gallery-detailed .activeElem .project-detailed .technology-heading {
     grid-column: 1;

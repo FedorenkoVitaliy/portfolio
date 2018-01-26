@@ -1,26 +1,5 @@
-@font-face{
-    font-family:Montserrat;
-    src: url(../fonts/Montserrat-Bold.otf);
-    font-weight:700;
-}
-@font-face{
-    font-family:Montserrat;
-    src: url(../fonts/Montserrat-ExtraBold.otf);
-    font-weight:900;
-
-}
-@font-face{
-    font-family:Montserrat;
-    src: url(../fonts/Montserrat-light.otf);
-    font-weight:300;
-}
-@font-face{
-    font-family:Montserrat;
-    src: url(../fonts/Montserrat-Regular.otf);
-    font-weight:400;
-}
-@font-face{
-    font-family:Montserrat;
-    src: url(../fonts/Montserrat-SemiBold.otf);
-    font-weight:600;
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&subset=cyrillic');//openSans
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+@import url('https://fonts.googleapis.com/css?family=Roboto');

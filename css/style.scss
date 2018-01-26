@@ -1,33 +1,31 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-@import url('https://fonts.googleapis.com/css?family=Pacifico');
-
-@font-face{
-font-family: "Myriad-Pro";
-src : url("../fonts/Myriad-Pro-Regular.ttf");
-}
-
-@font-face{
-    font-family: "StrokeyBacon";
-    src : url("../fonts/StrokeyBacon.ttf");
-}
-
+//main style
 $main-big-indent:0 80px;
 $main-middle-indent:0 50px;
 $main-small-indent:0 20px;
 $main-color: orange;
 
+//import
 @import 'keyframes';
+@import 'fonts';
+
+
+
+html{
+    font-size: 14px;
+}
 
 body {
     margin: 0;
     padding: 0;
+    font-size: 1.2rem;
 }
 
 body * {
-     margin: 0;
-     padding: 0;
-     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Verdana, sans-serif;
     box-sizing: border-box;
+
  }
 
 body>*{
@@ -56,13 +54,13 @@ body>*{
     border-bottom: 10px solid #ad6e00;
     outline: none;
 
-    font-family:"Raleway";
-    font-size: 0.875rem;
-    font-weight: bold;
     background-color: $main-color;
     color:white;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.16rem;
 
     &:active {
         box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.7);
@@ -75,11 +73,9 @@ body>*{
     align-items: flex-end;
     justify-content: center;
     position: relative;
+
+    color: #4f4b48;
     text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-size:1.7rem;
-    font-weight: bold;
-    color:black;
     text-transform: uppercase;
 }
 
@@ -101,7 +97,7 @@ body>*{
         right: 10px;
         width: 31px;
         height: 31px;
-         transform: rotate(45deg);
+        transform: rotate(45deg);
         border: 3px solid orange;
         border-right: none;
         border-bottom: none;
@@ -210,8 +206,8 @@ body>*{
         a{
             text-decoration: none;
             color:#f8f9fa;
-            font:bold 0.9rem "proxima nova", "Helvetica Neue", Helvetica, Arial, Sans-serif;
-            text-transform: uppercase;
+            font-size: 1.3rem;
+           /// text-transform: uppercase;
         }
 
         .button--header{
@@ -241,10 +237,9 @@ body>*{
             grid-row: 1;
 
             color:white;
-            font-family: 'Pacifico', cursive;
-            font-size: 5rem;
-            font-weight: bold;
             text-transform: uppercase;
+            font-family: 'Audiowide', cursive;
+            font-size: 5rem;
             letter-spacing: 0.09em;
             line-height: 0.65;
 
@@ -252,10 +247,9 @@ body>*{
                 display:block;
 
                 color:$main-color;
-                font-family:"Bringin";
-                font-size:3rem;
-                font-weight: 400;
                 letter-spacing: 0.01em;
+                font-family: 'Kaushan Script', cursive;
+                font-size: 3.5rem;
                 text-transform: none;
             }
         }
@@ -263,10 +257,10 @@ body>*{
         .description{
             grid-row: 3;
             grid-column: 1/span 2;
+
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.7rem;
             color:white;
-            font-family:"Myriad Pro";
-            font-size:2rem;
-            font-weight: normal;
         }
 
         .button{
@@ -291,10 +285,8 @@ body>*{
 
         .contact-title{
             display: grid;
-//            order: 1;
             height: 35px;
-            font-family: 'Myriad-Pro', sans-serif;
-            font-size: 2.25rem;
+
             color:$main-color;
             text-transform: uppercase;
             text-align: center;
@@ -304,10 +296,8 @@ body>*{
 
         .close-form {
             display: grid;
-//            justify-self: flex-end;
+
             width: 30px;
-            font-family: "Myriad-Pro", sans-serif;
-            font-size: 30px;
             line-height: 16px;
             cursor: pointer;
             margin: 0;
@@ -315,9 +305,7 @@ body>*{
             padding: 0;
             margin-top: 15px;
             margin-left: 30px;
-           // order: 2;
-//            animation: mymove 5s infinite;
-//
+
             &:hover {
                 transform: rotate(360deg);
                 transition: 1s;
@@ -375,8 +363,6 @@ body>*{
         grid-column: 1 / span 2;
         grid-row: 2;
 
-        font-family: sans-serif;
-        font-size: 0.875rem;
         line-height: 26px;
         text-align: justify;
         color: #949494;
@@ -455,30 +441,18 @@ body>*{
                 position: relative;
 
                 text-align: center;
-                font-family: 'Open Sans', sans-serif;
-                font-size: 1.2rem;
                 color: #777777;
                 padding: 47px 40px;
 
                 .quality__epigraph {
-                    font-family: 'Open Sans', sans-serif;
-                    font-weight: bold;
-                    color: #16b5ef;
+                    color: $main-color;
                     text-transform: uppercase;
                 }
 
                 .quality__title {
-                    font-family: 'Open Sans', sans-serif;
-                    font-size: 1rem;
-                    font-weight: bold;
                     color: black;
                     letter-spacing: 0.13em;;
                     text-transform: uppercase;
-                }
-
-                .quality__description {
-                    font-family: 'Myriad-Pro', sans-serif;
-                    font-size: 1.375rem;
                 }
             }
 
@@ -500,7 +474,7 @@ body>*{
         }
 
         .quality__image:hover{
-            background: url("../img/technology2.jpg") center;
+            background: url("../img/technology2.jpg") bottom;
             background-size: cover;
             transition:0.5s;
         }
@@ -631,8 +605,6 @@ body>*{
     //
     //    .skillbar {
     //        display: grid;
-    //        font-family: 'Open Sans', sans-serif;
-    //        font-size:1.2rem;
     //        text-align: center;
     //        position: relative;
     //        margin-bottom: 15px;
@@ -652,8 +624,6 @@ body>*{
     //            position: absolute;
     //            top: 0;
     //            left: 0;
-    //            font-size: 13px;
-    //            font-weight: bold;
     //            color: #fff;
     //            padding: 0 20px;
     //            margin: 0;
@@ -733,17 +703,12 @@ body>*{
             }
 
             .position {
-                font-family: sans-serif;
-                font-size: 1rem;
                 color: $main-color;
                 line-height: 22px;
                 padding: 0 20px;
             }
 
             .name {
-                font-family: sans-serif;
-                font-size: 1.8rem;
-                font-weight: 400;
                 line-height: 22px;
                 background-color: rgba(0, 0, 0, 0.4);
                 text-transform: capitalize;
@@ -946,20 +911,14 @@ body>*{
             align-content: space-around;
             padding:10px 20px;
 
-            font-family:'Open Sans',sans-serif;
             color:white;
             background: url("../img/project-bg.jpg") #333333;
 
             .project-name{
-                font-family:"Bringin",'Pacifico', cursive;
-                font-weight: bold;
-                font-size:30px;
                 letter-spacing: 5px;
             }
 
             .technology-heading{
-                font-size: 1.2rem;
-                color:$main-color;
                 padding:0;
                 margin-bottom: 10px;
             }
@@ -972,7 +931,6 @@ body>*{
 
             li{
                 list-style-type: none;
-                font-size: 0.9rem;
                 padding-left: 20px;
             }
 
@@ -980,7 +938,6 @@ body>*{
                 text-transform: none;
                 width: 140px;
                 height: 30px;
-                font-size: 1rem;
                 letter-spacing: 1px;
             }
         }
@@ -1066,8 +1023,6 @@ body>*{
                 border:0;
                 padding:20px 20px;
                 text-align: justify;
-                font-size: 16px;
-                font-family: Arial, sans-serif;
             }
 
             &:before, &:after {
@@ -1095,8 +1050,6 @@ body>*{
             text-align: right;
             padding-right: 10px;
             color: rgb(156, 156, 156);
-            font-size: 16px;
-            font-family: Arial, sans-serif;
             opacity: 0;
             transition: opacity 1s ease;
         }
@@ -1167,8 +1120,6 @@ body>*{
 
                     height: auto;
                     padding: 0 15px;
-                    font-family: 'Myriad-Pro', sans-serif;
-                    font-size: 1.25rem;
                     color: #bcbcbc;
 
                     .avatar {
@@ -1183,9 +1134,7 @@ body>*{
                         grid-column: 2;
 
                         display: inline-block;
-                        font-family: "Myriad Pro";
-                        font-weight: bold;
-                        font-size: 1.5rem;
+
                         color: $main-color;
                         text-shadow: 1px 1px 2px rgba(0,0,0,0.2)
                     }
@@ -1193,8 +1142,6 @@ body>*{
                     .author-position{
                         @extend .author-name;
                         grid-row: 2;
-                        font-weight: normal;
-                        font-size: 1.2rem;
                         color: rgba(265, 165, 0, 0.7);
                         ;
                     }
@@ -1225,9 +1172,6 @@ body>*{
 
     background-color: #292929;
     color:white;
-    font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 18px;
-    font-weight: bold;
 
     .footer__contact-name{
         grid-column: 1;
@@ -1249,7 +1193,6 @@ body>*{
         grid-row:2;
 
         text-align: center;
-        font-weight: 400;
     }
 
     .footer__contact-social{
@@ -1283,8 +1226,9 @@ body>*{
         display: grid;
         grid-column: 3;
         grid-row: 2;
-        font-weight: normal;
         text-align: center;
+
+        font-size:  1.3rem;
     }
 
     .footer__development-name{
@@ -1293,6 +1237,8 @@ body>*{
         grid-column: 3;
         align-items: center;
 
+        font-family: 'Audiowide', cursive;
+        font-size: 1.2rem;
         text-align: center;
         text-transform: uppercase;
         border: 1px solid #3e3e3e;
@@ -1323,6 +1269,7 @@ body>*{
 //media-queries
 
 @media screen and(max-width: 1365px){
+
     body>*{
         padding:$main-middle-indent;
     }
@@ -1359,6 +1306,7 @@ body>*{
 }
 
 @media screen   and(max-width: 1024px){
+
     body>*{
         padding:$main-middle-indent;
     }
@@ -1369,7 +1317,6 @@ body>*{
             padding: $main-middle-indent;
 
             a {
-                font-size: 1rem;
                 text-transform: none;
             }
 
@@ -1549,7 +1496,6 @@ body>*{
                     a {
                         position:relative;
                         left: -22px;
-                        font: bold 0.9rem "proxima nova", "Helvetica Neue", "Arial", Sans-serif;
                         color:#f8f9fa;
                         text-decoration: none;
                         text-transform: uppercase;
@@ -1572,18 +1518,6 @@ body>*{
 
     .header .header-content{
         margin: $main-middle-indent;
-
-        .heading{
-            font-size: 3.5rem;
-        }
-
-        .heading-slogan{
-            font-size: 2.3rem;
-        }
-
-        .description{
-            font-size: 1.2rem;
-        }
     }
 
     .hammer{
@@ -1635,18 +1569,6 @@ body>*{
 
             .header .header-content {
                 margin: $main-middle-indent;
-
-                .heading {
-                    font-size: 3.5rem;
-                }
-
-                .heading-slogan {
-                    font-size: 2.3rem;
-                }
-
-                .description {
-                    font-size: 1.2rem;
-                }
             }
 
             .hammer {
@@ -1736,7 +1658,6 @@ body>*{
 
                     li {
                         list-style-type: none;
-                        font-size: 0.9rem;
                         padding-left: 20px;
                     }
 
@@ -1744,7 +1665,6 @@ body>*{
                         text-transform: none;
                         width: 140px;
                         height: 30px;
-                        font-size: 1rem;
                         letter-spacing: 1px;
                     }
                 }
@@ -1997,16 +1917,7 @@ body>*{
             margin: 0 20px;
 
             .heading {
-                font-size: 2.5rem;
                 text-align: center;
-            }
-
-            .heading-slogan {
-                font-size: 1.5rem;
-            }
-
-            .description {
-                font-size: 1rem;
             }
         }
     }
@@ -2112,9 +2023,6 @@ body>*{
         .header-content {
             margin:0 10px;
             padding: 30px 10px;
-            .heading {
-                font-size: 2rem;
-            }
             .button{
                 width: 200px;
             }
@@ -2135,14 +2043,10 @@ body>*{
             .project-name {
                 grid-column: 1;
                 grid-row: 1;
-
-                font-size: 22px;
             }
             .project-description {
                 grid-column: 1;
                 grid-row: 2;
-
-                font-size: 13px;
             }
             .technology-heading {
                 grid-column: 1;

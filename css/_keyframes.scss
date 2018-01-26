@@ -2,7 +2,7 @@
 
 @keyframes arrow {
     0% {
-        border-color: orange;
+        border-color: $main-color;
     }
 
     50% {
@@ -10,7 +10,7 @@
     }
 
     100% {
-        border-color: orange;
+        border-color: $main-color;
     }
 }
 
