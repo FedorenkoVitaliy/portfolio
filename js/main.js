@@ -70,7 +70,7 @@ $(document).ready(function () {
 
     $(".arrow-up").click(function(){
         iteration--;
-        if(iteration<0){
+        if(iteration<  0){
             $(".allReviews").css("top", -reviewHeight*10);
             iteration=$(".review").length-2;
         }
@@ -111,5 +111,10 @@ $(document).ready(function () {
             $(".allReviews").css("left", -reviewWidth*iteration);
         }
     });
-
+    if($(window).width() < 600) {
+        $('.quality__description-block').slideUp();
+        $('.quality').click(function(){
+            $(this).find($('.quality__description-block')).slideToggle();
+        });
+    }
 });
