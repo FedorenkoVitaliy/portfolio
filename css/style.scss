@@ -56,6 +56,7 @@ body>*{
 
     background-color: $main-color;
     color:white;
+
     font-family: 'Alegreya Sans', sans-serif;
     font-size: 1.2rem;
     font-weight: bold;
@@ -363,6 +364,7 @@ body>*{
         grid-column: 1 / span 2;
         grid-row: 2;
 
+        font-size: 1rem;
         line-height: 26px;
         text-align: justify;
         color: #949494;
@@ -427,6 +429,8 @@ body>*{
         grid-template-rows: repeat(2, 300px);
         grid-row: 3;
 
+        max-width: 1200px;
+        margin:auto ;
         box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.4);
 
         .quality {
@@ -446,13 +450,19 @@ body>*{
 
                 .quality__epigraph {
                     color: $main-color;
-                    text-transform: uppercase;
+                    font-family: 'Kaushan Script', cursive;
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
                 }
 
                 .quality__title {
-                    color: black;
-                    letter-spacing: 0.13em;;
+                    color: #4f4b48;
+                    font-family: 'Open Sans', Verdana, sans-serif;
+                    font-weight: bold;
+                    font-size: 1.3rem;
                     text-transform: uppercase;
+
                 }
             }
 
@@ -463,78 +473,105 @@ body>*{
             }
         }
 
-    .quality--1 {
-        grid-row: 1;
-
-        .quality__image {
-            grid-column: 1;
-            background: url("../img/technology.jpg") center;
-            background-size: cover;
-            transition:0.5s;
-        }
-
-        .quality__image:hover{
-            background: url("../img/technology2.jpg") bottom;
-            background-size: cover;
-            transition:0.5s;
-        }
-
-        .quality__description-block {
-            grid-column: 2;
-        }
-
-        .quality__description-block:after {
-            left: -45px;
-            top: 70px;
-            border-right: 25px solid white;
-        }
-    }
-
-    .quality--2 {
-        grid-row: 2;
-
-        .quality__image {
-            grid-column: 2;
-            background: url("../img/price.jpeg") left;
-            background-size: cover;
-        }
-
-        .quality__description-block {
-            grid-column: 1;
+        .quality--1 {
             grid-row: 1;
+
+            .quality__image {
+                grid-column: 1;
+                background: url("../img/price.jpg");
+                animation-name: moveLeft;
+                animation-duration: 300ms;
+                animation-play-state: paused;
+                animation-fill-mode: both;
+
+            }
+
+            .quality__description-block {
+                grid-column: 2;
+            }
+
+            .quality__description-block:after {
+                left: -45px;
+                top: 70px;
+                border-right: 25px solid white;
+            }
         }
 
-        .quality__description-block:after {
-            right: -45px;
-            top: 70px;
-            border-left: 25px solid white;
-        }
-    }
-
-    .quality--3 {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-column: 3;
-        grid-row: 1/span 2;
-
-        .quality__image {
-            grid-column: 1;
-            grid-row: 1;
-            background: url("../img/clean.jpg") center;
-            background-size: cover;
+        .quality--1:hover > .quality__image{
+            animation-name: moveLeft;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both;
+            animation-play-state: running;
         }
 
-        .quality__description-block {
-            grid-column: 1;
+        .quality--2 {
             grid-row: 2;
+
+            .quality__image {
+                grid-column: 2;
+                background: url("../img/technology.jpg") right;
+                animation-name: technoMove;
+                animation-fill-mode: forwards;
+                animation-duration: 300ms;
+                animation-play-state: paused;
+            }
+
+            .quality__description-block {
+                grid-column: 1;
+                grid-row: 1;
+            }
+
+            .quality__description-block:after {
+                right: -45px;
+                top: 70px;
+                border-left: 25px solid white;
+            }
+        }
+        .quality--2:hover > .quality__image{
+            animation-name: technoMove;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+            animation-play-state: running;
         }
 
-        .quality__description-block:after {
-            left: 70px;
-            top: -40px;
-            border-bottom: 25px solid white;
+        .quality--3 {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-column: 3;
+            grid-row: 1/span 2;
+
+            .quality__image {
+                grid-column: 1;
+                grid-row: 1;
+                background-image:  radial-gradient(farthest-corner at 10% 100%,black 40%, black 40%, black 40%), url("../img/clean.jpg");
+                background-position:center;
+                background-size: 125%;
+                animation-name: searchCode;
+                animation-duration: 300ms;
+                animation-fill-mode: forwards;
+                animation-play-state: paused;
+            }
+
+            .quality__description-block {
+                grid-column: 1;
+                grid-row: 2;
+            }
+
+            .quality__description-block:after {
+                left: 70px;
+                top: -40px;
+                border-bottom: 25px solid white;
+            }
         }
-    }
+        .quality--3:hover > .quality__image{
+            animation-name: searchCode;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+            animation-play-state: running;
+        }
     }
 }
 
@@ -1302,6 +1339,10 @@ body>*{
             grid-row: 3 / 5;
             //border-radius: 50%;
         }
+    }
+
+    .quality__description{
+        font-size: 1.1rem;
     }
 }
 
