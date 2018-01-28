@@ -505,7 +505,7 @@ body>*{
             animation-name: moveLeft;
             animation-duration: 2s;
             animation-timing-function: ease-in-out;
-            animation-fill-mode: both;
+            animation-fill-mode: forwards;
             animation-play-state: running;
         }
 
@@ -516,7 +516,7 @@ body>*{
                 grid-column: 2;
                 background: url("../img/technology.jpg") right;
                 animation-name: technoMove;
-                animation-fill-mode: forwards;
+                animation-fill-mode: both;
                 animation-duration: 300ms;
                 animation-play-state: paused;
             }

@@ -61,7 +61,7 @@
 
 @keyframes searchCode {
   0% {
-    background-image: radial-gradient(farthest-corner at 10% 100%, black 40%, black 40%, black 40%), url("../img/clean.jpg");
+    background-image: radial-gradient(farthest-corner at 10% 100%, black 40%, black 40%, black 40%);
   }
   15% {
     background-image: radial-gradient(farthest-corner at 10% 10%, rgba(255, 255, 255, 0.5) 0%, transparent 20%, black 40%), url("../img/clean.jpg");
@@ -79,7 +79,7 @@
     background-image: radial-gradient(farthest-corner at 50% 50%, rgba(255, 255, 255, 0.5) 0%, transparent 20%, black 40%), url("../img/clean.jpg");
   }
   100% {
-    background-image: radial-gradient(farthest-corner at 50% 50%, transparent 20%, transparent 20%, transparent 40%), url("../img/clean.jpg");
+    background-image: radial-gradient(farthest-corner at 50% 50%, rgba(255, 255, 255, 0.5) 0%, transparent 20%, black 60%), url("../img/clean.jpg");
   }
 }
 
@@ -90,7 +90,7 @@
   }
   100% {
     background: url("../img/technology2.jpg") right;
-    background-size: 150%;
+    background-size: cover;
   }
 }
 
@@ -542,7 +542,7 @@ body > * {
   animation-name: moveLeft;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
-  animation-fill-mode: both;
+  animation-fill-mode: forwards;
   animation-play-state: running;
 }
 
@@ -554,7 +554,7 @@ body > * {
   grid-column: 2;
   background: url("../img/technology.jpg") right;
   animation-name: technoMove;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
   animation-duration: 300ms;
   animation-play-state: paused;
 }
@@ -720,7 +720,7 @@ body > * {
   font-weight: bold;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   text-align: right;
-  padding-right: 10px;
+  padding-right: 5px;
 }
 
 .team-wrapper .team .associate .name {
