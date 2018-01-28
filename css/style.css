@@ -471,9 +471,9 @@ body > * {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 300px);
+  justify-self: center;
   grid-row: 3;
   max-width: 1200px;
-  margin: auto;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.4);
 }
 
@@ -481,6 +481,10 @@ body > * {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column: 1/span 2;
+}
+
+.advantages .quality-wrapper .quality i {
+  display: none;
 }
 
 .advantages .quality-wrapper .quality .quality__description-block {
@@ -512,7 +516,7 @@ body > * {
 .advantages .quality-wrapper .quality .quality__description-block:after {
   content: '';
   position: absolute;
-  border: 20px solid transparent;
+  border: 25px solid transparent;
 }
 
 .advantages .quality-wrapper .quality--1 {
@@ -533,17 +537,9 @@ body > * {
 }
 
 .advantages .quality-wrapper .quality--1 .quality__description-block:after {
-  left: -45px;
+  left: -50px;
   top: 70px;
   border-right: 25px solid white;
-}
-
-.advantages .quality-wrapper .quality--1:hover > .quality__image {
-  animation-name: moveLeft;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-play-state: running;
 }
 
 .advantages .quality-wrapper .quality--2 {
@@ -565,17 +561,9 @@ body > * {
 }
 
 .advantages .quality-wrapper .quality--2 .quality__description-block:after {
-  right: -45px;
+  right: -50px;
   top: 70px;
   border-left: 25px solid white;
-}
-
-.advantages .quality-wrapper .quality--2:hover > .quality__image {
-  animation-name: technoMove;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-  animation-play-state: running;
 }
 
 .advantages .quality-wrapper .quality--3 {
@@ -604,16 +592,8 @@ body > * {
 
 .advantages .quality-wrapper .quality--3 .quality__description-block:after {
   left: 70px;
-  top: -40px;
+  top: -50px;
   border-bottom: 25px solid white;
-}
-
-.advantages .quality-wrapper .quality--3:hover > .quality__image {
-  animation-name: searchCode;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-  animation-play-state: running;
 }
 
 .tech-bar {
@@ -1458,6 +1438,49 @@ body > * {
     transform: rotate(130deg);
     transition: 1s;
   }
+  .advantages .quality-wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 300px);
+  }
+  .advantages .quality-wrapper .quality--2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column: 1;
+    grid-row: 2/span 3;
+  }
+  .advantages .quality-wrapper .quality--2 .quality__image {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .advantages .quality-wrapper .quality--2 .quality__description-block {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .advantages .quality-wrapper .quality--2 .quality__description-block:after {
+    right: 50px;
+    top: 300px;
+    border: 25px solid transparent;
+    border-top: 25px solid white;
+  }
+  .advantages .quality-wrapper .quality--3 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column: 2;
+    grid-row: 2/span 3;
+  }
+  .advantages .quality-wrapper .quality--3 .quality__image {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .advantages .quality-wrapper .quality--3 .quality__description-block {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .advantages .quality-wrapper .quality--3 .quality__description-block:after {
+    left: 50px;
+    top: -50px;
+    border-bottom: 25px solid white;
+  }
   .team-wrapper .team {
     justify-content: space-between;
   }
@@ -1603,8 +1626,17 @@ body > * {
 }
 
 @media screen and (max-width: 768px) {
-  .logo-description {
-    height: 70px;
+  body > * {
+    padding: 0 30px;
+  }
+  .header .logo-description {
+    height: 3.5rem;
+  }
+  .header .header-content .heading {
+    font-size: 4rem;
+  }
+  .header .header-content .heading .heading-slogan {
+    font-size: 2.5rem;
   }
   .about-us {
     display: grid;
@@ -1739,6 +1771,30 @@ body > * {
   }
 }
 
+@media screen and (min-width: 600px) {
+  .advantages:hover .quality--1 > .quality__image {
+    animation-name: moveLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+  .advantages:hover .quality--2 > .quality__image {
+    animation-name: technoMove;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+  .advantages:hover .quality--3 > .quality__image {
+    animation-name: searchCode;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+}
+
 @media screen and (max-width: 600px) {
   body > * {
     padding: 0 20px;
@@ -1750,18 +1806,24 @@ body > * {
     grid-template-rows: 80px 120px 450px 100px;
   }
   .header .nav-bar {
-    padding: 0 20px;
+    padding: 0 10px;
     grid-column-gap: 10px;
   }
   .header .nav-bar .button--header {
-    width: 100px;
+    width: 90px;
   }
   .header .header-content {
     grid-template-rows: 2fr 1fr 5fr 1fr 1fr;
     margin: 0 20px;
   }
   .header .header-content .heading {
-    text-align: center;
+    font-size: 3rem;
+  }
+  .header .header-content .heading .heading-slogan {
+    font-size: 2rem;
+  }
+  .header .header-content .description {
+    font-size: 1.4rem;
   }
   .header-small {
     grid-template-rows: 80px 250px 400px 20px;
@@ -1786,8 +1848,112 @@ body > * {
   .about-us .big-photo {
     display: none;
   }
+  .advantages {
+    grid-template-columns: auto;
+    grid-template-rows: 110px 30px auto 100px;
+    justify-content: center;
+  }
+  .advantages .quality-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-row-gap: 40px;
+    box-shadow: none;
+  }
+  .advantages .quality-wrapper .quality {
+    grid-template-rows: 200px auto;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+  }
+  .advantages .quality-wrapper .quality .quality__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 165, 0, 0.8);
+    height: 200px;
+    width: 90vw;
+    border-radius: 10px;
+  }
+  .advantages .quality-wrapper .quality .quality__image i {
+    display: block;
+  }
+  .advantages .quality-wrapper .quality .quality__image:hover > i {
+    display: none;
+  }
+  .advantages .quality-wrapper .quality--1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .advantages .quality-wrapper .quality--1 .quality__image {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .advantages .quality-wrapper .quality--1 .quality__image:hover {
+    animation-name: moveLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+  .advantages .quality-wrapper .quality--1 .quality__description-block {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .advantages .quality-wrapper .quality--1 .quality__description-block:after {
+    display: none;
+  }
+  .advantages .quality-wrapper .quality--2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .advantages .quality-wrapper .quality--2 .quality__image {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .advantages .quality-wrapper .quality--2 .quality__image:hover {
+    animation-name: technoMove;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+  .advantages .quality-wrapper .quality--2 .quality__description-block {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .advantages .quality-wrapper .quality--2 .quality__description-block:after {
+    display: none;
+  }
+  .advantages .quality-wrapper .quality--3 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .advantages .quality-wrapper .quality--3 .quality__image {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .advantages .quality-wrapper .quality--3 .quality__image:hover {
+    animation-name: searchCode;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+  .advantages .quality-wrapper .quality--3 .quality__description-block {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .advantages .quality-wrapper .quality--3 .quality__description-block:after {
+    display: none;
+  }
   .team-wrapper .team {
-    grid-template-columns: 370px;
+    grid-template-columns: 350px;
     justify-content: center;
   }
   .team-wrapper .team .associate {
