@@ -70,8 +70,8 @@ $(document).ready(function () {
 
     $(".arrow-up").click(function(){
         iteration--;
-        if(iteration<  0){
-            $(".allReviews").css("top", -reviewHeight*10);
+        if(iteration<0){
+            $(".allReviews").css("top", -reviewHeight*($(".review").length-2));
             iteration=$(".review").length-2;
         }
         else{
@@ -81,7 +81,7 @@ $(document).ready(function () {
 
     $(".arrow-down").click(function(){
         iteration++;
-        if( iteration==$(".review").length-2){
+        if( iteration>($(".review").length-2)){
             $(".allReviews").css("top", 0);
             iteration=0;
         }
@@ -93,7 +93,7 @@ $(document).ready(function () {
     $(".arrow-left").click(function(){
         iteration--;
         if(iteration<0){
-            $(".allReviews").css("left", -reviewWidth*(10));
+            $(".allReviews").css("left", -reviewWidth*($(".review").length-2));
             iteration=$(".review").length-2;
         }
         else{
