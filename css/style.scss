@@ -1985,8 +1985,8 @@ body>*{
 
     .footer {
         grid-template-columns: 1fr;
-        grid-template-rows: 35px 20px 45px 50px 100px 20px 50px  50px;
-        grid-row-gap: 25px;
+        grid-template-rows: 35px 20px 20px 50px 100px 20px 50px  50px;
+        grid-row-gap: 10px;
         justify-content: center;
         text-align: center;
 
@@ -2001,8 +2001,12 @@ body>*{
         }
 
         .footer__contact-phone{
+            display:flex;
+            align-items: center;
+            justify-content: center;
             grid-column: 1;
             grid-row: 4;
+
         }
 
         .footer__friendly{
@@ -2142,6 +2146,7 @@ body>*{
                     height: 200px;
                     width: 90vw;
                     border-radius: 10px;
+                    cursor: pointer;
 
                     i{
                         display:block;

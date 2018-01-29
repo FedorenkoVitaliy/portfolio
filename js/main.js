@@ -81,7 +81,7 @@ $(document).ready(function () {
 
     $(".arrow-down").click(function(){
         iteration++;
-        if( iteration==$(".review").length-2){
+        if( iteration>($(".review").length-2)){
             $(".allReviews").css("top", 0);
             iteration=0;
         }
