@@ -130,6 +130,7 @@ body > * {
   height: 60px;
   width: 253px;
   border-radius: 2px;
+  border: 3 px solid orange;
   border: none;
   border-bottom: 10px solid #ad6e00;
   outline: none;
@@ -376,7 +377,6 @@ body > * {
 }
 
 .header .call-back-form-header .contact-send, .header .close-form .contact-send {
-  border-radius: 20px;
   width: 100%;
 }
 
@@ -1054,7 +1054,6 @@ body > * {
   grid-column: 2;
   grid-row: 5;
   justify-self: end;
-  border-radius: 20px;
   width: 200px;
 }
 
