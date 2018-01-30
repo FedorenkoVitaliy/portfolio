@@ -2041,5 +2041,12 @@ body>*{
             justify-content: center;
         }
     }
+    .portfolio {
+        &-gallery {
+            .examples {
+                width: 85%;
+            }
+        }
+    }
 }
 
