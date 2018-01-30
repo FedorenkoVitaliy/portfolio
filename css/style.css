@@ -673,6 +673,8 @@ body > * {
   height: 382px;
   box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.4);
   transition: 0.5s;
+  background-position: top;
+  background-size: cover;
 }
 
 .team-wrapper .team .associate .social {
@@ -794,142 +796,55 @@ body > * {
   background: orange;
 }
 
-.portfolio .portfolio-gallery {
-  grid-column: 3;
-  grid-row: 2;
-}
-
-.portfolio .portfolio-gallery > div {
-  width: 100%;
-  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5);
-}
-
-.portfolio .portfolio-gallery > div img {
-  width: 100%;
-  height: auto;
-}
-
-.portfolio .portfolio-gallery:hover > div {
-  box-shadow: 0 0 15px 1px black;
-  transition: 0.3s;
-}
-
-.portfolio .portfolio-gallery > div:hover {
-  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5);
-}
-
-.portfolio .gallery-normal {
+.portfolio-gallery {
   display: grid;
   grid-template-columns: repeat(3, 250fr);
   grid-template-rows: 200px 50px 200px;
+  grid-column: 3;
+  grid-row: 2;
   grid-gap: 50px;
   justify-content: space-around;
 }
 
-.portfolio .gallery-normal .icon-site {
+.portfolio-gallery .icon-site {
   height: 100%;
   overflow: hidden;
 }
 
-.portfolio .gallery-normal .showScroll {
+.portfolio-gallery .showScroll {
   overflow-y: scroll;
 }
 
-.portfolio .gallery-normal .project-detailed {
+.portfolio-gallery .project-detailed {
   display: none;
 }
 
-.portfolio .gallery-normal div:nth-child(odd) {
+.portfolio-gallery div:nth-child(odd) {
   grid-row: span 2;
 }
 
-.portfolio .gallery-normal div:nth-child(5) {
+.portfolio-gallery div:nth-child(5) {
   grid-column: 2;
   grid-row: 2/ span 2;
 }
 
-.portfolio .gallery-detailed {
-  display: grid;
-  grid-template-columns: repeat(4, 200fr);
-  grid-template-rows: repeat(6, 75px);
-  justify-content: space-around;
-  grid-gap: 20px;
-  align-self: center;
+.portfolio-gallery > div {
+  width: 100%;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5);
 }
 
-.portfolio .gallery-detailed .icon-site {
-  height: 100%;
-  overflow: hidden;
-}
-
-.portfolio .gallery-detailed .showScroll {
-  overflow-y: scroll;
-}
-
-.portfolio .gallery-detailed > div {
-  grid-row-end: span 2;
-}
-
-.portfolio .gallery-detailed > div:first-child {
-  grid-column: 1/span 3;
-  grid-row: 1/span 4;
-  grid-column-gap: 30fr;
-}
-
-.portfolio .gallery-detailed > div:nth-child(2) {
-  grid-row-end: span 3;
-}
-
-.portfolio .gallery-detailed > div:nth-child(3) {
-  grid-row-end: span 3;
-}
-
-.portfolio .project-detailed {
-  display: none;
-}
-
-.portfolio .activeElem {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-}
-
-.portfolio .activeElem .icon-site {
+.portfolio-gallery > div img {
+  width: 100%;
   height: auto;
 }
 
-.portfolio .activeElem > .project-detailed {
-  display: grid;
-  align-content: space-around;
-  padding: 10px 20px;
-  color: white;
-  background: url("../img/project-bg.jpg") #333333;
+.portfolio-gallery:hover > div {
+  box-shadow: 0 0 15px 1px black;
+  transition: 0.3s;
 }
 
-.portfolio .activeElem > .project-detailed .project-name {
-  letter-spacing: 5px;
-}
-
-.portfolio .activeElem > .project-detailed .technology-heading {
-  padding: 0;
-  margin-bottom: 10px;
-}
-
-.portfolio .activeElem > .project-detailed .project-technology {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.portfolio .activeElem > .project-detailed li {
-  list-style-type: none;
-  padding-left: 20px;
-}
-
-.portfolio .activeElem > .project-detailed .button, .portfolio .activeElem > .project-detailed .header .nav-bar .button--header, .header .nav-bar .portfolio .activeElem > .project-detailed .button--header, .portfolio .activeElem > .project-detailed .about-us-read-more {
-  text-transform: none;
-  width: 140px;
-  height: 30px;
-  letter-spacing: 1px;
+.portfolio-gallery > div:hover {
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5);
 }
 
 .feedback {
@@ -1300,16 +1215,11 @@ body > * {
     justify-content: space-between;
     grid-auto-flow: column;
   }
-  .portfolio .portfolio-gallery {
+  .portfolio-gallery {
     grid-row: 5;
     grid-column: 1;
-  }
-  .portfolio .gallery-normal {
     grid-row-gap: 30px;
     justify-content: space-around;
-  }
-  .portfolio .gallery-detailed {
-    grid-template-columns: repeat(4, 1fr);
   }
   .feedback .contact {
     grid-template-columns: 1fr 500px;
@@ -1482,103 +1392,70 @@ body > * {
   .team-wrapper .team {
     justify-content: space-between;
   }
-  .portfolio .gallery-normal {
+  .portfolio-gallery {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 260px 50px 260px 280px;
     grid-column-gap: 30px;
   }
-  .portfolio .gallery-normal .examples:nth-child(n+1) {
+  .portfolio-gallery .examples:nth-child(n+1) {
     grid-column: auto;
     grid-row: auto;
   }
-  .portfolio .gallery-normal .examples:nth-child(1) {
+  .portfolio-gallery .examples:nth-child(1) {
     grid-row: 1/span 2;
   }
-  .portfolio .gallery-normal .examples:nth-child(4) {
+  .portfolio-gallery .examples:nth-child(4) {
     grid-row: 2/span 2;
   }
-  .portfolio .gallery-normal .header-small {
+  .portfolio-gallery .header-small {
     grid-template-rows: 80px 250px 400px 20px;
   }
-  .portfolio .gallery-normal .header .header-content {
+  .portfolio-gallery .header .header-content {
     margin: 0 50px;
   }
-  .portfolio .gallery-normal .hammer {
+  .portfolio-gallery .hammer {
     top: 0;
     right: 0;
     transition: 1s;
   }
-  .portfolio .gallery-normal .hatchet {
+  .portfolio-gallery .hatchet {
     top: 25px;
     left: 0;
     transition: 1s;
   }
-  .portfolio .gallery-normal .hammerRotate {
+  .portfolio-gallery .hammerRotate {
     top: 27%;
     right: 0%;
     transform: rotate(50deg) scaleX(-1);
     transition: 1s;
   }
-  .portfolio .gallery-normal .hatchetRotate {
+  .portfolio-gallery .hatchetRotate {
     top: 36%;
     left: 10%;
     transform: rotate(130deg);
     transition: 1s;
   }
-  .portfolio .about-us {
+  .about-us {
     display: grid;
     grid-template-columns: 150px repeat(4, 1fr) 150px;
     grid-template-rows: 110px 190px 1fr 190px 110px;
   }
-  .portfolio .about-us .about-description1, .portfolio .about-us .about-description2, .portfolio .about-us .about-description3 {
+  .about-us .about-description1, .about-us .about-description2, .about-us .about-description3 {
     grid-column: 2 / span 5;
   }
-  .portfolio .about-us .about-description2, .portfolio .about-us .about-description3 {
+  .about-us .about-description2, .about-us .about-description3 {
     grid-column: 1 / span 6;
   }
-  .portfolio .about-us .about-description3 {
+  .about-us .about-description3 {
     grid-column: 1 / span 5;
   }
-  .portfolio .about-us .small-photo {
+  .about-us .small-photo {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
   }
-  .portfolio .about-us .big-photo {
+  .about-us .big-photo {
     grid-column: 6 / 7;
     grid-row: 4 / 5;
-  }
-  .portfolio .gallery-detailed {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(13, 75px);
-    grid-column-gap: 20px;
-    justify-content: center;
-  }
-  .portfolio .gallery-detailed .examples:nth-child(n+1) {
-    grid-column-end: span 3;
-    grid-row-end: span 3;
-  }
-  .portfolio .gallery-detailed .examples:first-child {
-    grid-column: 1/span 6;
-    grid-row: 1/span 4;
-  }
-  .portfolio .gallery-detailed .examples:last-child {
-    grid-column: 2/span 4;
-    grid-row-end: span 3;
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed .project-technology {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed li {
-    list-style-type: none;
-    padding-left: 20px;
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed .button, .portfolio .gallery-detailed .activeElem .project-detailed .header .nav-bar .button--header, .header .nav-bar .portfolio .gallery-detailed .activeElem .project-detailed .button--header, .portfolio .gallery-detailed .activeElem .project-detailed .about-us-read-more {
-    text-transform: none;
-    width: 140px;
-    height: 30px;
-    letter-spacing: 1px;
   }
   .feedback .contact {
     grid-template-columns: 1fr 400px;
@@ -1665,46 +1542,6 @@ body > * {
   }
   .portfolio .portfolio-filter label {
     margin: 5px 0;
-  }
-  .portfolio .gallery-detailed {
-    grid-template-rows: repeat(15, 75px);
-  }
-  .portfolio .gallery-detailed .activeElem {
-    grid-template-columns: 1fr;
-    grid-template-rows: 4fr 1fr;
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed {
-    grid-template-columns: 5fr 3fr;
-    grid-template-rows: repeat(3, auto);
-    grid-row-gap: 5px;
-    align-items: center;
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed .project-name {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed .project-description {
-    grid-column: 1;
-    grid-row: 2/span 2;
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed .technology-heading {
-    grid-column: 2;
-    grid-row: 1;
-    justify-self: center;
-    margin: 0;
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed .project-technology {
-    grid-column: 2;
-    grid-row: 2;
-    justify-self: center;
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed .button, .portfolio .gallery-detailed .activeElem .project-detailed .header .nav-bar .button--header, .header .nav-bar .portfolio .gallery-detailed .activeElem .project-detailed .button--header, .portfolio .gallery-detailed .activeElem .project-detailed .about-us-read-more {
-    grid-column: 2;
-    grid-row: 3;
-    justify-self: center;
-  }
-  .portfolio .gallery-detailed .examples:first-child {
-    grid-row: 1/span 6;
   }
   .feedback .contact {
     grid-template-columns: 1fr;
@@ -1859,7 +1696,7 @@ body > * {
     justify-content: center;
     align-items: center;
     height: 200px;
-    width: 82vw;
+    min-width: 82vw;
     border-radius: 10px;
     cursor: pointer;
   }
@@ -1947,56 +1784,13 @@ body > * {
     grid-template-columns: 350px;
     justify-content: center;
   }
-  .team-wrapper .team .associate {
-    height: 500px;
-  }
-  .portfolio .gallery-normal {
+  .portfolio-gallery {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 230px);
   }
-  .portfolio .gallery-normal .examples:nth-child(n+1) {
+  .portfolio-gallery .examples:nth-child(n+1) {
     grid-column: 1;
     grid-row: auto;
-  }
-  .portfolio .gallery-detailed {
-    grid-template-rows: repeat(21, 45px);
-  }
-  .portfolio .gallery-detailed .examples:nth-child(n+1) {
-    grid-row-end: span 4;
-  }
-  .portfolio .gallery-detailed .examples:first-child {
-    grid-row-end: span 8;
-  }
-  .portfolio .gallery-detailed .examples:last-child {
-    grid-row-end: span 5;
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed {
-    grid-template-columns: 2fr 3fr;
-    grid-template-rows: repeat(4, auto);
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed .project-name {
-    grid-column: 1/span 2;
-    grid-row: 1;
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed .project-description {
-    grid-column: 1/span 2;
-    grid-row: 2;
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed .technology-heading {
-    grid-column: 1;
-    grid-row: 3;
-    justify-self: start;
-    margin: 0;
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed .project-technology {
-    grid-column: 2;
-    grid-row: 3/span 2;
-    justify-self: start;
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed .button, .portfolio .gallery-detailed .activeElem .project-detailed .header .nav-bar .button--header, .header .nav-bar .portfolio .gallery-detailed .activeElem .project-detailed .button--header, .portfolio .gallery-detailed .activeElem .project-detailed .about-us-read-more {
-    grid-column: 1;
-    grid-row: 4;
-    justify-self: start;
   }
   .feedback .contact {
     grid-template-rows: repeat(3, 30px) 250px 40px;
@@ -2027,44 +1821,5 @@ body > * {
   .team-wrapper .team {
     grid-template-columns: minmax(200px, 300px);
     justify-content: center;
-  }
-  .portfolio .gallery-detailed {
-    grid-template-columns: 1fr;
-    grid-template-rows: 500px repeat(5, 230px);
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed {
-    grid-template-columns: 1fr;
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed .project-name {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed .project-description {
-    grid-column: 1;
-    grid-row: 2;
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed .technology-heading {
-    grid-column: 1;
-    grid-row: 3;
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed .project-technology {
-    grid-column: 1;
-    grid-row: 4;
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed .project-technology ul {
-    display: flex;
-  }
-  .portfolio .gallery-detailed .activeElem .project-detailed .button, .portfolio .gallery-detailed .activeElem .project-detailed .header .nav-bar .button--header, .header .nav-bar .portfolio .gallery-detailed .activeElem .project-detailed .button--header, .portfolio .gallery-detailed .activeElem .project-detailed .about-us-read-more {
-    grid-column: 1;
-    grid-row: 5;
-  }
-  .portfolio .gallery-detailed .examples:first-child {
-    grid-column: 1;
-    grid-row: 1;
-    grid-row-end: 2;
-  }
-  .portfolio .gallery-detailed .examples:nth-child(n+1) {
-    grid-column: 1;
-    grid-row: auto;
   }
 }
