@@ -791,7 +791,7 @@ body>*{
     display: grid;
     grid-template-columns: 100px  30px 1fr;
     grid-template-rows: 110px auto auto 50px;
-    grid-gap: 20px;
+    grid-row-gap: 20px;
 
     .portfolio-title {
         grid-row: 1;
@@ -834,7 +834,7 @@ body>*{
         display: flex;
         flex-wrap: wrap;
         flex-flow: column wrap;
-        justify-content: space-around;
+        align-content: space-around;
         grid-column: 3;
         grid-row: 2;
         max-height: 700px;
@@ -842,7 +842,7 @@ body>*{
         .examples{
             position:relative;
             height: 330px;
-            max-width: 300px;
+            width: 30%;
             margin-bottom: 20px;
             border-radius: 10px;
             overflow: hidden;
@@ -872,7 +872,7 @@ body>*{
             content: "";
             font-family: "Font Awesome\ 5 Free";
             font-weight: 900;
-            color: white;
+            color: $main-color;
             font-size: 32px;
             position: absolute;
             top:0;
@@ -885,7 +885,7 @@ body>*{
         }
 
         .examples:hover:after{
-            content: "\f360";
+            content: "\f06e";
             background: rgba(0, 0, 0, 0.4);
 
             transition: 1s;
@@ -1339,12 +1339,10 @@ body>*{
             grid-auto-flow: column;
         }
 
-        /*&-gallery {
+        &-gallery {
             grid-row: 5;
             grid-column: 1;
-            grid-row-gap: 30px;
-            justify-content: space-around;
-        }*/
+        }
     }
 
     //feedback
@@ -1562,89 +1560,6 @@ body>*{
         }
     }
 
-    /*.portfolio{
-        &-gallery{
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 260px 50px 260px 280px;
-            grid-column-gap: 30px;
-
-            .examples:nth-child(n+1) {
-                grid-column: auto;
-                grid-row: auto;
-            }
-
-            .examples:nth-child(1) {
-                grid-row: 1/span 2;
-            }
-
-            .examples:nth-child(4) {
-                grid-row: 2/span 2;
-            }
-            .header-small {
-                grid-template-rows: 80px 250px 400px 20px;
-            }
-
-            .header .header-content {
-                margin: $main-middle-indent;
-            }
-
-            .hammer {
-                top: 0;
-                right: 0;
-                transition: 1s;
-            }
-            .hatchet {
-                top: 25px;
-                left: 0;
-                transition: 1s;
-            }
-
-            .hammerRotate {
-                top: 27%;
-                right: 0%;
-                transform: rotate(50deg) scaleX(-1);
-                transition: 1s;
-
-            }
-            .hatchetRotate {
-                top: 36%;
-                left: 10%;
-                transform: rotate(130deg);
-                transition: 1s;
-            }
-        }
-    }*/
-
-    .about-us {
-        display: grid;
-        grid-template-columns: 150px repeat(4, 1fr) 150px;
-        grid-template-rows: 110px 190px 1fr 190px 110px;
-
-        .about-description1 {
-            grid-column: 2 / span 5;
-        }
-
-        .about-description2 {
-            grid-column: 1 / span 6;
-        }
-
-        .about-description3 {
-            grid-column: 1 / span 5;
-        }
-
-        .small-photo {
-            grid-column: 1 / 2;
-            grid-row: 2 / 3;
-            //border-radius: 50%;
-        }
-
-        .big-photo {
-            grid-column: 6 / 7;
-            grid-row: 4 / 5;
-            //border-radius: 50%;
-        }
-    }
-
     //feedback
     .feedback {
         .contact {
@@ -1758,6 +1673,17 @@ body>*{
 
             label{
                 margin:5px 0;
+            }
+        }
+
+        &-gallery {
+            max-height: 1000px;
+            .examples{
+                 width: 45%;
+            }
+
+            .examples:last-child{
+                height: 270px;
             }
         }
     }
@@ -2055,20 +1981,31 @@ body>*{
         }
     }
 
-    /*.portfolio {
-        &-gallery{
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(6, 230px);
 
-            .examples:nth-child(n+1){
-                grid-column: 1;
-                grid-row: auto;
-            }
-        }
-    }*/
     .feedback {
         .contact {
             grid-template-rows: repeat(3, 30px) 250px 40px;
+        }
+    }
+}
+
+@media screen and(max-width: 600px) {
+    .portfolio {
+        &-gallery {
+            flex-wrap: nowrap;
+            max-height: 2000px;
+            .examples{
+                width: 75%;
+                margin: 20px auto;
+            }
+
+            .examples:last-child{
+                height: 320px;
+            }
+
+            .examples:after{
+                padding-top:35%;
+            }
         }
     }
 }
