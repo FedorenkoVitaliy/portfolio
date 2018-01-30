@@ -790,7 +790,7 @@ body>*{
 .portfolio {
     display: grid;
     grid-template-columns: 100px  30px 1fr;
-    grid-template-rows: 110px auto auto 150px;
+    grid-template-rows: 110px auto auto 50px;
     grid-gap: 20px;
 
     .portfolio-title {
@@ -831,65 +831,66 @@ body>*{
     }
 
     &-gallery{
-        display: grid;
-        grid-template-columns: repeat(3, 250fr);
-        grid-template-rows: 200px 50px 200px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow: column wrap;
+        justify-content: space-around;
         grid-column: 3;
         grid-row: 2;
-        grid-gap: 50px;
-        justify-content: space-around;
+        max-height: 700px;
 
-        .icon-site{
-            height: 100%;
+        .examples{
+            position:relative;
+            height: 330px;
+            max-width: 300px;
+            margin-bottom: 20px;
+            border-radius: 10px;
             overflow: hidden;
+            box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+
+            .icon-site{
+                height: 100%;
+                overflow: hidden;
+
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .project-detailed{
+                display:none;
+            }
         }
 
-        .showScroll{
-            overflow-y: scroll;
+        .examples:nth-child(odd){
+            height: 270px;
         }
 
-
-        .project-detailed{
-            display:none;
-        }
-
-        div:nth-child(odd){
-            grid-row: span 2;
-        }
-
-        div:nth-child(5){
-            grid-column: 2;
-            grid-row: 2/ span 2;
-        }
-
-        &>div{
+        .examples:after{
+            content: "";
+            font-family: "Font Awesome\ 5 Free";
+            font-weight: 900;
+            color: white;
+            font-size: 32px;
+            position: absolute;
+            top:0;
+            padding-top: 45%;
+            text-align: center;
             width: 100%;
-            box-shadow:  0 0 15px 1px rgba(0,0,0,0.5);
-
-            img{
-                width: 100%;
-                height: auto;
-            }
-        }
-        &:hover{
-            &>div {
-                box-shadow:  0 0 15px 1px rgb(0,0,0);
-                transition: 0.3s;
-            }
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            transition: 1s;
         }
 
-        &>div:hover{
-            box-shadow:  0 0 15px 1px rgba(0,0,0,0.5);
+        .examples:hover:after{
+            content: "\f360";
+            background: rgba(0, 0, 0, 0.4);
 
+            transition: 1s;
         }
     }
-
-
-
-
-
-
-
 }
 
 .feedback{
@@ -1338,12 +1339,12 @@ body>*{
             grid-auto-flow: column;
         }
 
-        &-gallery {
+        /*&-gallery {
             grid-row: 5;
             grid-column: 1;
             grid-row-gap: 30px;
             justify-content: space-around;
-        }
+        }*/
     }
 
     //feedback
@@ -1561,7 +1562,7 @@ body>*{
         }
     }
 
-    .portfolio{
+    /*.portfolio{
         &-gallery{
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 260px 50px 260px 280px;
@@ -1612,8 +1613,7 @@ body>*{
                 transition: 1s;
             }
         }
-
-    }
+    }*/
 
     .about-us {
         display: grid;
@@ -2055,7 +2055,7 @@ body>*{
         }
     }
 
-    .portfolio {
+    /*.portfolio {
         &-gallery{
             grid-template-columns: 1fr;
             grid-template-rows: repeat(6, 230px);
@@ -2065,7 +2065,7 @@ body>*{
                 grid-row: auto;
             }
         }
-    }
+    }*/
     .feedback {
         .contact {
             grid-template-rows: repeat(3, 30px) 250px 40px;
