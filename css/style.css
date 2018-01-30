@@ -287,19 +287,19 @@ body > * {
 }
 
 .header .header-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 2fr 2fr 2fr 3fr 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-wrap: wrap;
   grid-row: 3;
   border-radius: 30px;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.1);
   margin: 0 80px;
   padding: 30px 30px;
 }
 
 .header .header-content .heading {
-  grid-column: 1/span 3;
-  grid-row: 1;
   color: white;
   text-transform: uppercase;
   font-family: 'Audiowide', cursive;
@@ -313,13 +313,12 @@ body > * {
   color: orange;
   letter-spacing: 0.01em;
   font-family: 'Kaushan Script', cursive;
-  font-size: 3.5rem;
+  font-size: 0.7em;
   text-transform: none;
 }
 
 .header .header-content .description {
-  grid-row: 3;
-  grid-column: 1/span 2;
+  max-width: 400px;
   font-family: 'Roboto', sans-serif;
   font-size: 1.7rem;
   color: white;
@@ -1354,7 +1353,7 @@ body > * {
     display: grid;
     grid-column: 2;
     width: auto;
-    height: 80px;
+    height: 10vw;
     justify-self: center;
   }
   .header {
@@ -1374,7 +1373,6 @@ body > * {
   }
   .header .nav-bar .logo-menu img {
     position: absolute;
-    height: 34px;
     width: 75px;
   }
   .header .nav-bar .menu-link {
@@ -1628,14 +1626,8 @@ body > * {
   body > * {
     padding: 0 30px;
   }
-  .header .logo-description {
-    height: 3.5rem;
-  }
   .header .header-content .heading {
     font-size: 4rem;
-  }
-  .header .header-content .heading .heading-slogan {
-    font-size: 2.5rem;
   }
   .about-us {
     display: grid;
@@ -1801,9 +1793,6 @@ body > * {
   body > * {
     padding: 0 20px;
   }
-  .logo-description {
-    height: 40px;
-  }
   .header {
     grid-template-rows: 80px 120px 450px 100px;
   }
@@ -1821,11 +1810,8 @@ body > * {
   .header .header-content .heading {
     font-size: 3rem;
   }
-  .header .header-content .heading .heading-slogan {
-    font-size: 2rem;
-  }
   .header .header-content .description {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .header-small {
     grid-template-rows: 80px 250px 400px 20px;
@@ -1871,14 +1857,15 @@ body > * {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgba(255, 165, 0, 0.8);
     height: 200px;
-    width: 90vw;
+    width: 82vw;
     border-radius: 10px;
     cursor: pointer;
   }
   .advantages .quality-wrapper .quality .quality__image i {
     display: block;
+    font-size: 34px;
+    color: rgba(255, 165, 0, 0.8);
   }
   .advantages .quality-wrapper .quality .quality__image:hover > i {
     display: none;
@@ -2021,10 +2008,17 @@ body > * {
   }
   .header .header-content {
     margin: 0 10px;
-    padding: 30px 10px;
+    padding: 30px 15px;
+  }
+  .header .header-content .heading {
+    font-size: 2.5rem;
+  }
+  .header .header-content .description {
+    font-size: 1.2rem;
   }
   .header .header-content .button, .header .header-content .nav-bar .button--header, .header .nav-bar .header-content .button--header, .header .header-content .about-us-read-more {
-    width: 200px;
+    width: 150px;
+    font-size: 1.2rem;
   }
   .header-small {
     grid-template-rows: 80px 250px 400px 20px;
