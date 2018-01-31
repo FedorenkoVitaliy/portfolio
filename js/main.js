@@ -5,6 +5,36 @@ $(document).ready(function () {
         $(".menu-link").toggleClass("mini-menu-link");
         $(".header").toggleClass("header-small");
     })
+    //portfolio
+    var filter = $(".portfolio-filter label");
+    //all examples visible
+    var counter=0;
+    filter.click(function () {
+        if(counter==0){
+            filter.first().prev().prop( "checked", true );
+        }
+
+        filter.prev().each(function () {
+            if($(this).is(':checked')){
+                var test=$(this).prev().attr("id");
+                $(".examples").each(function(){
+                    if($(this).attr("data-site-type")==test){
+                        $(this).toggle();
+                    }
+                })
+                counter++;
+                if(counter>0){
+                    filter.first().prev().prop( "checked", false );
+                }
+            }
+        });
+        if(filter.prev().is(':checked')){
+            $(".examples").each(function(){
+                $(this).toggle();
+            })
+        }
+    });
+
 
     //feedback
     var reviewWidth = $(".review").outerWidth();

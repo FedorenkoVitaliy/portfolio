@@ -9,7 +9,6 @@
     <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
     <header id="header" class="header">
         <nav class="nav-bar">
             <img src="img/logo-craft.png" alt="" class="logo">
@@ -226,12 +225,11 @@
     </div>
 </section>
 
-
 <section class="portfolio">
     <h2 class="portfolio-title subheading">gullery</h2>
 
     <div class="portfolio-filter">
-        <input type="checkbox" id="all"><label for="all">all</label>
+        <input type="checkbox" id="all" checked><label for="all">all</label>
         <input type="checkbox" id="blog"><label for="blog">blog</label>
         <input type="checkbox" id="business"><label for="business">business</label>
         <input type="checkbox" id="commerce"><label for="commerce">commerce</label>
@@ -240,13 +238,13 @@
     </div>
 
     <div class="portfolio-gallery">
-        <div class="examples">
+        <div class="examples" data-site-type="blog" >
             <div class="icon-site"><img src="img/portfolio/baxter.jpg" alt=""></div>
             <div class="project-detailed">
                 <p class="project-name">Baxter corporate</p>
                 <p class="project-description">Разработка корпоративного сайта. Верстка более 10 уникальных шаблонов,
                     адаптация под мобильные устройства, програмирование, посадка на CMS Modx. SEO-оптимизация.</p>
-                <p class="technology-heading">Technologies</p>
+
                 <ul class="project-technology">
                     <ul>
                         <li>HTML</li>
@@ -258,16 +256,15 @@
                         <li>Full Responsive</li>
                     </ul>
                 </ul>
-                <input type="button" class="button" value="Подробнее">
             </div>
         </div>
-        <div class="examples">
+        <div class="examples" data-site-type="business">
             <div class="icon-site"><img src="img/portfolio/valgus.jpg" alt=""></div>
             <div class="project-detailed">
                 <p class="project-name">wolff.com</p>
                 <p class="project-description">Разработка корпоративного сайта. Верстка более 10 уникальных шаблонов,
                     адаптация под мобильные устройства, програмирование, посадка на CMS Modx. SEO-оптимизация.</p>
-                <p class="technology-heading">Technologies</p>
+
                 <ul class="project-technology">
                     <ul>
                         <li>HTML</li>
@@ -279,16 +276,15 @@
                         <li>Full Responsive</li>
                     </ul>
                 </ul>
-                <input type="button" class="button" value="Подробнее">
             </div>
         </div>
-        <div class="examples">
+        <div class="examples" data-site-type="commerce">
             <div class="icon-site"><img src="img/portfolio/barbershop.jpg" alt=""></div>
             <div class="project-detailed">
                 <p class="project-name">wolff.com</p>
                 <p class="project-description">Разработка корпоративного сайта. Верстка более 10 уникальных шаблонов,
                     адаптация под мобильные устройства, програмирование, посадка на CMS Modx. SEO-оптимизация.</p>
-                <p class="technology-heading">Technologies</p>
+
                 <ul class="project-technology">
                     <ul>
                         <li>HTML</li>
@@ -300,16 +296,15 @@
                         <li>Full Responsive</li>
                     </ul>
                 </ul>
-                <input type="button" class="button" value="Подробнее">
             </div>
         </div>
-        <div class="examples">
+        <div class="examples" data-site-type="blog">
             <div class="icon-site"><img src="img/portfolio/crios.jpg" alt=""></div>
             <div class="project-detailed">
                 <p class="project-name">wolff.com</p>
                 <p class="project-description">Разработка корпоративного сайта. Верстка более 10 уникальных шаблонов,
                     адаптация под мобильные устройства, програмирование, посадка на CMS Modx. SEO-оптимизация.</p>
-                <p class="technology-heading">Technologies</p>
+
                 <ul class="project-technology">
                     <ul>
                         <li>HTML</li>
@@ -321,16 +316,15 @@
                         <li>Full Responsive</li>
                     </ul>
                 </ul>
-                <input type="button" class="button" value="Подробнее">
             </div>
         </div>
-        <div class="examples">
+        <div class="examples" data-site-type="portfolio">
             <div class="icon-site"><img src="img/portfolio/bussines.jpg" alt=""></div>
             <div class="project-detailed">
                 <p class="project-name">wolff.com</p>
                 <p class="project-description">Разработка корпоративного сайта. Верстка более 10 уникальных шаблонов,
                     адаптация под мобильные устройства, програмирование, посадка на CMS Modx. SEO-оптимизация.</p>
-                <p class="technology-heading">Technologies</p>
+
                 <ul class="project-technology">
                     <ul>
                         <li>HTML</li>
@@ -342,10 +336,9 @@
                         <li>Full Responsive</li>
                     </ul>
                 </ul>
-                <input type="button" class="button" value="Подробнее">
             </div>
         </div>
-        <div class="examples">
+        <div class="examples" data-site-type="personal">
             <div class="icon-site"><img src="img/portfolio/bakery.jpg" alt=""></div>
             <div class="project-detailed">
                 <p class="project-name">wolff.com</p>
@@ -362,12 +355,15 @@
                         <li>Full Responsive</li>
                     </ul>
                 </ul>
-                <input type="button" class="button" value="Подробнее">
             </div>
         </div>
 
     </div>
+    <div class="examples-detailed">
+        <i class="fas fa-times close-form"></i>
+    </div>
 </section>
+
 
 
 <section class="feedback">
