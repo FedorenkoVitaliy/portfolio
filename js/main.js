@@ -1,63 +1,58 @@
 $(document).ready(function () {
-
-    var gallery = $(".portfolio-gallery");
-    var galleryElem = $(".examples");
-    var iconSites = $(".icon-site");
-    var timeoutId;
-
     $(".logo-menu").click(function () {
         $(".hatchet").toggleClass("hatchetRotate");
         $(".hammer").toggleClass("hammerRotate");
         $(".menu-link").toggleClass("mini-menu-link");
         $(".header").toggleClass("header-small");
     })
+    //portfolio
+    var filter = $(".siteType");
+    //all examples visible
+    var test;
 
-    galleryElem.click(function () {
-        if ($(this).hasClass("activeElem")) {
-            gallery.removeClass("gallery-detailed") && gallery.addClass("gallery-normal");
-            $(this).removeClass("activeElem");
+    $("#all").click(function () {
+        if($(this).is(':checked')){
+            filter.each(function () {
+                $(this).prop('checked',false);
+            })
+            $(".examples").show();
         }
-
-        else {
-            gallery.addClass("gallery-detailed") && gallery.removeClass("gallery-normal");
-            galleryElem.each(function () {
-                $(this).removeClass("activeElem");
-            });
-            $(this).insertBefore($(".portfolio-gallery>div:first-child"));
-            $(this).toggleClass("activeElem");
+        else{
+            filter.each(function () {
+                $(this).prop('checked',false);
+            })
+            $(".examples").hide();
         }
     });
 
-    iconSites.hover(
-        function () {
-            var current = $(this);
-            if (!timeoutId) {
-                timeoutId = window.setTimeout(function () {
-                    timeoutId = null;
-                    current.addClass("showScroll");
-                }, 1000);
+    filter.click(function () {
+        $("#all").prop('checked',false);
+        filter.each(function () {
+            if($(this).is(':checked')){
+                test=$(this).attr("id");
+                $(".examples").each(function(){
+                    if($(this).attr("data-site-type")==test){
+                        $(this).show();
+                    }
+                })
             }
-        },
-        function () {
-            var current = $(this);
-            if (timeoutId) {
-                window.clearTimeout(timeoutId);
-                timeoutId = null;
+            else{
+                test=$(this).attr("id");
+                $(".examples").each(function(){
+                    if($(this).attr("data-site-type")==test){
+                        $(this).hide();
+                    }
+                })
             }
-            else {
-                current.removeClass("showScroll");
-            }
-        }
-    )
-
-    $("#contact .user-message").on('input', function(){
-        $(".charLeft").text(600-$(this).val().length);
-       ($(".charLeft").text())<180?
-            $(".counter").addClass("counterVisible"):
-            $(".counter").removeClass("counterVisible");
+        });
     });
 
-//feedback
+
+
+
+
+
+    //feedback
     var reviewWidth = $(".review").outerWidth();
     var reviewHeight = $(".review").outerHeight();
     var iteration=0;
