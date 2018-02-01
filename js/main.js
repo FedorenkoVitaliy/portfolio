@@ -6,34 +6,50 @@ $(document).ready(function () {
         $(".header").toggleClass("header-small");
     })
     //portfolio
-    var filter = $(".portfolio-filter label");
+    var filter = $(".siteType");
     //all examples visible
-    var counter=0;
-    filter.click(function () {
-        if(counter==0){
-            filter.first().prev().prop( "checked", true );
-        }
+    var test;
 
-        filter.prev().each(function () {
-            if($(this).is(':checked')){
-                var test=$(this).prev().attr("id");
-                $(".examples").each(function(){
-                    if($(this).attr("data-site-type")==test){
-                        $(this).toggle();
-                    }
-                })
-                counter++;
-                if(counter>0){
-                    filter.first().prev().prop( "checked", false );
-                }
-            }
-        });
-        if(filter.prev().is(':checked')){
-            $(".examples").each(function(){
-                $(this).toggle();
+    $("#all").click(function () {
+        if($(this).is(':checked')){
+            filter.each(function () {
+                $(this).prop('checked',false);
             })
+            $(".examples").show();
+        }
+        else{
+            filter.each(function () {
+                $(this).prop('checked',false);
+            })
+            $(".examples").hide();
         }
     });
+
+    filter.click(function () {
+        $("#all").prop('checked',false);
+        filter.each(function () {
+            if($(this).is(':checked')){
+                test=$(this).attr("id");
+                $(".examples").each(function(){
+                    if($(this).attr("data-site-type")==test){
+                        $(this).show();
+                    }
+                })
+            }
+            else{
+                test=$(this).attr("id");
+                $(".examples").each(function(){
+                    if($(this).attr("data-site-type")==test){
+                        $(this).hide();
+                    }
+                })
+            }
+        });
+    });
+
+
+
+
 
 
     //feedback
