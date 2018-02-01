@@ -629,8 +629,7 @@ button {
 .tech-bar {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 110px 60px 400px 130px;
-  border: 1px solid red;
+  grid-template-rows: 110px 60px auto 130px;
 }
 
 .tech-bar .tech-bar-title {
