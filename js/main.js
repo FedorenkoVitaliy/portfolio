@@ -47,11 +47,6 @@ $(document).ready(function () {
         });
     });
 
-
-
-
-
-
     //feedback
     var reviewWidth = $(".review").outerWidth();
     var reviewHeight = $(".review").outerHeight();

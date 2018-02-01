@@ -7,22 +7,17 @@ $(document).ready(function() {
 		});
 	});
 
-    $('#overlay, .close-form, .examples-detailed:after').click( function(){ // лoвим клик пo крестику или пoдлoжке
-        $('.call-back-form-modal').animate({opacity: 0, top: '100%'}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
-            function(){ // пoсле aнимaции
-                $(this).css('display', 'none'); // делaем ему display: none;
-                $('#overlay').fadeOut(400); // скрывaем пoдлoжку
+    $('#overlay, .close-form, .examples-detailed:after').click( function(){
+        $('.call-back-form-modal').animate({opacity: 0, top: '100%'}, 200,
+            function(){
+                $(this).css('display', 'none');
+                $('#overlay').fadeOut(400);
             }
         );
     });
 //write us modal menu end
 
-
-
-
 //portfolio gallery modal start
-
-
     $('.examples').click( function(event){
         $('#overlay').fadeIn(400, function(){
 			$(event.target).children(".icon-site").clone().addClass("icon-site").appendTo(".examples-detailed");
@@ -32,11 +27,11 @@ $(document).ready(function() {
         });
     });
 
-    $('#overlay, .close-form').click( function(){ // лoвим клик пo крестику или пoдлoжке
-		$('.examples-detailed').animate({opacity: 0, top: '45%'}, 300,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
-			function(){ // пoсле aнимaции
-				$(this).css('display', 'none'); // делaем ему display: none;
-				$('#overlay').fadeOut(400); // скрывaем пoдлoжку
+    $('#overlay, .close-form').click( function(){
+		$('.examples-detailed').animate({opacity: 0, top: '45%'}, 300,
+			function(){
+				$(this).css('display', 'none');
+				$('#overlay').fadeOut(400);
                 $("html,body").css("overflow","auto");
                 $('.examples-detailed').children(".project-detailed").detach();
                 $('.examples-detailed').children(".icon-site").detach();

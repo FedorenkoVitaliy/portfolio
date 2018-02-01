@@ -15,11 +15,5 @@ $(document).ready(function(){
                 .css('opacity', '0.8');
         }
     });
-    // $('.nav-bar').click(function () {
-    //     $('html').animate({
-    //         scrollTop: 0
-    //     }, 1000);
-    //
-    // });
 });
 
