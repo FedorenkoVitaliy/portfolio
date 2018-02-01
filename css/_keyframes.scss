@@ -68,3 +68,37 @@
     100%{ background: url("../img/technology2.jpg") right;
         background-size: cover;}
 }
+
+@keyframes sherlock {
+    0%{ background: url("../img/sherlock.jpg");
+        background-size: cover;}
+    100%{ background: url("../img/sherlock-active.jpg");
+        background-size: cover;}
+}
+
+@keyframes proger {
+    0%{ filter: grayscale(0%); }
+    25%{ filter: grayscale(50%); }
+    50%{ filter: grayscale(100%); }
+    75%{ filter: grayscale(50%); }
+    100%{ filter: grayscale(100%); }
+}
+
+@keyframes aboutMove {
+    0% {
+        background-position: left;
+    }
+    25% {
+        background-position: top;
+    }
+
+    50% {
+        background-position: right;
+    }
+    75% {
+        background-position: bottom;
+    }
+    100% {
+        background-position: bottom;
+    }
+}

@@ -93,6 +93,53 @@
   }
 }
 
+@keyframes sherlock {
+  0% {
+    background: url("../img/sherlock.jpg");
+    background-size: cover;
+  }
+  100% {
+    background: url("../img/sherlock-active.jpg");
+    background-size: cover;
+  }
+}
+
+@keyframes proger {
+  0% {
+    filter: grayscale(0%);
+  }
+  25% {
+    filter: grayscale(50%);
+  }
+  50% {
+    filter: grayscale(100%);
+  }
+  75% {
+    filter: grayscale(50%);
+  }
+  100% {
+    filter: grayscale(100%);
+  }
+}
+
+@keyframes aboutMove {
+  0% {
+    background-position: left;
+  }
+  25% {
+    background-position: top;
+  }
+  50% {
+    background-position: right;
+  }
+  75% {
+    background-position: bottom;
+  }
+  100% {
+    background-position: bottom;
+  }
+}
+
 html {
   font-size: 14px;
 }
@@ -130,7 +177,7 @@ button {
   display: none;
 }
 
-.button, .header .nav-bar .button--header, .about-us-read-more {
+.button, .header .nav-bar .button--header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,7 +197,7 @@ button {
   letter-spacing: 0.16rem;
 }
 
-.button:active, .header .nav-bar .button--header:active, .about-us-read-more:active {
+.button:active, .header .nav-bar .button--header:active {
   text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.15);
   box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset 3px 15px 45px rgba(0, 0, 0, 0.2), inset -1px -1px 2px rgba(0, 0, 0, 0.5), inset -3px -15px 45px rgba(255, 255, 255, 0.1), 1px 5px 10px -4px black;
 }
@@ -346,7 +393,7 @@ button {
   color: white;
 }
 
-.header .header-content .button, .header .header-content .nav-bar .button--header, .header .nav-bar .header-content .button--header, .header .header-content .about-us-read-more {
+.header .header-content .button, .header .header-content .nav-bar .button--header, .header .nav-bar .header-content .button--header {
   grid-column: 1;
   grid-row: 5;
 }
@@ -436,6 +483,7 @@ button {
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   background-image: url("../img/about-us-background.png");
+  background-position: left;
 }
 
 .about-us-title {
@@ -443,10 +491,15 @@ button {
   grid-row: 1;
 }
 
-.about-us .about-description1, .about-us .about-description2, .about-us .about-description3 {
-  display: grid;
-  grid-column: 1 / span 2;
-  grid-row: 2;
+.about-us .description-heading {
+  font-size: 1.4em;
+  font-family: cursive;
+  color: orange;
+  text-transform: uppercase;
+  transition: 1s;
+}
+
+.about-us .about-description {
   font-size: 1rem;
   line-height: 26px;
   text-align: justify;
@@ -454,7 +507,19 @@ button {
   align-content: center;
 }
 
-.about-us .about-description2, .about-us .about-description3 {
+.about-us .about-description:hover > .description-heading {
+  color: #ff6c08;
+  font-size: 1.6em;
+  transition: 1s;
+}
+
+.about-us .about-description1 {
+  display: grid;
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+.about-us .about-description2 {
   grid-column: 3 / span 2;
   grid-row: 3;
 }
@@ -464,28 +529,46 @@ button {
   grid-row: 4;
 }
 
-.about-us-read-more {
-  grid-row: 5;
-  justify-self: end;
-  height: 46px;
-  width: 153px;
-}
-
-.about-us .big-photo {
-  grid-column: 5 / span 2;
-  grid-row: 2 / span 2;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.about-us .small-photo {
+.about-us .left-photo {
   grid-column: 1 / span 2;
   grid-row: 3 / span 2;
+  position: relative;
+  z-index: 1;
+  background: url("../img/sherlock.jpg");
+  background-size: cover;
+  background-position: center;
+  animation-name: sherlock;
+  animation-fill-mode: both;
+  animation-duration: 300ms;
+  animation-play-state: paused;
+}
+
+.about-us .right-photo {
+  grid-column: 5 / span 2;
+  grid-row: 2 / span 2;
   width: 100%;
   height: 100%;
   z-index: 2;
+  background: url("../img/proger2.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(0%);
+}
+
+body:hover > .about-us {
+  animation: aboutMove linear 50s infinite;
+}
+
+.about-us:hover > .left-photo {
+  animation-name: sherlock;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.about-us:hover > .right-photo {
+  animation: proger linear 2s;
 }
 
 .advantages {
@@ -1267,21 +1350,22 @@ button {
     display: grid;
     grid-template-columns: 200px repeat(4, 1fr) 200px;
     grid-template-rows: repeat(5, 1fr);
+    font-size: 1.4rem;
   }
-  .about-us .about-description1, .about-us .about-description2, .about-us .about-description3 {
+  .about-us .about-description1 {
     grid-column: 2 / span 5;
   }
-  .about-us .about-description2, .about-us .about-description3 {
+  .about-us .about-description2 {
     grid-column: 2 / span 4;
   }
   .about-us .about-description3 {
     grid-column: 1 / span 5;
   }
-  .about-us .small-photo {
+  .about-us .left-photo {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
   }
-  .about-us .big-photo {
+  .about-us .right-photo {
     grid-column: 6 / 7;
     grid-row: 3 / 5;
   }
@@ -1310,26 +1394,33 @@ button {
     width: 125px;
   }
   .about-us {
-    display: grid;
-    grid-template-columns: 200px repeat(4, 1fr) 200px;
-    grid-template-rows: repeat(5, 1fr);
-  }
-  .about-us .about-description1, .about-us .about-description2, .about-us .about-description3 {
-    grid-column: 2 / span 5;
-  }
-  .about-us .about-description2, .about-us .about-description3 {
-    grid-column: 1 / span 6;
-  }
-  .about-us .about-description3 {
-    grid-column: 1 / span 5;
-  }
-  .about-us .small-photo {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-  }
-  .about-us .big-photo {
-    grid-column: 6 / 7;
-    grid-row: 4 / 5;
+    /*display: grid;
+        grid-template-columns: 200px repeat(4, 1fr) 200px;
+        grid-template-rows: repeat(5, 1fr);
+
+        .about-description1 {
+            grid-column: 2 / span 5;
+        }
+
+        .about-description2 {
+            grid-column: 1 / span 6;
+        }
+
+        .about-description3 {
+            grid-column: 1 / span 5;
+        }
+
+        .left-photo {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            //border-radius: 50%;
+        }
+
+        .right-photo {
+            grid-column: 6 / 7;
+            grid-row: 4 / 5;
+            //border-radius: 50%;
+        }*/
   }
   .portfolio {
     grid-template-columns: 1fr;
@@ -1574,21 +1665,21 @@ button {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 110px repeat(3, 1fr) 110px;
   }
-  .about-us .about-description1, .about-us .about-description2, .about-us .about-description3 {
+  .about-us .about-description1 {
     grid-column: 2 / span 5;
   }
-  .about-us .about-description2, .about-us .about-description3 {
+  .about-us .about-description2 {
     grid-column: 1 / span 6;
   }
   .about-us .about-description3 {
     grid-column: 1 / span 5;
   }
-  .about-us .small-photo {
+  .about-us .left-photo {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     border-radius: 50%;
   }
-  .about-us .big-photo {
+  .about-us .right-photo {
     grid-column: 6 / 7;
     grid-row: 4 / 5;
     border-radius: 50%;
@@ -1730,19 +1821,19 @@ button {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 110px repeat(3, 1fr) 110px;
   }
-  .about-us .about-description1, .about-us .about-description2, .about-us .about-description3 {
+  .about-us .about-description1 {
     grid-column: 1 / span 6;
   }
-  .about-us .about-description2, .about-us .about-description3 {
+  .about-us .about-description2 {
     grid-column: 1 / span 6;
   }
   .about-us .about-description3 {
     grid-column: 1 / span 6;
   }
-  .about-us .small-photo {
+  .about-us .left-photo {
     display: none;
   }
-  .about-us .big-photo {
+  .about-us .right-photo {
     display: none;
   }
   .advantages {
@@ -1912,7 +2003,7 @@ button {
   .header .header-content .description {
     font-size: 1.2rem;
   }
-  .header .header-content .button, .header .header-content .nav-bar .button--header, .header .nav-bar .header-content .button--header, .header .header-content .about-us-read-more {
+  .header .header-content .button, .header .header-content .nav-bar .button--header, .header .nav-bar .header-content .button--header {
     width: 150px;
     font-size: 1.2rem;
   }
