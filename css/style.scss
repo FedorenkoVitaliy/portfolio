@@ -1363,38 +1363,7 @@ body:hover>.about-us{
             }
         }
     }
-
-    .about-us {
-        /*display: grid;
-        grid-template-columns: 200px repeat(4, 1fr) 200px;
-        grid-template-rows: repeat(5, 1fr);
-
-        .about-description1 {
-            grid-column: 2 / span 5;
-        }
-
-        .about-description2 {
-            grid-column: 1 / span 6;
-        }
-
-        .about-description3 {
-            grid-column: 1 / span 5;
-        }
-
-        .left-photo {
-            grid-column: 1 / 2;
-            grid-row: 2 / 3;
-            //border-radius: 50%;
-        }
-
-        .right-photo {
-            grid-column: 6 / 7;
-            grid-row: 4 / 5;
-            //border-radius: 50%;
-        }*/
-    }
-
-    //portfolio
+    
     .portfolio {
         grid-template-columns: 1fr;
         grid-template-rows: 110px 15px auto 15px auto 100px;
