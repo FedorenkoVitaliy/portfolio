@@ -302,64 +302,75 @@ button{
             grid-row: 5;
         }
     }
+    .call-back-wrapper{
+        display:grid;
+        justify-content: center;
+        position:fixed;
+        width: 100%;
+        z-index: 9;
+        .call-back-form-modal {
+            display: none;
+            grid-template-columns: minmax(150px, 400px);
+            grid-row-gap: 20px;
+            top: 100vh;
+            position: relative;
+            width: auto;
+
+            background: rgba(150, 150, 150, 0.9);
+            padding: 15px 30px 50px;
+            border-radius: 10px;
+            z-index: 10;
 
 
-    .call-back-form-header, .close-form {
-        position: fixed;
-        display: none;
-        grid-row-gap: 20px;
-        grid-row: 8;
-        grid-column: 2 / span 2;
+            .contact-title{
+                display: grid;
+                height: 35px;
+                font-size: 2rem;
+                font-family: 'Kaushan Script', cursive;
 
-        background: url("../img/contacts-bg.png");
-        background-size: cover;
-        padding: 15px 30px 50px;
-        border-radius: 10px;
-        z-index: 10;
+                color:$main-color;
+                text-transform: uppercase;
+                text-align: center;
+                vertical-align: bottom;
+                letter-spacing: 0.15em;
+            }
 
-        .contact-title{
-            display: grid;
-            height: 35px;
+            .close-form {
+                position: absolute;
 
-            color:$main-color;
-            text-transform: uppercase;
-            text-align: center;
-            vertical-align: bottom;
-            letter-spacing: 0.15em;
-        }
+                width: 30px;
+                line-height: 16px;
+                cursor: pointer;
+                top:15px;
+                right:30px;
+                background: none;
+                padding: 0;
 
-        .close-form {
-            display: grid;
+                &:hover {
+                    transform: rotate(360deg);
+                    transition: 1s;
+                }
+            }
 
-            width: 30px;
-            line-height: 16px;
-            cursor: pointer;
-            margin: 0;
-            background: none;
-            padding: 0;
-            margin-top: 15px;
-            margin-left: 30px;
+            .help{
+                color:white;
+                font-family: 'Audiowide', cursive;
+            }
 
-            &:hover {
-                transform: rotate(360deg);
-                transition: 1s;
+            .input{
+                border-radius: 10px;
+                border: 0;
+                padding:20px;
+
+            }
+
+            .contact-send{
+                width: 200px;
+                justify-self: flex-end;
             }
         }
-
-        .input{
-            border-radius: 10px;
-            border: 0;
-            padding:20px;
-
-        }
-
-        .contact-send{
-            border-radius: 20px;
-            width: 100%;
-        }
     }
-
-     #overlay {
+    #overlay {
         z-index:3;
         position:fixed;
         background-color: rgba(0, 0, 0, 0.6);
@@ -2164,6 +2175,24 @@ button{
             .button{
                 width: 150px;
                 font-size: 1.2rem;
+            }
+        }
+
+        .call-back-wrapper{
+            .call-back-form-modal {
+                padding: 20px;
+                border-radius: 10px;
+                z-index: 10;
+
+                .help{
+                    color:white;
+                    font-family: cursive;
+                }
+
+                .input{
+                    padding:15px;
+
+                }
             }
         }
     }

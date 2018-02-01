@@ -351,22 +351,32 @@ button {
   grid-row: 5;
 }
 
-.header .call-back-form-header, .header .close-form {
+.header .call-back-wrapper {
+  display: grid;
+  justify-content: center;
   position: fixed;
+  width: 100%;
+  z-index: 9;
+}
+
+.header .call-back-wrapper .call-back-form-modal {
   display: none;
+  grid-template-columns: minmax(150px, 400px);
   grid-row-gap: 20px;
-  grid-row: 8;
-  grid-column: 2 / span 2;
-  background: url("../img/contacts-bg.png");
-  background-size: cover;
+  top: 100vh;
+  position: relative;
+  width: auto;
+  background: rgba(150, 150, 150, 0.9);
   padding: 15px 30px 50px;
   border-radius: 10px;
   z-index: 10;
 }
 
-.header .call-back-form-header .contact-title, .header .close-form .contact-title {
+.header .call-back-wrapper .call-back-form-modal .contact-title {
   display: grid;
   height: 35px;
+  font-size: 2rem;
+  font-family: 'Kaushan Script', cursive;
   color: orange;
   text-transform: uppercase;
   text-align: center;
@@ -374,32 +384,36 @@ button {
   letter-spacing: 0.15em;
 }
 
-.header .call-back-form-header .close-form, .header .close-form .close-form {
-  display: grid;
+.header .call-back-wrapper .call-back-form-modal .close-form {
+  position: absolute;
   width: 30px;
   line-height: 16px;
   cursor: pointer;
-  margin: 0;
+  top: 15px;
+  right: 30px;
   background: none;
   padding: 0;
-  margin-top: 15px;
-  margin-left: 30px;
 }
 
-.header .call-back-form-header .close-form:hover, .header .close-form .close-form:hover {
+.header .call-back-wrapper .call-back-form-modal .close-form:hover {
   transform: rotate(360deg);
   transition: 1s;
 }
 
-.header .call-back-form-header .input, .header .close-form .input {
+.header .call-back-wrapper .call-back-form-modal .help {
+  color: white;
+  font-family: 'Audiowide', cursive;
+}
+
+.header .call-back-wrapper .call-back-form-modal .input {
   border-radius: 10px;
   border: 0;
   padding: 20px;
 }
 
-.header .call-back-form-header .contact-send, .header .close-form .contact-send {
-  border-radius: 20px;
-  width: 100%;
+.header .call-back-wrapper .call-back-form-modal .contact-send {
+  width: 200px;
+  justify-self: flex-end;
 }
 
 .header #overlay {
@@ -1892,6 +1906,18 @@ button {
   .header .header-content .button, .header .header-content .nav-bar .button--header, .header .nav-bar .header-content .button--header, .header .header-content .about-us-read-more {
     width: 150px;
     font-size: 1.2rem;
+  }
+  .header .call-back-wrapper .call-back-form-modal {
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10;
+  }
+  .header .call-back-wrapper .call-back-form-modal .help {
+    color: white;
+    font-family: cursive;
+  }
+  .header .call-back-wrapper .call-back-form-modal .input {
+    padding: 15px;
   }
   .header-small {
     grid-template-rows: 80px 250px 400px 20px;
