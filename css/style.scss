@@ -312,8 +312,7 @@ button{
             display: none;
             grid-template-columns: minmax(150px, 400px);
             grid-row-gap: 20px;
-            top: 100vh;
-            position: relative;
+            position: absolute;
             width: auto;
 
             background: rgba(150, 150, 150, 0.9);
