@@ -20,20 +20,3 @@ $(document).ready(function () {
             $('html').animate({ scrollTop: destination }, 1100);
     });
 });
-
-
-//$(document).ready(function(){
-//    $(window).scroll(function () {
-//        if ($(this).scrollTop() > 0) {
-//            $('#scroller').fadeIn();
-//        } else {
-//            $('#scroller').fadeOut();
-//        }
-//    });
-//    $('#scroller').click(function () {
-//        $('body,html').animate({
-//            scrollTop: 0
-//        }, 1000);
-//        return false;
-//    });
-//});
