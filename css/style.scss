@@ -109,6 +109,7 @@ button{
 
 
 .to-Top {
+    display: none;
 
     .big-arrow {
         display: block;
@@ -606,7 +607,7 @@ button{
         display: grid;
         justify-items: center;
         align-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         grid-column: 1 / span 3;
         grid-row: 3;
 
@@ -634,6 +635,7 @@ button{
                 width: 100%;
                 color: #fff;
                 text-align: center;
+                text-decoration: underline;
                 opacity: 0;
                 transition: 0.5s;
             }
@@ -641,75 +643,11 @@ button{
             .size {
                 position: relative;
                 text-align: center;
-                width: 200px;
-                height: 200px;
-                font-size: 200px;
+                width: 170px;
+                height: 170px;
+                font-size: 170px;
             }
         }
-
-        //&:hover {
-        //    transform: scale(1.5);
-        //
-        //
-        //    animation: linear 2s border;
-        //    transition: 1s;
-        //}
-        //    display: grid;
-    //    grid-template-rows: repeat(3,1fr);
-    //    grid-column-gap: 1%;
-    //    grid-column: 1 / span 3;
-    //    grid-row: 4;
-    //
-    //
-    //
-    //
-    //    .skillbar {
-    //        display: grid;
-    //        text-align: center;
-    //        position: relative;
-    //        margin-bottom: 15px;
-    //        width: 100%;
-    //        height: 35px;
-    //        background-color: #eee;
-    //        transition: 0.4s linear;
-    //        grid-row: 2;
-    //
-    //
-    //
-    //        .skillbar-title {
-    //            display: grid;
-    //            align-items: center;
-    //            height: 35px;
-    //            width: 50px;
-    //            position: absolute;
-    //            top: 0;
-    //            left: 0;
-    //            color: #fff;
-    //            padding: 0 20px;
-    //            margin: 0;
-    //        }
-    //
-    //        .skillbar-bar {
-    //            height: 35px;
-    //            width: 80px;
-    //        }
-    //
-    //        .skillbar-bar-percent {
-    //            display: grid;
-    //            align-items: center;
-    //            height: 35px;
-    //            width: 50px;
-    //            background-color: $main-color;
-    //            position: absolute;
-    //            top: 0;
-    //            right: 0;
-    //            color: #fff;
-    //        }
-    //
-    //        .description {
-    //            color: rebeccapurple;
-    //        }
-    //    }
     }
 }
 
@@ -1320,27 +1258,6 @@ button{
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //media-queries
 
 @media screen and(max-width: 1365px){
@@ -1784,6 +1701,22 @@ button{
         }
     }
 
+    .tech-bar  {
+        .tech-bar-wrapper {
+
+            .img-technology {
+
+                .size {
+                    position: relative;
+                    text-align: center;
+                    width: 110px;
+                    height: 110px;
+                    font-size: 110px;
+                }
+            }
+        }
+    }
+
     .team-wrapper {
         .team {
             grid-template-columns: repeat(2, minmax(200px, 270px));
@@ -1912,6 +1845,23 @@ button{
         animation-play-state: running;
     }
 
+}
+
+@media screen and(max-width: 768px) {
+    .tech-bar  {
+        .tech-bar-wrapper {
+
+            .img-technology {
+                .size {
+                    position: relative;
+                    text-align: center;
+                    width: 150px;
+                    height: 150px;
+                    font-size: 150px;
+                }
+            }
+        }
+    }
 }
 
 @media screen and(max-width: 600px) {
@@ -2216,6 +2166,23 @@ button{
         &-gallery {
             .examples {
                 width: 85%;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 320px) {
+    .tech-bar  {
+        .tech-bar-wrapper {
+
+            .img-technology {
+                .size {
+                    position: relative;
+                    text-align: center;
+                    width: 150px;
+                    height: 150px;
+                    font-size: 150px;
+                }
             }
         }
     }
