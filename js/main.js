@@ -2,7 +2,7 @@ $(document).ready(function () {
     $(".logo-menu").click(function () {
         $(".hatchet").toggleClass("hatchetRotate");
         $(".hammer").toggleClass("hammerRotate");
-        $(".menu-link").toggleClass("mini-menu-link");
+        $(".menu-link").toggleClass("mini-menu-link", 1000);
         $(".header").toggleClass("header-small");
     })
     //portfolio

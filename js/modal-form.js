@@ -1,10 +1,11 @@
 $(document).ready(function() {
 
 //write us modal menu start
-	$('#write-us, .call-back-link').click( function(){  
+	$('#write-us, .call-back-link').click( function(){
 		$('#overlay').fadeIn(400, function(){
 			$('.call-back-form-modal').css('display', 'grid').animate({opacity: 1, top: '150px'}, 350);
 		});
+        $('#overlay').css("display", "grid");
 	});
 
     $('#overlay, .close-form, .examples-detailed:after').click( function(){

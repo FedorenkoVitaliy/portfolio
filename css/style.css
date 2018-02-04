@@ -283,9 +283,26 @@ button {
   transform: rotate(45deg);
 }
 
+#header-show {
+  display: none;
+  padding: 0;
+  position: fixed;
+  top: 28px;
+  right: 10px;
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  z-index: 11;
+  opacity: 0.8;
+}
+
+#header-show-check {
+  display: none;
+}
+
 .header {
   display: grid;
-  grid-template-rows: 120px 100px 450px 100px;
+  grid-template-rows: auto 100px 450px 100px;
   align-content: center;
   width: 100%;
   padding: 0;
@@ -298,6 +315,7 @@ button {
   grid-template-columns: auto 1fr auto;
   grid-column-gap: 20px;
   justify-content: space-around;
+  height: 120px;
   padding: 0 80px;
   grid-row: 1;
   align-items: center;
@@ -327,16 +345,22 @@ button {
 .header .nav-bar .menu-link li:after {
   display: block;
   position: absolute;
+  top: 0;
   content: '';
   width: 0;
-  height: 2px;
-  background-color: #ff6c08;
+  height: 100%;
+  background-color: transparent;
+  border-bottom: 2px solid white;
   transition: 0.5s;
 }
 
 .header .nav-bar .menu-link li:hover:after {
   width: 100%;
   transition: 0.7s;
+}
+
+.header .nav-bar .mini-menu-link {
+  top: 120px;
 }
 
 .header .nav-bar a {
@@ -402,20 +426,24 @@ button {
   grid-row: 5;
 }
 
-.header .call-back-wrapper {
-  display: grid;
+.header #overlay {
+  display: none;
   justify-content: center;
   position: fixed;
-  width: 100%;
-  z-index: 9;
+  z-index: 3;
+  background-color: rgba(50, 50, 50, 0.7);
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer;
 }
 
-.header .call-back-wrapper .call-back-form-modal {
+.header #overlay .call-back-form-modal {
   display: none;
   grid-template-columns: minmax(150px, 400px);
   grid-row-gap: 20px;
-  top: 100vh;
   position: relative;
+  top: 100vh;
+  height: 450px;
   width: auto;
   background: rgba(150, 150, 150, 0.9);
   padding: 15px 30px 50px;
@@ -423,7 +451,7 @@ button {
   z-index: 10;
 }
 
-.header .call-back-wrapper .call-back-form-modal .contact-title {
+.header #overlay .call-back-form-modal .contact-title {
   display: grid;
   height: 35px;
   font-size: 2rem;
@@ -435,7 +463,7 @@ button {
   letter-spacing: 0.15em;
 }
 
-.header .call-back-wrapper .call-back-form-modal .close-form {
+.header #overlay .call-back-form-modal .close-form {
   position: absolute;
   width: 30px;
   line-height: 16px;
@@ -446,38 +474,25 @@ button {
   padding: 0;
 }
 
-.header .call-back-wrapper .call-back-form-modal .close-form:hover {
+.header #overlay .call-back-form-modal .close-form:hover {
   transform: rotate(360deg);
   transition: 1s;
 }
 
-.header .call-back-wrapper .call-back-form-modal .help {
+.header #overlay .call-back-form-modal .help {
   color: white;
   font-family: 'Audiowide', cursive;
 }
 
-.header .call-back-wrapper .call-back-form-modal .input {
+.header #overlay .call-back-form-modal .input {
   border-radius: 10px;
   border: 0;
   padding: 20px;
 }
 
-.header .call-back-wrapper .call-back-form-modal .contact-send {
+.header #overlay .call-back-form-modal .contact-send {
   width: 200px;
   justify-self: flex-end;
-}
-
-.header #overlay {
-  z-index: 3;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-  display: none;
-  filter: blur(5px);
 }
 
 .about-us {
@@ -1398,35 +1413,6 @@ body:hover > .about-us {
     height: 40px;
     width: 125px;
   }
-  .about-us {
-    /*display: grid;
-        grid-template-columns: 200px repeat(4, 1fr) 200px;
-        grid-template-rows: repeat(5, 1fr);
-
-        .about-description1 {
-            grid-column: 2 / span 5;
-        }
-
-        .about-description2 {
-            grid-column: 1 / span 6;
-        }
-
-        .about-description3 {
-            grid-column: 1 / span 5;
-        }
-
-        .left-photo {
-            grid-column: 1 / 2;
-            grid-row: 2 / 3;
-            //border-radius: 50%;
-        }
-
-        .right-photo {
-            grid-column: 6 / 7;
-            grid-row: 4 / 5;
-            //border-radius: 50%;
-        }*/
-  }
   .portfolio {
     grid-template-columns: 1fr;
     grid-template-rows: 110px 15px auto 15px auto 100px;
@@ -1491,7 +1477,10 @@ body:hover > .about-us {
     justify-self: center;
   }
   .header {
-    grid-template-rows: repeat(2, 100px) 450px 100px;
+    grid-template-rows: auto 100px 450px 100px;
+  }
+  .header .nav-bar {
+    height: 110px;
   }
   .header .nav-bar .logo {
     display: none;
@@ -1516,9 +1505,11 @@ body:hover > .about-us {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 40px);
+    grid-column: 1;
     width: 100%;
+    height: 110px;
     position: absolute;
-    top: 90px;
+    top: 80px;
   }
   .header .nav-bar .mini-menu-link li {
     display: flex;
@@ -1542,7 +1533,13 @@ body:hover > .about-us {
     color: orange;
   }
   .header-small {
-    grid-template-rows: 90px 250px 400px 20px;
+    grid-template-rows: auto 250px 400px 20px;
+  }
+  .header .nav-bar {
+    height: 90px;
+  }
+  .header .nav-bar .mini-menu-link {
+    top: 90px;
   }
   .header .header-content {
     margin: 0 50px;
@@ -1816,11 +1813,15 @@ body:hover > .about-us {
     padding: 0 20px;
   }
   .header {
-    grid-template-rows: 80px 120px 450px 100px;
+    grid-template-rows: auto 120px 300px 100px;
   }
   .header .nav-bar {
+    height: 80px;
     padding: 0 10px;
     grid-column-gap: 10px;
+  }
+  .header .nav-bar .mini-menu-link {
+    top: 80px;
   }
   .header .nav-bar .button--header {
     width: 90px;
@@ -1836,7 +1837,7 @@ body:hover > .about-us {
     font-size: 1.3rem;
   }
   .header-small {
-    grid-template-rows: 80px 250px 400px 20px;
+    grid-template-rows: auto 250px 300px 20px;
   }
   .about-us {
     display: grid;
@@ -2012,6 +2013,9 @@ body:hover > .about-us {
 }
 
 @media screen and (max-width: 400px) {
+  .header {
+    grid-template-rows: auto 120px 250px 20px;
+  }
   .header .logo-description {
     display: none;
   }
@@ -2029,20 +2033,8 @@ body:hover > .about-us {
     width: 150px;
     font-size: 1.2rem;
   }
-  .header .call-back-wrapper .call-back-form-modal {
-    padding: 20px;
-    border-radius: 10px;
-    z-index: 10;
-  }
-  .header .call-back-wrapper .call-back-form-modal .help {
-    color: white;
-    font-family: cursive;
-  }
-  .header .call-back-wrapper .call-back-form-modal .input {
-    padding: 15px;
-  }
   .header-small {
-    grid-template-rows: 80px 250px 400px 20px;
+    grid-template-rows: auto 250px 250px 20px;
   }
   .team-wrapper .team {
     grid-template-columns: minmax(200px, 300px);
