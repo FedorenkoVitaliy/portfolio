@@ -300,9 +300,17 @@ button {
   display: none;
 }
 
+.fixedNav {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background: black;
+  opacity: 1;
+}
+
 .header {
   display: grid;
-  grid-template-rows: 120px 100px 450px 100px;
+  grid-template-rows: auto 100px 450px 100px;
   align-content: center;
   width: 100%;
   padding: 0;
@@ -315,6 +323,7 @@ button {
   grid-template-columns: auto 1fr auto;
   grid-column-gap: 20px;
   justify-content: space-around;
+  height: 120px;
   padding: 0 80px;
   grid-row: 1;
   align-items: center;
@@ -344,16 +353,22 @@ button {
 .header .nav-bar .menu-link li:after {
   display: block;
   position: absolute;
+  top: 0;
   content: '';
   width: 0;
-  height: 2px;
-  background-color: #ff6c08;
+  height: 100%;
+  background-color: transparent;
+  border-bottom: 2px solid white;
   transition: 0.5s;
 }
 
 .header .nav-bar .menu-link li:hover:after {
   width: 100%;
   transition: 0.7s;
+}
+
+.header .nav-bar .mini-menu-link {
+  top: 120px;
 }
 
 .header .nav-bar a {
@@ -1470,7 +1485,10 @@ body:hover > .about-us {
     justify-self: center;
   }
   .header {
-    grid-template-rows: repeat(2, 100px) 450px 100px;
+    grid-template-rows: auto 100px 450px 100px;
+  }
+  .header .nav-bar {
+    height: 110px;
   }
   .header .nav-bar .logo {
     display: none;
@@ -1480,13 +1498,22 @@ body:hover > .about-us {
     grid-column: 1;
     align-items: center;
     position: relative;
+    top: 10px;
     width: 75px;
     height: 75px;
     cursor: pointer;
+    z-index: 20;
+    opacity: 0.9;
   }
   .header .nav-bar .logo-menu img {
     position: absolute;
     width: 75px;
+  }
+  .header .nav-bar .fixedLogo {
+    position: fixed;
+    left: 50px;
+    height: 65px;
+    border-radius: 10px;
   }
   .header .nav-bar .menu-link {
     display: none;
@@ -1495,9 +1522,11 @@ body:hover > .about-us {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 40px);
-    width: 100%;
+    grid-column: 1;
+    width: 100vw;
     position: absolute;
-    top: 90px;
+    top: 110px;
+    left: -12px;
   }
   .header .nav-bar .mini-menu-link li {
     display: flex;
@@ -1521,7 +1550,13 @@ body:hover > .about-us {
     color: orange;
   }
   .header-small {
-    grid-template-rows: 90px 250px 400px 20px;
+    grid-template-rows: auto 250px 400px 20px;
+  }
+  .header .nav-bar {
+    height: 90px;
+  }
+  .header .nav-bar .mini-menu-link {
+    top: 90px;
   }
   .header .header-content {
     margin: 0 50px;
@@ -1795,14 +1830,21 @@ body:hover > .about-us {
     padding: 0 20px;
   }
   .header {
-    grid-template-rows: 80px 120px 450px 100px;
+    grid-template-rows: auto 120px 300px 100px;
   }
   .header .nav-bar {
+    height: 80px;
     padding: 0 10px;
     grid-column-gap: 10px;
   }
+  .header .nav-bar .mini-menu-link {
+    top: 80px;
+  }
   .header .nav-bar .button--header {
     width: 90px;
+  }
+  .header .nav-bar .fixedLogo {
+    left: 10px;
   }
   .header .header-content {
     grid-template-rows: 2fr 1fr 5fr 1fr 1fr;
@@ -1815,7 +1857,7 @@ body:hover > .about-us {
     font-size: 1.3rem;
   }
   .header-small {
-    grid-template-rows: 80px 250px 400px 20px;
+    grid-template-rows: auto 250px 300px 20px;
   }
   .about-us {
     display: grid;
@@ -1991,6 +2033,9 @@ body:hover > .about-us {
 }
 
 @media screen and (max-width: 400px) {
+  .header {
+    grid-template-rows: auto 120px 250px 20px;
+  }
   .header .logo-description {
     display: none;
   }
@@ -2009,7 +2054,7 @@ body:hover > .about-us {
     font-size: 1.2rem;
   }
   .header-small {
-    grid-template-rows: auto 250px 250px 20px;
+    grid-template-rows: 80px 250px 400px 20px;
   }
   .team-wrapper .team {
     grid-template-columns: minmax(200px, 300px);
