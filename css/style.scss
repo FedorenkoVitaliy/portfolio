@@ -590,6 +590,14 @@ body:hover>.about-us{
             }
         }
 
+        .quality--1:hover > .quality__image {
+            animation-name: moveLeft;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            animation-play-state: running;
+        }
+
         .quality--2 {
             grid-row: 2;
 
@@ -612,6 +620,14 @@ body:hover>.about-us{
                 top: 70px;
                 border-left: 25px solid white;
             }
+        }
+
+        .quality--2:hover > .quality__image {
+            animation-name: technoMove;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            animation-play-state: running;
         }
 
         .quality--3 {
@@ -642,6 +658,14 @@ body:hover>.about-us{
                 top: -50px;
                 border-bottom: 25px solid white;
             }
+        }
+
+        .quality--3:hover > .quality__image {
+            animation-name: searchCode;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            animation-play-state: running;
         }
     }
 }
@@ -939,7 +963,7 @@ body:hover>.about-us{
     height: 96vh;
     width: 90vw;
     top: 100vh;
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 1px 1px 3px 3px rgba(255, 165, 0, 0.5);
     background: white;
@@ -960,40 +984,68 @@ body:hover>.about-us{
     .project-detailed{
         display: grid;
         position:  relative;
-        grid-template-columns: auto auto;
-        grid-template-rows: 20px auto auto;
+        grid-template-columns: auto auto 1fr;
+        grid-template-rows: auto auto auto;
         align-content: space-between;
         grid-column-gap: 20px;
-        background-color: rgba(160, 160, 160, 0.5);
-        padding: 10px;
+        grid-row-gap: 10px;
+        background: url(../img/about-us-background.png) center top;
+        padding: 10px 15px;
+        box-shadow: inset 0 0 13px 2px black;
+        font-size:1rem;
+
 
         .project-name{
-            grid-column: 1/span 2;
+            position: relative;
+            grid-column: 1;
+            grid-row: 1;
             color: $main-color;
-            font-family: 'Kaushan Script', cursive;
-            font-size: 2rem;
+            font-family: 'Audiowide', cursive;
+            font-size: 3em;
             font-weight: bold;
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
             text-align: left;
             padding-right: 5px;
+            white-space: nowrap;
+        }
+
+        .project-name:after{
+            position: absolute;
+            bottom: 0;
+            content:'';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: rgba(0, 0, 0, 0.6);
         }
 
         .project-description{
             display:inline;
             grid-row: 2/span 2;
+            grid-column: 1/span 2;
+            font-family: cursive;
+            font-size: 1.5em;
+            max-width: 900px;
+            color: rgba(0, 0, 0, 0.8);
         }
 
         .project-technology{
-            display: flex;
+            display: grid;
             grid-row: 2/span 2;
-            flex-flow: column wrap;
-            align-content: space-between;
+            grid-template-columns: 1fr 1fr;
+
             height: 60px;
             min-width: 180px;
             margin-left:auto;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.8);
+            transform: skewX(-10deg);
 
             li{
                 list-style-type: none;
+                font-family: 'Kaushan Script', cursive;
+                font-size: 1.3em;
             }
 
         }
@@ -1200,16 +1252,16 @@ body:hover>.about-us{
                         grid-column: 2;
 
                         display: inline-block;
-
+                        font-size: 1.5rem;
                         color: $main-color;
                         text-shadow: 1px 1px 2px rgba(0,0,0,0.2)
                     }
 
                     .author-position{
                         @extend .author-name;
+                        font-size: 0.9em;
                         grid-row: 2;
                         color: rgba(265, 165, 0, 0.7);
-                        ;
                     }
 
                     .comment-body {
@@ -1868,31 +1920,6 @@ body:hover>.about-us{
             grid-row: 7;
         }
     }
-}
-
-@media screen and (min-width: 600px) {
-    .advantages:hover .quality--1 > .quality__image {
-        animation-name: moveLeft;
-        animation-duration: 3s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-        animation-play-state: running;
-    }
-    .advantages:hover .quality--2 > .quality__image {
-        animation-name: technoMove;
-        animation-duration: 3s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-        animation-play-state: running;
-    }
-    .advantages:hover .quality--3 > .quality__image {
-        animation-name: searchCode;
-        animation-duration: 3s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-        animation-play-state: running;
-    }
-
 }
 
 @media screen and(max-width: 768px) {
