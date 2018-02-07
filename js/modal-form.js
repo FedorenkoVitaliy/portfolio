@@ -3,13 +3,13 @@ $(document).ready(function() {
 //write us modal menu start
 	$('#write-us, .call-back-link').click( function(){
 		$('#overlay').fadeIn(400, function(){
-			$('.call-back-form-modal').css('display', 'grid').animate({opacity: 1, top: '140px', left: '35%'}, 350);
+			$('.call-back-form-modal').css('display', 'grid').animate({opacity: 1, top: '140px'}, 350);
 		});
         $('#overlay').css("display", "grid");
 	});
 
     $('#overlay, .close-form, .examples-detailed:after').click( function(){
-        $('.call-back-form-modal').animate({opacity: 0, top: '0'}, 200,
+        $('.call-back-form-modal').animate({opacity: 0, top: '100vh'}, 200,
             function(){
                 $(this).css('display', 'none');
                 $('#overlay').fadeOut(400);

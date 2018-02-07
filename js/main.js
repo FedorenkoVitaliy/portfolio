@@ -101,7 +101,7 @@ $(document).ready(function () {
             $(".allReviews").css("left", -reviewWidth*iteration);
         }
     });
-    if($(window).width() < 600) {
+    if($(window).outerWidth(true) < 600) {
         $('.quality__description-block').slideUp();
         $('.quality').click(function(){
             $(this).find($('.quality__description-block')).slideToggle();

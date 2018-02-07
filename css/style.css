@@ -1429,7 +1429,7 @@ body:hover > .about-us {
   .about-us {
     display: grid;
     grid-template-columns: 200px repeat(4, 1fr) 200px;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: 110px repeat(3, 1fr) 100px;
     font-size: 1.4rem;
   }
   .about-us .about-description1 {
@@ -1758,9 +1758,9 @@ body:hover > .about-us {
   .tech-bar .tech-bar-wrapper .img-technology .size {
     position: relative;
     text-align: center;
-    width: 110px;
-    height: 110px;
-    font-size: 110px;
+    width: 150px;
+    height: 150px;
+    font-size: 150px;
   }
   .team-wrapper .team {
     grid-template-columns: repeat(2, minmax(200px, 270px));
@@ -1773,6 +1773,7 @@ body:hover > .about-us {
   }
   .portfolio .portfolio-filter label {
     margin: 5px 0;
+    width: 85px;
   }
   .portfolio-gallery {
     max-height: 1000px;
@@ -1840,16 +1841,6 @@ body:hover > .about-us {
   .footer .footer__development-name {
     grid-column: 1;
     grid-row: 7;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .tech-bar .tech-bar-wrapper .img-technology .size {
-    position: relative;
-    text-align: center;
-    width: 150px;
-    height: 150px;
-    font-size: 150px;
   }
 }
 
@@ -1929,14 +1920,23 @@ body:hover > .about-us {
     justify-content: center;
     align-items: center;
     height: 200px;
-    min-width: 82vw;
     border-radius: 10px;
     cursor: pointer;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
   }
   .advantages .quality-wrapper .quality .quality__image i {
     display: block;
     font-size: 34px;
     color: rgba(255, 165, 0, 0.8);
+  }
+  .advantages .quality-wrapper .quality .quality__image:hover {
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
   }
   .advantages .quality-wrapper .quality .quality__image:hover > i {
     display: none;
@@ -1950,13 +1950,10 @@ body:hover > .about-us {
   .advantages .quality-wrapper .quality--1 .quality__image {
     grid-column: 1;
     grid-row: 1;
+    animation-name: moveLeft;
   }
   .advantages .quality-wrapper .quality--1 .quality__image:hover {
     animation-name: moveLeft;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    animation-play-state: running;
   }
   .advantages .quality-wrapper .quality--1 .quality__description-block {
     grid-column: 1;
@@ -1974,13 +1971,10 @@ body:hover > .about-us {
   .advantages .quality-wrapper .quality--2 .quality__image {
     grid-column: 1;
     grid-row: 1;
+    animation-name: technoMove;
   }
   .advantages .quality-wrapper .quality--2 .quality__image:hover {
     animation-name: technoMove;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    animation-play-state: running;
   }
   .advantages .quality-wrapper .quality--2 .quality__description-block {
     grid-column: 1;
@@ -1998,13 +1992,10 @@ body:hover > .about-us {
   .advantages .quality-wrapper .quality--3 .quality__image {
     grid-column: 1;
     grid-row: 1;
+    animation-name: searchCode;
   }
   .advantages .quality-wrapper .quality--3 .quality__image:hover {
     animation-name: searchCode;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    animation-play-state: running;
   }
   .advantages .quality-wrapper .quality--3 .quality__description-block {
     grid-column: 1;
@@ -2012,6 +2003,15 @@ body:hover > .about-us {
   }
   .advantages .quality-wrapper .quality--3 .quality__description-block:after {
     display: none;
+  }
+  .portfolio .portfolio-filter {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: 30px 30px;
+  }
+  .portfolio .portfolio-filter label {
+    margin: 5px 0;
+    width: 100px;
   }
   .portfolio-gallery {
     flex-wrap: nowrap;
@@ -2087,6 +2087,10 @@ body:hover > .about-us {
   .team-wrapper .team {
     grid-template-columns: minmax(200px, 300px);
     justify-content: center;
+  }
+  .portfolio .portfolio-filter {
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(3, 30px);
   }
   .portfolio-gallery .examples {
     width: 85%;
