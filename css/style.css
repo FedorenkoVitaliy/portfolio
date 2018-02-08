@@ -177,7 +177,7 @@ button {
   display: none;
 }
 
-.button, .header .nav-bar .button--header {
+.button, .header .nav-bar .button--header, .header .fix-nav .button--header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,7 +197,7 @@ button {
   letter-spacing: 0.16rem;
 }
 
-.button:active, .header .nav-bar .button--header:active {
+.button:active, .header .nav-bar .button--header:active, .header .fix-nav .button--header:active {
   text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.15);
   box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset 3px 15px 45px rgba(0, 0, 0, 0.2), inset -1px -1px 2px rgba(0, 0, 0, 0.5), inset -3px -15px 45px rgba(255, 255, 255, 0.1), 1px 5px 10px -4px black;
 }
@@ -283,29 +283,78 @@ button {
   transform: rotate(45deg);
 }
 
-#header-show {
+#overlay {
   display: none;
-  padding: 0;
+  justify-content: center;
   position: fixed;
-  top: 28px;
-  right: 10px;
-  height: 40px;
-  width: 40px;
-  padding: 10px;
-  z-index: 11;
-  opacity: 0.8;
+  z-index: 3;
+  background-color: rgba(50, 50, 50, 0.7);
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer;
 }
 
-#header-show-check {
+#overlay .call-back-form-modal {
   display: none;
-}
-
-.fixedNav {
-  position: fixed;
-  width: 100%;
+  grid-template-columns: minmax(150px, 400px);
+  grid-row-gap: 20px;
+  position: relative;
+  top: 100vh;
+  height: 450px;
+  width: auto;
+  background: rgba(150, 150, 150, 0.9);
+  padding: 15px 30px 50px;
+  border-radius: 10px;
   z-index: 10;
-  background: black;
-  opacity: 1;
+}
+
+#overlay .call-back-form-modal .contact-title {
+  display: grid;
+  height: 35px;
+  font-size: 2rem;
+  font-family: 'Kaushan Script', cursive;
+  color: orange;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: bottom;
+  letter-spacing: 0.15em;
+}
+
+#overlay .call-back-form-modal .close-form {
+  position: absolute;
+  width: 30px;
+  line-height: 16px;
+  cursor: pointer;
+  top: 15px;
+  right: 30px;
+  background: none;
+  padding: 0;
+}
+
+#overlay .call-back-form-modal .close-form:hover {
+  transform: rotate(360deg);
+  transition: 1s;
+}
+
+#overlay .call-back-form-modal .help {
+  color: white;
+  font-family: 'Audiowide', cursive;
+}
+
+#overlay .call-back-form-modal .input {
+  border-radius: 10px;
+  border: 0;
+  padding: 20px;
+}
+
+#overlay .call-back-form-modal .contact-send {
+  width: 200px;
+  justify-self: flex-end;
+}
+
+.fixed {
+  top: 0 !important;
+  transition: 1s;
 }
 
 .header {
@@ -318,26 +367,26 @@ button {
   background-size: cover;
 }
 
-.header .nav-bar {
+.header .nav-bar, .header .fix-nav {
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-column-gap: 20px;
   justify-content: space-around;
-  height: 120px;
   padding: 0 80px;
   grid-row: 1;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.header .nav-bar .logo {
+.header .nav-bar .logo, .header .fix-nav .logo {
   display: grid;
   grid-column: 1;
   width: auto;
   height: 100px;
+  margin: 10px 0;
 }
 
-.header .nav-bar .menu-link {
+.header .nav-bar .menu-link, .header .fix-nav .menu-link {
   display: grid;
   grid-column: 2;
   grid-template-columns: repeat(6, auto);
@@ -345,12 +394,12 @@ button {
   justify-content: end;
 }
 
-.header .nav-bar .menu-link li {
+.header .nav-bar .menu-link li, .header .fix-nav .menu-link li {
   display: inline;
   position: relative;
 }
 
-.header .nav-bar .menu-link li:after {
+.header .nav-bar .menu-link li:after, .header .fix-nav .menu-link li:after {
   display: block;
   position: absolute;
   top: 0;
@@ -362,22 +411,22 @@ button {
   transition: 0.5s;
 }
 
-.header .nav-bar .menu-link li:hover:after {
+.header .nav-bar .menu-link li:hover:after, .header .fix-nav .menu-link li:hover:after {
   width: 100%;
   transition: 0.7s;
 }
 
-.header .nav-bar .mini-menu-link {
+.header .nav-bar .mini-menu-link, .header .fix-nav .mini-menu-link {
   top: 120px;
 }
 
-.header .nav-bar a {
+.header .nav-bar a, .header .fix-nav a {
   text-decoration: none;
   color: #f8f9fa;
   font-size: 1.3rem;
 }
 
-.header .nav-bar .button--header {
+.header .nav-bar .button--header, .header .fix-nav .button--header {
   grid-column: 3;
   justify-self: end;
   height: 46px;
@@ -387,8 +436,18 @@ button {
   border: 2px solid orange;
 }
 
-.header .nav-bar .button--header:active {
+.header .nav-bar .button--header:active, .header .fix-nav .button--header:active {
   border: 2px solid #ff6c08;
+}
+
+.header .fix-nav {
+  position: fixed;
+  background: black;
+  width: 100%;
+  top: -200px;
+  padding: 0 50px;
+  transition: 1s;
+  z-index: 20;
 }
 
 .header .header-content {
@@ -429,78 +488,9 @@ button {
   color: white;
 }
 
-.header .header-content .button, .header .header-content .nav-bar .button--header, .header .nav-bar .header-content .button--header {
+.header .header-content .button, .header .header-content .nav-bar .button--header, .header .nav-bar .header-content .button--header, .header .header-content .fix-nav .button--header, .header .fix-nav .header-content .button--header {
   grid-column: 1;
   grid-row: 5;
-}
-
-.header #overlay {
-  display: none;
-  justify-content: center;
-  position: fixed;
-  z-index: 3;
-  background-color: rgba(50, 50, 50, 0.7);
-  width: 100vw;
-  height: 100vh;
-  cursor: pointer;
-}
-
-.header #overlay .call-back-form-modal {
-  display: none;
-  grid-template-columns: minmax(150px, 400px);
-  grid-row-gap: 20px;
-  position: relative;
-  top: 100vh;
-  height: 450px;
-  width: auto;
-  background: rgba(150, 150, 150, 0.9);
-  padding: 15px 30px 50px;
-  border-radius: 10px;
-  z-index: 10;
-}
-
-.header #overlay .call-back-form-modal .contact-title {
-  display: grid;
-  height: 35px;
-  font-size: 2rem;
-  font-family: 'Kaushan Script', cursive;
-  color: orange;
-  text-transform: uppercase;
-  text-align: center;
-  vertical-align: bottom;
-  letter-spacing: 0.15em;
-}
-
-.header #overlay .call-back-form-modal .close-form {
-  position: absolute;
-  width: 30px;
-  line-height: 16px;
-  cursor: pointer;
-  top: 15px;
-  right: 30px;
-  background: none;
-  padding: 0;
-}
-
-.header #overlay .call-back-form-modal .close-form:hover {
-  transform: rotate(360deg);
-  transition: 1s;
-}
-
-.header #overlay .call-back-form-modal .help {
-  color: white;
-  font-family: 'Audiowide', cursive;
-}
-
-.header #overlay .call-back-form-modal .input {
-  border-radius: 10px;
-  border: 0;
-  padding: 20px;
-}
-
-.header #overlay .call-back-form-modal .contact-send {
-  width: 200px;
-  justify-self: flex-end;
 }
 
 .about-us {
@@ -1463,15 +1453,19 @@ body:hover > .about-us {
   body > * {
     padding: 0 50px;
   }
-  .header .nav-bar {
+  .header .nav-bar, .header .fix-nav {
     padding: 0 50px;
   }
-  .header .nav-bar a {
+  .header .nav-bar a, .header .fix-nav a {
     text-transform: none;
   }
-  .header .nav-bar .button--header {
+  .header .nav-bar .button--header, .header .fix-nav .button--header {
     height: 40px;
     width: 125px;
+  }
+  .header .fix-nav {
+    padding: 0 12px;
+    grid-column-gap: 12px;
   }
   .portfolio {
     grid-template-columns: 1fr;
@@ -1533,54 +1527,43 @@ body:hover > .about-us {
     display: grid;
     grid-column: 2;
     width: auto;
-    height: 10vw;
+    height: 50px;
     justify-self: center;
   }
   .header {
     grid-template-rows: auto 100px 450px 100px;
   }
-  .header .nav-bar {
-    height: 110px;
-  }
-  .header .nav-bar .logo {
+  .header .nav-bar .logo, .header .fix-nav .logo {
     display: none;
   }
-  .header .nav-bar .logo-menu {
+  .header .nav-bar .logo-menu, .header .fix-nav .logo-menu {
     display: grid;
     grid-column: 1;
     align-items: center;
     position: relative;
-    top: 10px;
+    top: 5px;
     width: 75px;
     height: 75px;
     cursor: pointer;
-    z-index: 20;
     opacity: 0.9;
   }
-  .header .nav-bar .logo-menu img {
+  .header .nav-bar .logo-menu img, .header .fix-nav .logo-menu img {
     position: absolute;
     width: 75px;
   }
-  .header .nav-bar .fixedLogo {
-    position: fixed;
-    left: 50px;
-    height: 65px;
-    border-radius: 10px;
-  }
-  .header .nav-bar .menu-link {
+  .header .nav-bar .menu-link, .header .fix-nav .menu-link {
     display: none;
   }
-  .header .nav-bar .mini-menu-link {
+  .header .nav-bar .mini-menu-link, .header .fix-nav .mini-menu-link {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 40px);
     grid-column: 1;
-    width: 100vw;
+    width: 100%;
     position: absolute;
     top: 110px;
-    left: -12px;
   }
-  .header .nav-bar .mini-menu-link li {
+  .header .nav-bar .mini-menu-link li, .header .fix-nav .mini-menu-link li {
     display: flex;
     border-bottom: 2px solid transparent;
     align-items: center;
@@ -1588,26 +1571,23 @@ body:hover > .about-us {
     background: #404040;
     border-bottom: 1px solid orange;
   }
-  .header .nav-bar .mini-menu-link li a {
+  .header .nav-bar .mini-menu-link li a, .header .fix-nav .mini-menu-link li a {
     position: relative;
     left: -22px;
     color: #f8f9fa;
     text-decoration: none;
     text-transform: uppercase;
   }
-  .header .nav-bar .mini-menu-link li:hover {
+  .header .nav-bar .mini-menu-link li:hover, .header .fix-nav .mini-menu-link li:hover {
     color: orange;
   }
-  .header .nav-bar .mini-menu-link li:hover a {
+  .header .nav-bar .mini-menu-link li:hover a, .header .fix-nav .mini-menu-link li:hover a {
     color: orange;
   }
   .header-small {
     grid-template-rows: auto 250px 400px 20px;
   }
-  .header .nav-bar {
-    height: 90px;
-  }
-  .header .nav-bar .mini-menu-link {
+  .header .nav-bar .mini-menu-link, .header .fix-nav .mini-menu-link {
     top: 90px;
   }
   .header .header-content {
@@ -1851,29 +1831,31 @@ body:hover > .about-us {
   .header {
     grid-template-rows: auto 120px 300px 100px;
   }
-  .header .nav-bar {
-    height: 80px;
+  .header .nav-bar, .header .fix-nav {
     padding: 0 10px;
     grid-column-gap: 10px;
   }
-  .header .nav-bar .mini-menu-link {
+  .header .nav-bar .mini-menu-link, .header .fix-nav .mini-menu-link {
     top: 80px;
   }
-  .header .nav-bar .button--header {
+  .header .nav-bar .button--header, .header .fix-nav .button--header {
     width: 90px;
-  }
-  .header .nav-bar .fixedLogo {
-    left: 10px;
   }
   .header .header-content {
     grid-template-rows: 2fr 1fr 5fr 1fr 1fr;
-    margin: 0 20px;
+    margin: 0 30px;
+    padding: 30px 20px;
   }
   .header .header-content .heading {
     font-size: 3rem;
   }
   .header .header-content .description {
     font-size: 1.3rem;
+  }
+  .header .header-content .button, .header .header-content .nav-bar .button--header, .header .nav-bar .header-content .button--header, .header .header-content .fix-nav .button--header, .header .fix-nav .header-content .button--header {
+    width: 150px;
+    height: 50px;
+    font-size: 1.2rem;
   }
   .header-small {
     grid-template-rows: auto 250px 300px 20px;
@@ -2062,7 +2044,7 @@ body:hover > .about-us {
 
 @media screen and (max-width: 400px) {
   .header {
-    grid-template-rows: auto 120px 250px 20px;
+    grid-template-rows: auto 120px 300px 20px;
   }
   .header .logo-description {
     display: none;
@@ -2077,12 +2059,8 @@ body:hover > .about-us {
   .header .header-content .description {
     font-size: 1.2rem;
   }
-  .header .header-content .button, .header .header-content .nav-bar .button--header, .header .nav-bar .header-content .button--header {
-    width: 150px;
-    font-size: 1.2rem;
-  }
   .header-small {
-    grid-template-rows: 80px 250px 400px 20px;
+    grid-template-rows: 80px 250px 300px 20px;
   }
   .team-wrapper .team {
     grid-template-columns: minmax(200px, 300px);

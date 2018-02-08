@@ -35,13 +35,10 @@ textarea:focus, input:focus{
     outline: none;
 }
 
-
-
 button{
     outline: 0;
 }
-
-//General style for multiple use
+//General style for multiple use start
 .mini-logo{
     display: none;
 }
@@ -49,7 +46,6 @@ button{
 .logo-menu,  .logo-description{
     display:none;
 }
-
 
 .button {
     display: flex;
@@ -87,7 +83,6 @@ button{
     }
 }
 
-
 .subheading{
     display:flex;
     align-items: flex-end;
@@ -105,8 +100,6 @@ button{
     justify-self: center;
     content:url("../img/waves.png");
 }
-
-
 
 .to-Top {
     display: none;
@@ -171,33 +164,87 @@ button{
         transform: rotate(45deg);
     }
 }
-#header-show{
+
+#overlay{
     display:none;
-    padding:0;
+    justify-content: center;
     position:fixed;
-    top: 28px;
-    right: 10px;
-    height: 40px;
-    width: 40px;
-    padding: 10px;
-    z-index: 11;
-    opacity: 0.8;
+    z-index: 3;
+    background-color: rgba(50, 50,50, 0.7);
+    width:100vw;
+    height:100vh;
+    cursor:pointer;
+
+    .call-back-form-modal {
+        display: none;
+        grid-template-columns: minmax(150px, 400px);
+        grid-row-gap: 20px;
+        position: relative;
+        top: 100vh;
+        height: 450px;
+        width: auto;
+
+        background: rgba(150, 150, 150, 0.9);
+        padding: 15px 30px 50px;
+        border-radius: 10px;
+        z-index: 10;
+
+
+        .contact-title{
+            display: grid;
+            height: 35px;
+            font-size: 2rem;
+            font-family: 'Kaushan Script', cursive;
+
+            color:$main-color;
+            text-transform: uppercase;
+            text-align: center;
+            vertical-align: bottom;
+            letter-spacing: 0.15em;
+        }
+
+        .close-form {
+            position: absolute;
+
+            width: 30px;
+            line-height: 16px;
+            cursor: pointer;
+            top:15px;
+            right:30px;
+            background: none;
+            padding: 0;
+
+            &:hover {
+                transform: rotate(360deg);
+                transition: 1s;
+            }
+        }
+
+        .help{
+            color:white;
+            font-family: 'Audiowide', cursive;
+        }
+
+        .input{
+            border-radius: 10px;
+            border: 0;
+            padding:20px;
+
+        }
+
+        .contact-send{
+            width: 200px;
+            justify-self: flex-end;
+        }
+    }
 }
 
-#header-show-check{
-    display: none;
+
+.fixed{
+    top:0 !important;
+    transition: 1s;
 }
-
-.fixedNav{
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-    background: black;
-    opacity: 1;
-}
-
-
-//General style for multiple use
+//General style for multiple use end
 
 .header{
     display:grid;
@@ -214,11 +261,9 @@ button{
         grid-template-columns: auto 1fr auto;
         grid-column-gap: 20px;
         justify-content: space-around;
-        height: 120px;
         padding:$main-big-indent;
         grid-row: 1;
         align-items: center;
-
 
         background-color: rgba(0,0,0,0.8);
 
@@ -227,6 +272,7 @@ button{
             grid-column: 1;
             width: auto;
             height: 100px;
+            margin:10px 0;
         }
 
         .menu-link {
@@ -286,6 +332,17 @@ button{
         }
     }
 
+    .fix-nav{
+        @extend .nav-bar;
+        position: fixed;
+        background: black;
+        width: 100%;
+        top: -200px;
+        padding: $main-middle-indent;
+        transition: 1s;
+        z-index: 20;
+    }
+
     .header-content{
         display: flex;
         flex-direction: column;
@@ -330,81 +387,6 @@ button{
             grid-row: 5;
         }
     }
-
-    #overlay{
-        display:none;
-        justify-content: center;
-        position:fixed;
-        z-index: 3;
-        background-color: rgba(50, 50,50, 0.7);
-        width:100vw;
-        height:100vh;
-        cursor:pointer;
-
-        .call-back-form-modal {
-            display: none;
-            grid-template-columns: minmax(150px, 400px);
-            grid-row-gap: 20px;
-            position: relative;
-            top: 100vh;
-            height: 450px;
-            width: auto;
-
-            background: rgba(150, 150, 150, 0.9);
-            padding: 15px 30px 50px;
-            border-radius: 10px;
-            z-index: 10;
-
-
-            .contact-title{
-                display: grid;
-                height: 35px;
-                font-size: 2rem;
-                font-family: 'Kaushan Script', cursive;
-
-                color:$main-color;
-                text-transform: uppercase;
-                text-align: center;
-                vertical-align: bottom;
-                letter-spacing: 0.15em;
-            }
-
-            .close-form {
-                position: absolute;
-
-                width: 30px;
-                line-height: 16px;
-                cursor: pointer;
-                top:15px;
-                right:30px;
-                background: none;
-                padding: 0;
-
-                &:hover {
-                    transform: rotate(360deg);
-                    transition: 1s;
-                }
-            }
-
-            .help{
-                color:white;
-                font-family: 'Audiowide', cursive;
-            }
-
-            .input{
-                border-radius: 10px;
-                border: 0;
-                padding:20px;
-
-            }
-
-            .contact-send{
-                width: 200px;
-                justify-self: flex-end;
-            }
-        }
-    }
-
 }
 
 .about-us {
@@ -1435,6 +1417,11 @@ body:hover>.about-us{
                 width: 125px;
             }
         }
+
+        .fix-nav{
+            padding: 0 12px;
+            grid-column-gap: 12px;
+        }
     }
 
     .portfolio {
@@ -1512,15 +1499,13 @@ body:hover>.about-us{
         display:grid;
         grid-column: 2;
         width: auto;
-        height: 10vw;
+        height: 50px;
         justify-self: center;
     }
 
     .header{
         grid-template-rows: auto 100px 450px 100px;
         .nav-bar{
-            height: 110px;
-
             .logo{
                 display:none;
             }
@@ -1531,24 +1516,16 @@ body:hover>.about-us{
                 align-items: center;
 
                 position: relative;
-                top: 10px;
+                top: 5px;
                 width: 75px;
                 height: 75px;
                 cursor: pointer;
-                z-index: 20;
 
                 img{
                     position: absolute;
                     width: 75px;
                 }
                 opacity: 0.9;
-            }
-
-            .fixedLogo{
-                position: fixed;
-                left: 50px;
-                height: 65px;
-                border-radius: 10px;
             }
 
             .menu-link{
@@ -1561,10 +1538,9 @@ body:hover>.about-us{
                 grid-template-rows: repeat(6, 40px);
                 grid-column: 1;
 
-                width: 100vw;
+                width: 100%;
                 position: absolute;
                 top: 110px;
-                left: -12px;
 
                 li {
                     display: flex;
@@ -1599,10 +1575,7 @@ body:hover>.about-us{
     }
 
     .header {
-
         .nav-bar{
-            height: 90px;
-
             .mini-menu-link{
                 top: 90px;
             }
@@ -1925,7 +1898,6 @@ body:hover>.about-us{
         grid-template-rows: auto 120px 300px 100px;
 
         .nav-bar{
-            height: 80px;
             padding: 0 10px;
             grid-column-gap: 10px;
 
@@ -1936,14 +1908,12 @@ body:hover>.about-us{
             .button--header{
                 width: 90px;
             }
-            .fixedLogo{
-                left: 10px;
-            }
         }
 
         .header-content {
             grid-template-rows: 2fr 1fr 5fr 1fr 1fr;
-            margin: 0 20px;
+            margin: 0 30px;
+            padding: 30px 20px;
 
             .heading {
                 font-size:  3rem;
@@ -1951,6 +1921,12 @@ body:hover>.about-us{
 
             .description{
                 font-size: 1.3rem;
+            }
+
+            .button{
+                width: 150px;
+                height: 50px;
+                font-size: 1.2rem;
             }
         }
     }
@@ -2186,7 +2162,7 @@ body:hover>.about-us{
 }
 @media screen and (max-width: 400px) {
     .header{
-        grid-template-rows: auto 120px 250px 20px;
+        grid-template-rows: auto 120px 300px 20px;
         .logo-description{
             display: none;
         }
@@ -2199,15 +2175,11 @@ body:hover>.about-us{
             .description{
                 font-size: 1.2rem;
             }
-            .button{
-                width: 150px;
-                font-size: 1.2rem;
-            }
         }
     }
 
     .header-small{
-        grid-template-rows: 80px 250px 400px 20px;
+        grid-template-rows: 80px 250px 300px 20px;
     }
 
     .team-wrapper {
