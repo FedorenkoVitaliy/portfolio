@@ -444,7 +444,7 @@ button {
   position: fixed;
   background: black;
   width: 100%;
-  top: -200px;
+  top: -100vh;
   padding: 0 50px;
   transition: 1s;
   z-index: 20;
@@ -1588,7 +1588,7 @@ body:hover > .about-us {
     grid-template-rows: auto 250px 400px 20px;
   }
   .header .nav-bar .mini-menu-link, .header .fix-nav .mini-menu-link {
-    top: 90px;
+    top: 75px;
   }
   .header .header-content {
     margin: 0 50px;
@@ -1835,9 +1835,6 @@ body:hover > .about-us {
     padding: 0 10px;
     grid-column-gap: 10px;
   }
-  .header .nav-bar .mini-menu-link, .header .fix-nav .mini-menu-link {
-    top: 80px;
-  }
   .header .nav-bar .button--header, .header .fix-nav .button--header {
     width: 90px;
   }
@@ -1883,13 +1880,13 @@ body:hover > .about-us {
   .advantages {
     grid-template-columns: auto;
     grid-template-rows: 110px 30px auto 100px;
-    justify-content: center;
   }
   .advantages .quality-wrapper {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
     grid-row-gap: 40px;
     box-shadow: none;
+    width: 100%;
   }
   .advantages .quality-wrapper .quality {
     grid-template-rows: 200px auto;
@@ -2060,7 +2057,7 @@ body:hover > .about-us {
     font-size: 1.2rem;
   }
   .header-small {
-    grid-template-rows: 80px 250px 300px 20px;
+    grid-template-rows: 75px 250px 300px 20px;
   }
   .team-wrapper .team {
     grid-template-columns: minmax(200px, 300px);

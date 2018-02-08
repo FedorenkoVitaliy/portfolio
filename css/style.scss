@@ -337,7 +337,7 @@ button{
         position: fixed;
         background: black;
         width: 100%;
-        top: -200px;
+        top: -100vh;
         padding: $main-middle-indent;
         transition: 1s;
         z-index: 20;
@@ -1577,7 +1577,7 @@ body:hover>.about-us{
     .header {
         .nav-bar{
             .mini-menu-link{
-                top: 90px;
+                top: 75px;
             }
         }
 
@@ -1901,10 +1901,6 @@ body:hover>.about-us{
             padding: 0 10px;
             grid-column-gap: 10px;
 
-            .mini-menu-link{
-                top: 80px;
-            }
-
             .button--header{
                 width: 90px;
             }
@@ -1964,12 +1960,12 @@ body:hover>.about-us{
     .advantages {
         grid-template-columns: auto;
         grid-template-rows: 110px 30px auto 100px;
-        justify-content: center;
         .quality-wrapper {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(3, auto);
             grid-row-gap: 40px;
             box-shadow: none;
+            width: 100%;
 
             .quality{
                 grid-template-rows: 200px auto;
@@ -2179,7 +2175,7 @@ body:hover>.about-us{
     }
 
     .header-small{
-        grid-template-rows: 80px 250px 300px 20px;
+        grid-template-rows: 75px 250px 300px 20px;
     }
 
     .team-wrapper {
