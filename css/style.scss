@@ -72,6 +72,7 @@ button{
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.16rem;
+    cursor: pointer;
 
     &:active {
         text-shadow: 1px 1px 0px rgba(255,255,255,0.15);
@@ -80,6 +81,14 @@ button{
         inset -1px -1px 2px rgba(0,0,0,0.5),
         inset -3px -15px 45px rgba(255,255,255,0.1),
         1px 5px 10px -4px rgba(0,0,0,1);
+    }
+
+    &:hover{
+        box-shadow: inset 1px 3px 10px -4px rgba(0,0,0,1),
+        inset 3px 15px 45px rgba(255,255,255,0.1),
+        inset -1px -1px 2px rgba(0,0,0,0.3),
+        inset -3px -15px 45px rgba(0,0,0,0.2),
+        1px 0 15px 0 $active-color;
     }
 }
 
@@ -169,7 +178,7 @@ button{
     display:none;
     justify-content: center;
     position:fixed;
-    z-index: 3;
+    z-index: 12;
     background-color: rgba(50, 50,50, 0.7);
     width:100vw;
     height:100vh;
@@ -187,7 +196,7 @@ button{
         background: rgba(150, 150, 150, 0.9);
         padding: 15px 30px 50px;
         border-radius: 10px;
-        z-index: 10;
+        z-index: 14;
 
 
         .contact-title{
@@ -340,7 +349,7 @@ button{
         top: -100vh;
         padding: $main-middle-indent;
         transition: 1s;
-        z-index: 20;
+        z-index: 10;
     }
 
     .header-content{
@@ -510,6 +519,13 @@ body:hover>.about-us{
             grid-template-columns: 1fr 1fr;
             grid-column: 1/span 2;
 
+            .quality__image {
+                animation-duration: 2s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+                animation-play-state: paused;
+            }
+
             i {
                 display:none;
             }
@@ -548,6 +564,13 @@ body:hover>.about-us{
             }
         }
 
+        .quality:hover > .quality__image {
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            animation-play-state: running;
+        }
+
         .quality--1 {
             grid-row: 1;
 
@@ -555,10 +578,6 @@ body:hover>.about-us{
                 grid-column: 1;
                 background: url("../img/price.jpg");
                 animation-name: moveLeft;
-                animation-duration: 300ms;
-                animation-play-state: paused;
-                animation-fill-mode: both;
-
             }
 
             .quality__description-block {
@@ -574,10 +593,6 @@ body:hover>.about-us{
 
         .quality--1:hover > .quality__image {
             animation-name: moveLeft;
-            animation-duration: 2s;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: forwards;
-            animation-play-state: running;
         }
 
         .quality--2 {
@@ -587,9 +602,6 @@ body:hover>.about-us{
                 grid-column: 2;
                 background: url("../img/technology.jpg") right;
                 animation-name: technoMove;
-                animation-fill-mode: both;
-                animation-duration: 300ms;
-                animation-play-state: paused;
             }
 
             .quality__description-block {
@@ -606,10 +618,6 @@ body:hover>.about-us{
 
         .quality--2:hover > .quality__image {
             animation-name: technoMove;
-            animation-duration: 2s;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: forwards;
-            animation-play-state: running;
         }
 
         .quality--3 {
@@ -625,9 +633,6 @@ body:hover>.about-us{
                 background-position:center;
                 background-size: 125%;
                 animation-name: searchCode;
-                animation-duration: 300ms;
-                animation-fill-mode: forwards;
-                animation-play-state: paused;
             }
 
             .quality__description-block {
@@ -644,10 +649,6 @@ body:hover>.about-us{
 
         .quality--3:hover > .quality__image {
             animation-name: searchCode;
-            animation-duration: 2s;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: forwards;
-            animation-play-state: running;
         }
     }
 }
@@ -942,7 +943,6 @@ body:hover>.about-us{
 .examples-detailed{
     grid-template-rows: 70vh 1fr;
     position: fixed;
-    height: 96vh;
     width: 90vw;
     top: 100vh;
     border-radius: 10px;
@@ -950,7 +950,7 @@ body:hover>.about-us{
     box-shadow: 1px 1px 3px 3px rgba(255, 165, 0, 0.5);
     background: white;
     cursor: pointer;
-    z-index: 10;
+    z-index: 14;
     opacity: 0;
 
     .icon-site{
@@ -1981,23 +1981,11 @@ body:hover>.about-us{
                     border-radius: 10px;
                     cursor: pointer;
 
-                    animation-duration: 3s;
-                    animation-timing-function: ease-in-out;
-                    animation-fill-mode: forwards;
-                    animation-play-state: paused;
-
                     i {
                         display:block;
                         font-size: 34px;
                         color: rgba(255,165,0,0.8);
                     }
-                }
-
-                .quality__image:hover{
-                    animation-duration: 3s;
-                    animation-timing-function: ease-in-out;
-                    animation-fill-mode: forwards;
-                    animation-play-state: running;
                 }
 
                 .quality__image:hover>i{
@@ -2014,11 +2002,6 @@ body:hover>.about-us{
                 .quality__image{
                     grid-column: 1;
                     grid-row: 1;
-                    animation-name: moveLeft;
-                }
-
-                .quality__image:hover {
-                    animation-name: moveLeft;
                 }
 
                 .quality__description-block {
@@ -2040,11 +2023,6 @@ body:hover>.about-us{
                 .quality__image{
                     grid-column: 1;
                     grid-row: 1;
-                    animation-name: technoMove;
-                }
-
-                .quality__image:hover {
-                    animation-name: technoMove;
                 }
 
                 .quality__description-block {
@@ -2066,11 +2044,6 @@ body:hover>.about-us{
                 .quality__image{
                     grid-column: 1;
                     grid-row: 1;
-                    animation-name: searchCode;
-                }
-
-                .quality__image:hover {
-                    animation-name: searchCode;
                 }
 
                 .quality__description-block {
