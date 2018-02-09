@@ -195,11 +195,16 @@ button {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.16rem;
+  cursor: pointer;
 }
 
 .button:active, .header .nav-bar .button--header:active, .header .fix-nav .button--header:active {
   text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.15);
   box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset 3px 15px 45px rgba(0, 0, 0, 0.2), inset -1px -1px 2px rgba(0, 0, 0, 0.5), inset -3px -15px 45px rgba(255, 255, 255, 0.1), 1px 5px 10px -4px black;
+}
+
+.button:hover, .header .nav-bar .button--header:hover, .header .fix-nav .button--header:hover {
+  box-shadow: inset 1px 3px 10px -4px black, inset 3px 15px 45px rgba(255, 255, 255, 0.1), inset -1px -1px 2px rgba(0, 0, 0, 0.3), inset -3px -15px 45px rgba(0, 0, 0, 0.2), 1px 0 15px 0 #ff6c08;
 }
 
 .subheading {
@@ -287,7 +292,7 @@ button {
   display: none;
   justify-content: center;
   position: fixed;
-  z-index: 3;
+  z-index: 12;
   background-color: rgba(50, 50, 50, 0.7);
   width: 100vw;
   height: 100vh;
@@ -305,7 +310,7 @@ button {
   background: rgba(150, 150, 150, 0.9);
   padding: 15px 30px 50px;
   border-radius: 10px;
-  z-index: 10;
+  z-index: 14;
 }
 
 #overlay .call-back-form-modal .contact-title {
@@ -447,7 +452,7 @@ button {
   top: -100vh;
   padding: 0 50px;
   transition: 1s;
-  z-index: 20;
+  z-index: 10;
 }
 
 .header .header-content {
@@ -613,6 +618,13 @@ body:hover > .about-us {
   grid-column: 1/span 2;
 }
 
+.advantages .quality-wrapper .quality .quality__image {
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
 .advantages .quality-wrapper .quality i {
   display: none;
 }
@@ -649,6 +661,13 @@ body:hover > .about-us {
   border: 25px solid transparent;
 }
 
+.advantages .quality-wrapper .quality:hover > .quality__image {
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
 .advantages .quality-wrapper .quality--1 {
   grid-row: 1;
 }
@@ -657,9 +676,6 @@ body:hover > .about-us {
   grid-column: 1;
   background: url("../img/price.jpg");
   animation-name: moveLeft;
-  animation-duration: 300ms;
-  animation-play-state: paused;
-  animation-fill-mode: both;
 }
 
 .advantages .quality-wrapper .quality--1 .quality__description-block {
@@ -674,10 +690,6 @@ body:hover > .about-us {
 
 .advantages .quality-wrapper .quality--1:hover > .quality__image {
   animation-name: moveLeft;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-play-state: running;
 }
 
 .advantages .quality-wrapper .quality--2 {
@@ -688,9 +700,6 @@ body:hover > .about-us {
   grid-column: 2;
   background: url("../img/technology.jpg") right;
   animation-name: technoMove;
-  animation-fill-mode: both;
-  animation-duration: 300ms;
-  animation-play-state: paused;
 }
 
 .advantages .quality-wrapper .quality--2 .quality__description-block {
@@ -706,10 +715,6 @@ body:hover > .about-us {
 
 .advantages .quality-wrapper .quality--2:hover > .quality__image {
   animation-name: technoMove;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-play-state: running;
 }
 
 .advantages .quality-wrapper .quality--3 {
@@ -726,9 +731,6 @@ body:hover > .about-us {
   background-position: center;
   background-size: 125%;
   animation-name: searchCode;
-  animation-duration: 300ms;
-  animation-fill-mode: forwards;
-  animation-play-state: paused;
 }
 
 .advantages .quality-wrapper .quality--3 .quality__description-block {
@@ -744,10 +746,6 @@ body:hover > .about-us {
 
 .advantages .quality-wrapper .quality--3:hover > .quality__image {
   animation-name: searchCode;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-play-state: running;
 }
 
 .tech-bar {
@@ -1032,20 +1030,21 @@ body:hover > .about-us {
 .examples-detailed {
   grid-template-rows: 70vh 1fr;
   position: fixed;
-  height: 96vh;
   width: 90vw;
   top: 100vh;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 1px 1px 3px 3px rgba(255, 165, 0, 0.5);
-  background: white;
+  box-shadow: 1px 1px 3px 3px rgba(255, 165, 0, 0.5), inset 0 0 13px 2px black;
+  background: url(../img/about-us-background.png) center top;
   cursor: pointer;
-  z-index: 10;
+  z-index: 14;
   opacity: 0;
 }
 
 .examples-detailed .icon-site {
+  justify-self: end;
   height: 100%;
+  width: 90%;
   overflow-y: scroll;
 }
 
@@ -1062,9 +1061,8 @@ body:hover > .about-us {
   align-content: space-between;
   grid-column-gap: 20px;
   grid-row-gap: 10px;
-  background: url(../img/about-us-background.png) center top;
+  background: transparent;
   padding: 10px 15px;
-  box-shadow: inset 0 0 13px 2px black;
   font-size: 1rem;
 }
 
@@ -1128,7 +1126,7 @@ body:hover > .about-us {
   font-size: 32px;
   position: absolute;
   top: 5px;
-  right: 25px;
+  right: -25px;
 }
 
 .feedback {
@@ -1901,21 +1899,11 @@ body:hover > .about-us {
     height: 200px;
     border-radius: 10px;
     cursor: pointer;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    animation-play-state: paused;
   }
   .advantages .quality-wrapper .quality .quality__image i {
     display: block;
     font-size: 34px;
     color: rgba(255, 165, 0, 0.8);
-  }
-  .advantages .quality-wrapper .quality .quality__image:hover {
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    animation-play-state: running;
   }
   .advantages .quality-wrapper .quality .quality__image:hover > i {
     display: none;
@@ -1929,10 +1917,6 @@ body:hover > .about-us {
   .advantages .quality-wrapper .quality--1 .quality__image {
     grid-column: 1;
     grid-row: 1;
-    animation-name: moveLeft;
-  }
-  .advantages .quality-wrapper .quality--1 .quality__image:hover {
-    animation-name: moveLeft;
   }
   .advantages .quality-wrapper .quality--1 .quality__description-block {
     grid-column: 1;
@@ -1950,10 +1934,6 @@ body:hover > .about-us {
   .advantages .quality-wrapper .quality--2 .quality__image {
     grid-column: 1;
     grid-row: 1;
-    animation-name: technoMove;
-  }
-  .advantages .quality-wrapper .quality--2 .quality__image:hover {
-    animation-name: technoMove;
   }
   .advantages .quality-wrapper .quality--2 .quality__description-block {
     grid-column: 1;
@@ -1971,10 +1951,6 @@ body:hover > .about-us {
   .advantages .quality-wrapper .quality--3 .quality__image {
     grid-column: 1;
     grid-row: 1;
-    animation-name: searchCode;
-  }
-  .advantages .quality-wrapper .quality--3 .quality__image:hover {
-    animation-name: searchCode;
   }
   .advantages .quality-wrapper .quality--3 .quality__description-block {
     grid-column: 1;
@@ -2080,4 +2056,64 @@ body:hover > .about-us {
     height: 150px;
     font-size: 150px;
   }
+}
+
+.notebook {
+  position: relative;
+  font-size: 4px;
+  width: 100em;
+  margin: 50px auto;
+}
+
+.notebook .display {
+  width: 77.5em;
+  height: 52.5em;
+  margin: 0 auto;
+  border: 2.5em solid #333;
+  overflow-y: scroll;
+}
+
+.notebook .display img {
+  width: 100%;
+}
+
+.notebook .display:before {
+  content: '';
+  position: absolute;
+  top: 2.5px;
+  left: 50%;
+  margin-left: 2.5px;
+  width: 5px;
+  height: 5px;
+  background: #ccc;
+}
+
+.notebook .bottom {
+  position: relative;
+  width: 100em;
+  height: 2.5em;
+  background: #cccccc;
+  margin: 0 auto;
+}
+
+.notebook .bottom:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -6em;
+  width: 12em;
+  height: 1em;
+  background: #8e8e8e;
+}
+
+.notebook .bottom:after {
+  content: '';
+  position: absolute;
+  bottom: -1em;
+  left: 0;
+  right: 0;
+  border-top: 1em solid #959595;
+  border-left: 2em solid transparent;
+  border-right: 2em solid transparent;
 }

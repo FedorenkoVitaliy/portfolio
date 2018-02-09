@@ -21,8 +21,8 @@ $(document).ready(function() {
     $('.examples').click( function(event){
         event.stopPropagation();
         $('#overlay').fadeIn(400, function(){
-			$(event.target).children(".icon-site").clone().addClass("icon-site").appendTo(".examples-detailed");
-            $(event.target).children(".project-detailed").clone().addClass("project-detailed").appendTo(".examples-detailed");
+			$(event.target).children(".icon-site").children().clone().appendTo(".display");
+            $(event.target).children(".project-detailed").clone().appendTo(".examples-detailed");
             $('.examples-detailed').css('display', 'grid').animate({opacity: 1,top: "2vh", left: '5vw'}, 350);
             $("html,body").css("overflow","hidden");
         });
@@ -34,8 +34,8 @@ $(document).ready(function() {
             $(this).css('display', 'none');
             $('#overlay').fadeOut(400);
             $("html,body").css("overflow","auto");
+            $('.display').children().detach();
             $('.examples-detailed').children(".project-detailed").detach();
-            $('.examples-detailed').children(".icon-site").detach();
         });
     });
 
