@@ -10,35 +10,38 @@ $(document).ready(function() {
 
     $('#overlay, .close-form, .examples-detailed:after').click( function(){
         $('.call-back-form-modal').animate({opacity: 0, top: '100vh'}, 200,
-            function(){
-                $(this).css('display', 'none');
-                $('#overlay').fadeOut(400);
-            }
-        );
+        function(){
+            $(this).css('display', 'none');
+            $('#overlay').fadeOut(400);
+        });
     });
 //write us modal menu end
 
 //portfolio gallery modal start
     $('.examples').click( function(event){
+        event.stopPropagation();
         $('#overlay').fadeIn(400, function(){
-			$(event.target).children(".icon-site").clone().addClass("icon-site").appendTo(".examples-detailed");
-            $(event.target).children(".project-detailed").clone().addClass("project-detailed").appendTo(".examples-detailed");
+			$(event.target).children(".icon-site").children().clone().appendTo(".display");
+            $(event.target).children(".project-detailed").clone().appendTo(".examples-detailed");
             $('.examples-detailed').css('display', 'grid').animate({opacity: 1,top: "2vh", left: '5vw'}, 350);
             $("html,body").css("overflow","hidden");
         });
     });
 
-    $('#overlay, .close-form').click( function(){
+    $('#overlay, .close-form').click( function(event){
 		$('.examples-detailed').animate({opacity: 0, top: '45%'}, 300,
-			function(){
-				$(this).css('display', 'none');
-				$('#overlay').fadeOut(400);
-                $("html,body").css("overflow","auto");
-                $('.examples-detailed').children(".project-detailed").detach();
-                $('.examples-detailed').children(".icon-site").detach();
-			}
-		);
+        function(){
+            $(this).css('display', 'none');
+            $('#overlay').fadeOut(400);
+            $("html,body").css("overflow","auto");
+            $('.display').children().detach();
+            $('.examples-detailed').children(".project-detailed").detach();
+        });
     });
 
-    //portfolio gallery modal end
+    //portfolio gallery modal end*/
+
+    $('.call-back-form-modal, .examples-detailed').click(function (event) {
+        event.stopPropagation();
+    });
 });
