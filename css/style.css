@@ -2071,14 +2071,15 @@ body:hover > .about-us {
   .portfolio-gallery .examples {
     width: 85%;
   }
-}
-
-@media screen and (max-width: 320px) {
-  .tech-bar .tech-bar-wrapper .img-technology .size {
+  .tech-bar .tech-list .tech-item {
+    line-height: 30px;
+    font-size: 1rem;
+  }
+  .tech-bar .tech-list .tech-item .size {
     position: relative;
     text-align: center;
-    width: 80px;
-    height: 80px;
-    font-size: 80px;
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
   }
 }
