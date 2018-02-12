@@ -1007,8 +1007,9 @@ body:hover>.about-us{
 }
 
 .examples-detailed{
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80vh;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    height: 80vh;
     grid-column-gap: 20px;
     align-self: center;
 
@@ -1031,7 +1032,7 @@ body:hover>.about-us{
         align-self: end;
         position: relative;
         margin: 20px;
-        font-size: px; // this defines the comple notebook size
+        font-size: 0.5vw; // this defines the comple notebook size
 
         .display {
             width: 77.5em;
@@ -1097,6 +1098,7 @@ body:hover>.about-us{
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
         align-content: space-between;
+        max-width: 350px;
 
         background: transparent;
         padding: 10px 15px  ;
@@ -1110,7 +1112,7 @@ body:hover>.about-us{
             grid-row: 1;
             color: $main-color;
             font-family: 'Audiowide', cursive;
-            font-size: 3em;
+            font-size: 4em;
             font-weight: bold;
             text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
             text-align: left;
@@ -1132,7 +1134,7 @@ body:hover>.about-us{
             display:inline;
             grid-row: 2;
             font-family: cursive;
-            font-size: 1.5em;
+            font-size: 2em;
             max-width: 900px;
             color: rgba(0, 0, 0, 0.8);
         }
@@ -1144,8 +1146,7 @@ body:hover>.about-us{
 
             height: 60px;
             min-width: 180px;
-            margin-left:auto;
-            font-size: 1.2em;
+            font-size: 1.75em;
             font-weight: bold;
             color: rgba(0, 0, 0, 0.8);
             transform: skewX(-10deg);
@@ -1482,10 +1483,6 @@ body:hover>.about-us{
         font-size: 1.1rem;
     }
 
-    .quality__description{
-        font-size: 1.1rem;
-    }
-
     .team-wrapper {
         .team {
             display: grid;
@@ -1582,6 +1579,44 @@ body:hover>.about-us{
             grid-row: 5;
             grid-column: 1;
         }
+    }
+
+    .examples-detailed{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        align-content: space-around;
+        height: 90vh;
+
+
+        .notebook{
+            font-size: 0.8vh;
+        }
+
+        .project-detailed{
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            grid-column-gap: 20px;
+            max-width: 100%;
+            font-size: 0.7rem;
+            max-height: 150px;
+
+            .project-name{
+                grid-row: 1;
+                grid-column: 1;
+            }
+
+            .project-description{
+                grid-row: 2;
+                grid-column: 1;
+            }
+
+            .project-technology{
+                grid-row: 2;
+                grid-column: 2;
+                min-width: 230px;
+            }
+        }
+
     }
 
     //feedback
@@ -1959,6 +1994,24 @@ body:hover>.about-us{
         }
     }
 
+    .examples-detailed{
+        .notebook{
+            font-size: 0.7vw;
+        }
+
+        .project-detailed{
+            max-height: 200px;
+            grid-row-gap: 10px;
+            align-items: end;
+
+            .project-technology{
+                grid-template-columns: 1fr 1fr;
+                min-width: 150px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
     //feedback
     .feedback {
         .contact {
@@ -2288,14 +2341,6 @@ body:hover>.about-us{
                     text-align: center;
                     font-size: 5rem;
                 }
-
-                img {
-                    width: 5rem;
-                    text-align: center;
-                    font-weight: normal;
-                    margin-left: 22px;
-                    margin-right: 10px;
-                }
             }
         }
     }
@@ -2309,15 +2354,6 @@ body:hover>.about-us{
         &-gallery {
             .examples {
                 width: 85%;
-            }
-        }
-    }
-}
-@media screen and (max-width: 320px) {
-    .tech-bar  {
-        .tech-bar-wrapper {
-                .img-technology {
-
             }
         }
     }

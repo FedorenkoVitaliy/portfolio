@@ -1066,8 +1066,9 @@ body:hover > .about-us {
 }
 
 .examples-detailed {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 80vh;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  height: 80vh;
   grid-column-gap: 20px;
   align-self: center;
   position: fixed;
@@ -1087,7 +1088,7 @@ body:hover > .about-us {
   align-self: end;
   position: relative;
   margin: 20px;
-  font-size: px;
+  font-size: 0.5vw;
 }
 
 .examples-detailed .notebook .display {
@@ -1152,6 +1153,7 @@ body:hover > .about-us {
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
   align-content: space-between;
+  max-width: 350px;
   background: transparent;
   padding: 10px 15px;
   font-size: 1rem;
@@ -1164,7 +1166,7 @@ body:hover > .about-us {
   grid-row: 1;
   color: orange;
   font-family: 'Audiowide', cursive;
-  font-size: 3em;
+  font-size: 4em;
   font-weight: bold;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
   text-align: left;
@@ -1186,7 +1188,7 @@ body:hover > .about-us {
   display: inline;
   grid-row: 2;
   font-family: cursive;
-  font-size: 1.5em;
+  font-size: 2em;
   max-width: 900px;
   color: rgba(0, 0, 0, 0.8);
 }
@@ -1197,8 +1199,7 @@ body:hover > .about-us {
   grid-template-columns: 1fr 1fr 1fr;
   height: 60px;
   min-width: 180px;
-  margin-left: auto;
-  font-size: 1.2em;
+  font-size: 1.75em;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.8);
   transform: skewX(-10deg);
@@ -1505,9 +1506,6 @@ body:hover > .about-us {
   .quality__description {
     font-size: 1.1rem;
   }
-  .quality__description {
-    font-size: 1.1rem;
-  }
   .team-wrapper .team {
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 270px));
@@ -1580,6 +1578,36 @@ body:hover > .about-us {
   .portfolio-gallery {
     grid-row: 5;
     grid-column: 1;
+  }
+  .examples-detailed {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    align-content: space-around;
+    height: 90vh;
+  }
+  .examples-detailed .notebook {
+    font-size: 0.8vh;
+  }
+  .examples-detailed .project-detailed {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-column-gap: 20px;
+    max-width: 100%;
+    font-size: 0.7rem;
+    max-height: 150px;
+  }
+  .examples-detailed .project-detailed .project-name {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .examples-detailed .project-detailed .project-description {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .examples-detailed .project-detailed .project-technology {
+    grid-row: 2;
+    grid-column: 2;
+    min-width: 230px;
   }
   .feedback .contact {
     grid-template-columns: 1fr 500px;
@@ -1864,6 +1892,19 @@ body:hover > .about-us {
   .portfolio-gallery .examples:last-child {
     height: 270px;
   }
+  .examples-detailed .notebook {
+    font-size: 0.7vw;
+  }
+  .examples-detailed .project-detailed {
+    max-height: 200px;
+    grid-row-gap: 10px;
+    align-items: end;
+  }
+  .examples-detailed .project-detailed .project-technology {
+    grid-template-columns: 1fr 1fr;
+    min-width: 150px;
+    margin-bottom: 10px;
+  }
   .feedback .contact {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 30px) 200px 10px 60px;
@@ -2128,13 +2169,6 @@ body:hover > .about-us {
     position: relative;
     text-align: center;
     font-size: 5rem;
-  }
-  .tech-bar .tech-list .tech-item img {
-    width: 5rem;
-    text-align: center;
-    font-weight: normal;
-    margin-left: 22px;
-    margin-right: 10px;
   }
   .portfolio .portfolio-filter {
     grid-template-columns: repeat(2, 100px);
