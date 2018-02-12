@@ -23,7 +23,7 @@ $(document).ready(function() {
         $('#overlay').fadeIn(400, function(){
 			$(event.target).children(".icon-site").children().clone().appendTo(".display");
             $(event.target).children(".project-detailed").clone().appendTo(".examples-detailed");
-            $('.examples-detailed').css('display', 'grid').animate({opacity: 1,top: "2vh", left: '5vw'}, 350);
+            $('.examples-detailed').css('display', 'grid').animate({opacity: 1,top: "5vh", left: '5vw'}, 350);
             $("html,body").css("overflow","hidden");
         });
     });

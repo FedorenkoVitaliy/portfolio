@@ -791,26 +791,21 @@ body:hover > .about-us {
 .tech-bar .tech-list .tech-item {
   display: flex;
   width: 45%;
-  justify-content: space-between;
   align-items: center;
   padding: 27px 0;
   border-top: 1px solid #949494;
   transition: 1s;
+  font-family: 'Alegreya Sans';
+  font-size: 2rem;
+  line-height: 55px;
+  font-weight: bold;
 }
 
 .tech-bar .tech-list .tech-item i {
-  width: 30%;
-  text-align: center;
   font-weight: normal;
   text-shadow: 0 0 15px black;
-  padding: 0 10px;
-}
-
-.tech-bar .tech-list .tech-item span {
-  width: 75%;
-  font-family: 'Alegreya Sans';
-  font-size: 1.9rem;
-  font-weight: bold;
+  padding-left: 15px;
+  margin-right: 50px;
 }
 
 .tech-bar .tech-list .tech-item:last-of-type {
@@ -830,7 +825,7 @@ body:hover > .about-us {
 .tech-bar .tech-list .tech-item .size {
   position: relative;
   text-align: center;
-  font-size: 8.2rem;
+  font-size: 135px;
 }
 
 .team-wrapper {
@@ -1055,12 +1050,16 @@ body:hover > .about-us {
 }
 
 .examples-detailed {
-  grid-template-rows: 70vh 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 80vh;
+  grid-column-gap: 20px;
+  align-self: center;
   position: fixed;
   width: 90vw;
   top: 100vh;
   border-radius: 10px;
   overflow: hidden;
+  padding: 20px 0 50px;
   box-shadow: 1px 1px 3px 3px rgba(255, 165, 0, 0.5), inset 0 0 13px 2px black;
   background: url(../img/about-us-background.png) center top;
   cursor: pointer;
@@ -1068,32 +1067,82 @@ body:hover > .about-us {
   opacity: 0;
 }
 
-.examples-detailed .icon-site {
-  justify-self: end;
-  height: 100%;
-  width: 90%;
+.examples-detailed .notebook {
+  align-self: end;
+  position: relative;
+  margin: 20px;
+  font-size: px;
+}
+
+.examples-detailed .notebook .display {
+  width: 77.5em;
+  height: 50em;
+  margin: 0 auto;
+  border: 2.5em solid #333;
+  border-radius: 3em 3em 0 0;
   overflow-y: scroll;
 }
 
-.examples-detailed .icon-site img {
+.examples-detailed .notebook .display img {
   width: 100%;
-  margin: 0 -5px -5px 0;
+}
+
+.examples-detailed .notebook .display:before {
+  content: '';
+  position: absolute;
+  top: 1em;
+  border-radius: 1em;
+  left: 50%;
+  margin-left: 2.5px;
+  width: 1em;
+  height: 1em;
+  background: #ccc;
+}
+
+.examples-detailed .notebook .bottom {
+  position: relative;
+  width: 100em;
+  height: 2.5em;
+  background: #cccccc;
+  margin: 0 auto;
+}
+
+.examples-detailed .notebook .bottom:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -6em;
+  width: 12em;
+  height: 1em;
+  border-radius: 0 0 1em 1em;
+  background: #8e8e8e;
+}
+
+.examples-detailed .notebook .bottom:after {
+  content: '';
+  position: absolute;
+  bottom: -1em;
+  left: 0;
+  right: 0;
+  border-top: 1em solid #959595;
+  border-left: 2em solid transparent;
+  border-right: 2em solid transparent;
 }
 
 .examples-detailed .project-detailed {
   display: grid;
   position: relative;
-  grid-template-columns: auto auto 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
   align-content: space-between;
-  grid-column-gap: 20px;
-  grid-row-gap: 10px;
   background: transparent;
   padding: 10px 15px;
   font-size: 1rem;
 }
 
 .examples-detailed .project-detailed .project-name {
+  justify-self: start;
   position: relative;
   grid-column: 1;
   grid-row: 1;
@@ -1112,15 +1161,14 @@ body:hover > .about-us {
   bottom: 0;
   content: '';
   display: block;
-  width: 100%;
+  width: 150%;
   height: 2px;
   background: rgba(0, 0, 0, 0.6);
 }
 
 .examples-detailed .project-detailed .project-description {
   display: inline;
-  grid-row: 2/span 2;
-  grid-column: 1/span 2;
+  grid-row: 2;
   font-family: cursive;
   font-size: 1.5em;
   max-width: 900px;
@@ -1129,11 +1177,10 @@ body:hover > .about-us {
 
 .examples-detailed .project-detailed .project-technology {
   display: grid;
-  grid-row: 2/span 2;
-  grid-template-columns: 1fr 1fr;
+  grid-row: 3;
+  grid-template-columns: 1fr 1fr 1fr;
   height: 60px;
   min-width: 180px;
-  margin-left: auto;
   font-size: 1.2em;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.8);
@@ -1479,7 +1526,7 @@ body:hover > .about-us {
   .tech-bar .tech-list .tech-item .size {
     position: relative;
     text-align: center;
-    font-size: 7.3rem;
+    font-size: 100px;
   }
   .portfolio {
     grid-template-columns: 1fr;
@@ -1751,6 +1798,11 @@ body:hover > .about-us {
   .about-us .about-description3 {
     grid-column: 1 / sapn 2;
     grid-row: 8;
+  }
+  .tech-bar .tech-bar-wrapper .img-technology .size {
+    position: relative;
+    text-align: center;
+    font-size: 150px;
   }
   .team-wrapper .team {
     grid-template-columns: repeat(2, minmax(200px, 270px));
@@ -2031,13 +2083,14 @@ body:hover > .about-us {
     grid-template-columns: minmax(200px, 300px);
     justify-content: center;
   }
-  .tech-bar .tech-list .tech-item span {
+  .tech-bar .tech-list .tech-item {
     font-size: 1rem;
+    line-height: 30px;
   }
   .tech-bar .tech-list .tech-item .size {
     position: relative;
     text-align: center;
-    font-size: 5rem;
+    font-size: 70px;
   }
   .portfolio .portfolio-filter {
     grid-template-columns: repeat(2, 100px);
@@ -2046,64 +2099,4 @@ body:hover > .about-us {
   .portfolio-gallery .examples {
     width: 85%;
   }
-}
-
-.notebook {
-  position: relative;
-  font-size: 4px;
-  width: 100%;
-  margin: 50px auto;
-}
-
-.notebook .display {
-  width: 77.5em;
-  height: 52.5em;
-  margin: 0 auto;
-  border: 2.5em solid #333;
-  overflow-y: scroll;
-}
-
-.notebook .display img {
-  width: 100%;
-}
-
-.notebook .display:before {
-  content: '';
-  position: absolute;
-  top: 2.5px;
-  left: 50%;
-  margin-left: 2.5px;
-  width: 5px;
-  height: 5px;
-  background: #ccc;
-}
-
-.notebook .bottom {
-  position: relative;
-  width: 100em;
-  height: 2.5em;
-  background: #cccccc;
-  margin: 0 auto;
-}
-
-.notebook .bottom:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin-left: -6em;
-  width: 12em;
-  height: 1em;
-  background: #8e8e8e;
-}
-
-.notebook .bottom:after {
-  content: '';
-  position: absolute;
-  bottom: -1em;
-  left: 0;
-  right: 0;
-  border-top: 1em solid #959595;
-  border-left: 2em solid transparent;
-  border-right: 2em solid transparent;
 }
