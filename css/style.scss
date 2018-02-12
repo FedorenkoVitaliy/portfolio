@@ -281,7 +281,7 @@ button{
             grid-column: 1;
             width: auto;
             height: 100px;
-            margin:10px 0;
+            margin: 10px 0;
         }
 
         .menu-link {
@@ -720,21 +720,25 @@ body:hover>.about-us{
         .tech-item {
             display: flex;
             width: 45%;
-            //justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
             padding: 27px 0;
             border-top: 1px solid #949494;
             transition: 1s;
-            font-family: 'Alegreya Sans';
-            font-size: 2rem;
-            line-height: 55px;
-            font-weight: bold;
 
             i {
+                width: 30%;
+                text-align: center;
                 font-weight: normal;
                 text-shadow: 0 0 15px rgba(0, 0 ,0 , 1);
-                padding-left: 15px;
-                margin-right: 50px;
+                padding: 0 10px;
+            }
+
+            span {
+                width: 75%;
+                font-family: 'Alegreya Sans';
+                font-size: 1.9rem;
+                font-weight: bold;
             }
 
             &:last-of-type {
@@ -754,7 +758,7 @@ body:hover>.about-us{
             .size {
                 position: relative;
                 text-align: center;
-                font-size: 135px;
+                font-size: 8.2rem;
             }
         }
     }
@@ -1532,7 +1536,7 @@ body:hover>.about-us{
                 .size {
                     position: relative;
                     text-align: center;
-                    font-size: 100px;
+                    font-size: 7.3rem;
                 }
             }
         }
@@ -1889,19 +1893,6 @@ body:hover>.about-us{
         }
     }
 
-    .tech-bar  {
-        .tech-bar-wrapper {
-
-            .img-technology {
-                .size {
-                    position: relative;
-                    text-align: center;
-                    font-size: 150px;
-                }
-            }
-        }
-    }
-
     .team-wrapper {
         .team {
             grid-template-columns: repeat(2, minmax(200px, 270px));
@@ -2253,13 +2244,14 @@ body:hover>.about-us{
     .tech-bar {
         .tech-list {
             .tech-item {
-                font-size: 1rem;
-                line-height: 30px;
+                span {
+                    font-size: 1rem;
+                }
 
                 .size {
                     position: relative;
                     text-align: center;
-                    font-size: 70px;
+                    font-size: 5rem;
                 }
             }
         }
