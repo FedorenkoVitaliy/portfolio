@@ -713,9 +713,6 @@ body:hover>.about-us{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        //justify-items: center;
-        //align-items: center;
-        //grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         list-style-type: none;
         grid-column: 1 / span 3;
         grid-row: 3;
@@ -723,11 +720,8 @@ body:hover>.about-us{
         .tech-item {
             display: flex;
             width: 45%;
-            //margin-right: 5px;
-            //justify-content: space-around;
-            //display: grid;
+            //justify-content: space-evenly;
             align-items: center;
-            //justify-content: space-around;
             padding: 27px 0;
             border-top: 1px solid #949494;
             transition: 1s;
@@ -760,8 +754,6 @@ body:hover>.about-us{
             .size {
                 position: relative;
                 text-align: center;
-                width: 135px;
-                height: 135px;
                 font-size: 135px;
             }
         }
@@ -1496,8 +1488,6 @@ body:hover>.about-us{
                 .size {
                     position: relative;
                     text-align: center;
-                    width: 100px;
-                    height: 100px;
                     font-size: 100px;
                 }
             }
@@ -1862,8 +1852,6 @@ body:hover>.about-us{
                 .size {
                     position: relative;
                     text-align: center;
-                    width: 150px;
-                    height: 150px;
                     font-size: 150px;
                 }
             }
@@ -2217,6 +2205,22 @@ body:hover>.about-us{
             justify-content: center;
         }
     }
+
+    .tech-bar {
+        .tech-list {
+            .tech-item {
+                font-size: 1rem;
+                line-height: 30px;
+
+                .size {
+                    position: relative;
+                    text-align: center;
+                    font-size: 70px;
+                }
+            }
+        }
+    }
+
     .portfolio {
         .portfolio-filter{
             grid-template-columns: repeat(2, 100px);
@@ -2234,13 +2238,7 @@ body:hover>.about-us{
     .tech-bar  {
         .tech-bar-wrapper {
                 .img-technology {
-                .size {
-                    position: relative;
-                    text-align: center;
-                    width: 80px;
-                    height: 80px;
-                    font-size: 80px;
-                }
+
             }
         }
     }
