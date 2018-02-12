@@ -1003,15 +1003,59 @@ body:hover>.about-us{
     z-index: 14;
     opacity: 0;
 
-    .icon-site{
-        justify-self: end;
-        height: 100%;
-        width: 90%;
-        overflow-y: scroll;
+    // Notebook
+    .notebook {
+        display: flex;
+        font-size: 4px; // this defines the comple notebook size
+        margin: 50px auto;
 
-        img{
-            width: 100%;
-            margin:0 -5px -5px 0;
+        .display {
+            width: 80%;
+            height: 80%;
+            border: 2.5em solid #333;
+            overflow-y: scroll;
+
+            img{
+                width: 100%;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                background: #ccc;
+            }
+        }
+
+        .bottom {
+            position: relative;
+            width: 100em;
+            height: 2.5em;
+            background: #cccccc;
+            margin: 0 auto;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 50%;
+                margin-left: -6em;
+                width: 12em;
+                height: 1em;
+                background: #8e8e8e;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -1em;
+                left: 0;
+                right: 0;
+                border-top: 1em solid #959595;
+                border-left: 2em solid transparent;
+                border-right: 2em solid transparent;
+            }
         }
     }
 
@@ -2244,65 +2288,3 @@ body:hover>.about-us{
     }
 }
 
-// Notebook
-//
-.notebook {
-    position: relative;
-    font-size: 4px; // this defines the comple notebook size
-    width: 100%;
-    margin: 50px auto;
-
-    .display {
-        width: 77.5em;
-        height: 52.5em;
-        margin: 0 auto;
-        border: 2.5em solid #333;
-        overflow-y: scroll;
-
-        img{
-            width: 100%;
-        }
-
-        &:before {
-            content: '';
-            position: absolute;
-            top: 2.5px;
-            left: 50%;
-            margin-left: 2.5px;
-            width: 5px;
-            height: 5px;
-            background: #ccc;
-        }
-    }
-
-
-    .bottom {
-        position: relative;
-        width: 100em;
-        height: 2.5em;
-        background: #cccccc;
-        margin: 0 auto;
-
-        &:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            margin-left: -6em;
-            width: 12em;
-            height: 1em;
-            background: #8e8e8e;
-        }
-
-        &:after {
-            content: '';
-            position: absolute;
-            bottom: -1em;
-            left: 0;
-            right: 0;
-            border-top: 1em solid #959595;
-            border-left: 2em solid transparent;
-            border-right: 2em solid transparent;
-        }
-    }
-}
