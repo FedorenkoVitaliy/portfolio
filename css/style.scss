@@ -734,11 +734,24 @@ body:hover>.about-us{
                 padding: 0 10px;
             }
 
-            span {
+            img {
+                width: 8.3rem;
+                text-align: center;
+                font-weight: normal;
+                margin: 0 20px;
+                tex-shadow: 0 0 15px rgba(0, 0 ,0 , 1);
+            }
+
+            p {
                 width: 75%;
                 font-family: 'Alegreya Sans';
                 font-size: 1.9rem;
-                font-weight: bold;
+
+                span {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+
             }
 
             &:last-of-type {
@@ -1007,59 +1020,15 @@ body:hover>.about-us{
     z-index: 14;
     opacity: 0;
 
-    // Notebook
-    .notebook {
-        display: flex;
-        font-size: 4px; // this defines the comple notebook size
-        margin: 50px auto;
+    .icon-site{
+        justify-self: end;
+        height: 100%;
+        width: 90%;
+        overflow-y: scroll;
 
-        .display {
-            width: 80%;
-            height: 80%;
-            border: 2.5em solid #333;
-            overflow-y: scroll;
-
-            img{
-                width: 100%;
-            }
-
-            &:before {
-                content: '';
-                position: absolute;
-                width: 5px;
-                height: 5px;
-                background: #ccc;
-            }
-        }
-
-        .bottom {
-            position: relative;
-            width: 100em;
-            height: 2.5em;
-            background: #cccccc;
-            margin: 0 auto;
-
-            &:before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 50%;
-                margin-left: -6em;
-                width: 12em;
-                height: 1em;
-                background: #8e8e8e;
-            }
-
-            &:after {
-                content: '';
-                position: absolute;
-                bottom: -1em;
-                left: 0;
-                right: 0;
-                border-top: 1em solid #959595;
-                border-left: 2em solid transparent;
-                border-right: 2em solid transparent;
-            }
+        img{
+            width: 100%;
+            margin:0 -5px -5px 0;
         }
     }
 
@@ -1455,35 +1424,6 @@ body:hover>.about-us{
         font-size: 1.1rem;
     }
 
-    //.about-us {
-    //    display: grid;
-    //    grid-template-columns: 200px repeat(4, 1fr) 200px;
-    //    grid-template-rows: 110px repeat(3, 1fr) 100px;
-    //    font-size: 1.4rem;
-    //
-    //    .about-description1 {
-    //        grid-column: 2 / span 5;
-    //    }
-    //
-    //    .about-description2 {
-    //        grid-column: 2 / span 4;
-    //    }
-    //
-    //    .about-description3 {
-    //        grid-column: 1 / span 5;
-    //    }
-    //
-    //    .left-photo {
-    //        grid-column: 1 / 2;
-    //        grid-row: 2 / 4;
-    //    }
-    //
-    //    .right-photo {
-    //        grid-column: 6 / 7;
-    //        grid-row: 3 / 5;
-    //    }
-    //}
-
     .quality__description{
         font-size: 1.1rem;
     }
@@ -1533,10 +1473,33 @@ body:hover>.about-us{
                     border-bottom: none;
                 }
 
-                .size {
-                    position: relative;
+                i {
+                    width: 30%;
                     text-align: center;
-                    font-size: 7.3rem;
+                    font-weight: normal;
+                    text-shadow: 0 0 15px rgba(0, 0 ,0 , 1);
+                    padding: 0 10px;
+                }
+
+                img {
+                    width: 8.3rem;
+                    text-align: center;
+                    font-weight: normal;
+                    margin-left: 80px;
+                    margin-right: 70px;
+                }
+
+                p {
+                    width: 75%;
+                    font-family: 'Alegreya Sans';
+                    font-size: 1.9rem;
+
+                    span {
+                        font-size: 2.2rem;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                    }
+
                 }
             }
         }
@@ -1893,6 +1856,20 @@ body:hover>.about-us{
         }
     }
 
+    .tech-bar {
+        .tech-list {
+            .tech-item {
+                img {
+                    width: 8.3rem;
+                    text-align: center;
+                    font-weight: normal;
+                    margin-left: 50px;
+                    margin-right: 40px;
+                }
+            }
+        }
+    }
+
     .team-wrapper {
         .team {
             grid-template-columns: repeat(2, minmax(200px, 270px));
@@ -2038,6 +2015,30 @@ body:hover>.about-us{
 
     .header-small{
         grid-template-rows: auto 250px 300px 20px;
+    }
+
+    .tech-bar {
+        .tech-list {
+            .tech-item {
+                span {
+                    font-size: 1rem;
+                }
+
+                .size {
+                    position: relative;
+                    text-align: center;
+                    font-size: 5rem;
+                }
+
+                img {
+                    width: 5rem;
+                    text-align: center;
+                    font-weight: normal;
+                    margin-left: 45px;
+                    margin-right: 45px;
+                }
+            }
+        }
     }
 
     .advantages {
@@ -2253,6 +2254,14 @@ body:hover>.about-us{
                     text-align: center;
                     font-size: 5rem;
                 }
+
+                img {
+                    width: 5rem;
+                    text-align: center;
+                    font-weight: normal;
+                    margin-left: 22px;
+                    margin-right: 10px;
+                }
             }
         }
     }
@@ -2280,3 +2289,65 @@ body:hover>.about-us{
     }
 }
 
+// Notebook
+//
+.notebook {
+    position: relative;
+    font-size: 4px; // this defines the comple notebook size
+    width: 100%;
+    margin: 50px auto;
+
+    .display {
+        width: 77.5em;
+        height: 52.5em;
+        margin: 0 auto;
+        border: 2.5em solid #333;
+        overflow-y: scroll;
+
+        img{
+            width: 100%;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 2.5px;
+            left: 50%;
+            margin-left: 2.5px;
+            width: 5px;
+            height: 5px;
+            background: #ccc;
+        }
+    }
+
+
+    .bottom {
+        position: relative;
+        width: 100em;
+        height: 2.5em;
+        background: #cccccc;
+        margin: 0 auto;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -6em;
+            width: 12em;
+            height: 1em;
+            background: #8e8e8e;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -1em;
+            left: 0;
+            right: 0;
+            border-top: 1em solid #959595;
+            border-left: 2em solid transparent;
+            border-right: 2em solid transparent;
+        }
+    }
+}

@@ -806,10 +806,22 @@ body:hover > .about-us {
   padding: 0 10px;
 }
 
-.tech-bar .tech-list .tech-item span {
+.tech-bar .tech-list .tech-item img {
+  width: 8.3rem;
+  text-align: center;
+  font-weight: normal;
+  margin: 0 20px;
+  tex-shadow: 0 0 15px black;
+}
+
+.tech-bar .tech-list .tech-item p {
   width: 75%;
   font-family: 'Alegreya Sans';
   font-size: 1.9rem;
+}
+
+.tech-bar .tech-list .tech-item p span {
+  text-transform: uppercase;
   font-weight: bold;
 }
 
@@ -1476,10 +1488,29 @@ body:hover > .about-us {
   .tech-bar .tech-list .tech-item:nth-of-type(5) {
     border-bottom: none;
   }
-  .tech-bar .tech-list .tech-item .size {
-    position: relative;
+  .tech-bar .tech-list .tech-item i {
+    width: 30%;
     text-align: center;
-    font-size: 7.3rem;
+    font-weight: normal;
+    text-shadow: 0 0 15px black;
+    padding: 0 10px;
+  }
+  .tech-bar .tech-list .tech-item img {
+    width: 8.3rem;
+    text-align: center;
+    font-weight: normal;
+    margin-left: 80px;
+    margin-right: 70px;
+  }
+  .tech-bar .tech-list .tech-item p {
+    width: 75%;
+    font-family: 'Alegreya Sans';
+    font-size: 1.9rem;
+  }
+  .tech-bar .tech-list .tech-item p span {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
   }
   .portfolio {
     grid-template-columns: 1fr;
@@ -1752,6 +1783,13 @@ body:hover > .about-us {
     grid-column: 1 / sapn 2;
     grid-row: 8;
   }
+  .tech-bar .tech-list .tech-item img {
+    width: 8.3rem;
+    text-align: center;
+    font-weight: normal;
+    margin-left: 50px;
+    margin-right: 40px;
+  }
   .team-wrapper .team {
     grid-template-columns: repeat(2, minmax(200px, 270px));
     justify-content: space-around;
@@ -1866,6 +1904,21 @@ body:hover > .about-us {
   }
   .header-small {
     grid-template-rows: auto 250px 300px 20px;
+  }
+  .tech-bar .tech-list .tech-item span {
+    font-size: 1rem;
+  }
+  .tech-bar .tech-list .tech-item .size {
+    position: relative;
+    text-align: center;
+    font-size: 5rem;
+  }
+  .tech-bar .tech-list .tech-item img {
+    width: 5rem;
+    text-align: center;
+    font-weight: normal;
+    margin-left: 45px;
+    margin-right: 45px;
   }
   .advantages {
     grid-template-columns: auto;
@@ -2038,6 +2091,13 @@ body:hover > .about-us {
     position: relative;
     text-align: center;
     font-size: 5rem;
+  }
+  .tech-bar .tech-list .tech-item img {
+    width: 5rem;
+    text-align: center;
+    font-weight: normal;
+    margin-left: 22px;
+    margin-right: 10px;
   }
   .portfolio .portfolio-filter {
     grid-template-columns: repeat(2, 100px);
