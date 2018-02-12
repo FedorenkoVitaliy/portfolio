@@ -795,13 +795,11 @@ body:hover > .about-us {
   padding: 27px 0;
   border-top: 1px solid #949494;
   transition: 1s;
-  font-family: 'Alegreya Sans';
-  font-size: 2rem;
-  line-height: 55px;
-  font-weight: bold;
 }
 
 .tech-bar .tech-list .tech-item i {
+  width: 30%;
+  text-align: center;
   font-weight: normal;
   text-shadow: 0 0 15px black;
   padding: 0 10px;
@@ -843,7 +841,7 @@ body:hover > .about-us {
 .tech-bar .tech-list .tech-item .size {
   position: relative;
   text-align: center;
-  font-size: 135px;
+  font-size: 8.2rem;
 }
 
 .team-wrapper {
@@ -1199,6 +1197,7 @@ body:hover > .about-us {
   grid-template-columns: 1fr 1fr 1fr;
   height: 60px;
   min-width: 180px;
+  margin-left: auto;
   font-size: 1.2em;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.8);
@@ -1958,21 +1957,6 @@ body:hover > .about-us {
   .header-small {
     grid-template-rows: auto 250px 300px 20px;
   }
-  .tech-bar .tech-list .tech-item span {
-    font-size: 1rem;
-  }
-  .tech-bar .tech-list .tech-item .size {
-    position: relative;
-    text-align: center;
-    font-size: 5rem;
-  }
-  .tech-bar .tech-list .tech-item img {
-    width: 5rem;
-    text-align: center;
-    font-weight: normal;
-    margin-left: 45px;
-    margin-right: 45px;
-  }
   .advantages {
     grid-template-columns: auto;
     grid-template-rows: 110px 30px auto 100px;
@@ -2137,14 +2121,13 @@ body:hover > .about-us {
     grid-template-columns: minmax(200px, 300px);
     justify-content: center;
   }
-  .tech-bar .tech-list .tech-item {
+  .tech-bar .tech-list .tech-item span {
     font-size: 1rem;
-    line-height: 30px;
   }
   .tech-bar .tech-list .tech-item .size {
     position: relative;
     text-align: center;
-    font-size: 70px;
+    font-size: 5rem;
   }
   .tech-bar .tech-list .tech-item img {
     width: 5rem;
