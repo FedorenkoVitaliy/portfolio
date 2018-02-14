@@ -41,12 +41,12 @@
             </div>
             <img src="img/logo-description.png" alt="" class="logo-description">
             <ul class="menu-link">
-              <li><a href="#">about</a></li>
-              <li><a href="#">advantages</a></li>
-              <li><a href="#">portfolio</a></li>
-              <li><a href="#">our team</a></li>
-              <li><a href="#">review</a></li>
+              <li><a href="#about-us">about</a></li>
+              <li><a href="#advantages">advantages</a></li>
+              <li><a href="#portfolio">portfolio</a></li>
+              <li><a href="#team-wrapper">our team</a></li>
               <li><a href="#contact" class="to-form">callback</a></li>
+              <li><a href="#review">review</a></li>
             </ul>
             <input type="button" value="call us" class="button--header call-back-link">
         </nav>
@@ -61,7 +61,7 @@
     </div>
     </header>
 
-<section class="about-us">
+    <section id="about-us">
     <h2 class="about-us-title subheading">about us</h2>
     <p class="description-heading-style description-heading1">no lucky guesses</p>
 
@@ -91,7 +91,7 @@
 
     </section>
 
-    <section class="advantages">
+    <section id="advantages">
         <h2 class="advantages-title subheading">our advantages</h2>
         <div class="quality-wrapper">
             <div class="quality quality--1">
@@ -128,7 +128,7 @@
         </div>
     </section>
 
-    <section class="tech-bar">
+    <section id="tech-bar">
         <h2 class="tech-bar-title subheading">our technology</h2>
 
         <ul class="tech-list">
@@ -142,7 +142,7 @@
         </ul>
     </section>
 
-    <section class="team-wrapper">
+    <section id="team-wrapper">
         <h2 class="team-title subheading">our team</h2>
 
         <div class="team">
@@ -203,16 +203,16 @@
         </div>
     </section>
 
-    <section class="portfolio">
+    <section id="portfolio">
         <h2 class="portfolio-title subheading">gallery</h2>
 
         <div class="portfolio-filter">
-            <input type="checkbox" id="all" checked><label for="all">all</label>
-            <input type="checkbox" id="blog" class="siteType"><label for="blog">blog</label>
-            <input type="checkbox" id="business" class="siteType"><label for="business">business</label>
-            <input type="checkbox" id="commerce" class="siteType"><label for="commerce">commerce</label>
-            <input type="checkbox" id="portfolio" class="siteType"><label for="portfolio">portfolio</label>
-            <input type="checkbox" id="personal" class="siteType"><label for="personal">personal</label>
+            <input type="checkbox" id="all-check" checked><label for="all-check">all</label>
+            <input type="checkbox" id="blog-check" class="siteType"><label for="blog-check">blog</label>
+            <input type="checkbox" id="business-check" class="siteType"><label for="business-check">business</label>
+            <input type="checkbox" id="commerce-check" class="siteType"><label for="commerce-check">commerce</label>
+            <input type="checkbox" id="portfolio-check" class="siteType"><label for="portfolio-check">portfolio</label>
+            <input type="checkbox" id="personal-check" class="siteType"><label for="personal-check">personal</label>
         </div>
 
         <div class="portfolio-gallery">
@@ -320,7 +320,7 @@
         </div>
     </section>
 
-    <section class="feedback">
+    <section id="feedback">
         <h2 class="feedback-title subheading">contact us / write</h2>
 
         <form id="contact" class="contact">
@@ -335,7 +335,7 @@
             <input type="button" value="send" class="button contact-send">
         </form>
 
-        <div class="reviews-block">
+        <div id="reviews" class="reviews-block">
             <i class="fas fa-arrow-up fa-2x arrow-up arrow"></i>
             <i class="fas fa-arrow-left fa-2x arrow-left arrow"></i>
             <div class="activeReview">
@@ -455,8 +455,6 @@
 
         </section>
 
-
-
     <div class="to-Top">
         <a href="#header" class="zzz"></a>
         <p class="big-arrow"></p>
@@ -464,7 +462,7 @@
         <p class="small-arrow"></p>
     </div>
 
-    <footer class="footer">
+    <footer id="footer">
         <p class="footer__contact-name"> WebCraft Studio</p>
         <p class="footer__contact-address">Kiev</p>
         <p class="footer__contact-phone">+38 063 123 45 67</p>

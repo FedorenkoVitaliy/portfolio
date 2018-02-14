@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $(".logo-menu").click(function () {
+    $(".logo-menu, .menu-link li").click(function () {
         $(".hatchet").toggleClass("hatchetRotate");
         $(".hammer").toggleClass("hammerRotate");
         $(".menu-link").toggleClass("mini-menu-link", 1000);

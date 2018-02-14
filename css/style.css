@@ -398,28 +398,27 @@ button {
   grid-template-columns: repeat(6, auto);
   grid-column-gap: 15px;
   justify-content: end;
+  /*li:after{
+                display: block;
+                position: absolute;
+                top:0;
+                content: '';
+                width: 0;
+                height: 100%;
+                background-color: transparent;
+                border-bottom: 2px solid white;
+                transition: 0.5s;
+            }
+
+            li:hover:after{
+                width: 100%;
+                transition: 0.7s;
+            }*/
 }
 
 .header .nav-bar .menu-link li, .header .fix-nav .menu-link li {
   display: inline;
   position: relative;
-}
-
-.header .nav-bar .menu-link li:after, .header .fix-nav .menu-link li:after {
-  display: block;
-  position: absolute;
-  top: 0;
-  content: '';
-  width: 0;
-  height: 100%;
-  background-color: transparent;
-  border-bottom: 2px solid white;
-  transition: 0.5s;
-}
-
-.header .nav-bar .menu-link li:hover:after, .header .fix-nav .menu-link li:hover:after {
-  width: 100%;
-  transition: 0.7s;
 }
 
 .header .nav-bar .mini-menu-link, .header .fix-nav .mini-menu-link {
@@ -499,7 +498,7 @@ button {
   grid-row: 5;
 }
 
-.about-us {
+#about-us {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 110px 40px 75px auto 100px;
@@ -509,12 +508,12 @@ button {
   background-position: left;
 }
 
-.about-us-title {
+#about-us .about-us-title {
   grid-column: 1 / span 6;
   grid-row: 1;
 }
 
-.about-us .description-heading-style {
+#about-us .description-heading-style {
   display: grid;
   font-size: 1.4em;
   font-family: cursive;
@@ -529,22 +528,22 @@ button {
   text-shadow: 0 0 10px #000;
 }
 
-.about-us .description-heading1 {
+#about-us .description-heading1 {
   grid-column: 1 / span 2;
   grid-row: 3;
 }
 
-.about-us .description-heading2 {
+#about-us .description-heading2 {
   grid-column: 3 / span 2;
   grid-row: 3;
 }
 
-.about-us .description-heading3 {
+#about-us .description-heading3 {
   grid-column: 5 / span 2;
   grid-row: 3;
 }
 
-.about-us .about-description {
+#about-us .about-description {
   font-size: 1rem;
   line-height: 26px;
   text-align: justify;
@@ -557,35 +556,35 @@ button {
   text-shadow: 0 0 10px #000;
 }
 
-.about-us .about-description1 {
+#about-us .about-description1 {
   grid-column: 1 / span 2;
   grid-row: 4;
 }
 
-.about-us .about-description2 {
+#about-us .about-description2 {
   grid-column: 3 / span 2;
   grid-row: 4;
 }
 
-.about-us .about-description3 {
+#about-us .about-description3 {
   grid-column: 5 / span 2;
   grid-row: 4;
 }
 
-body:hover > .about-us {
+body:hover > #about-us {
   animation: aboutMove linear 50s infinite;
 }
 
-.advantages {
+#advantages {
   display: grid;
   grid-template-rows: 110px 75px auto 100px;
 }
 
-.advantages-title {
+#advantages .advantages-title {
   grid-row: 1;
 }
 
-.advantages .quality-wrapper {
+#advantages .quality-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 300px);
@@ -595,24 +594,24 @@ body:hover > .about-us {
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.4);
 }
 
-.advantages .quality-wrapper .quality {
+#advantages .quality-wrapper .quality {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column: 1/span 2;
 }
 
-.advantages .quality-wrapper .quality .quality__image {
+#advantages .quality-wrapper .quality .quality__image {
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-play-state: paused;
 }
 
-.advantages .quality-wrapper .quality i {
+#advantages .quality-wrapper .quality i {
   display: none;
 }
 
-.advantages .quality-wrapper .quality .quality__description-block {
+#advantages .quality-wrapper .quality .quality__description-block {
   display: grid;
   grid-template-rows: auto auto auto;
   align-items: start;
@@ -622,7 +621,7 @@ body:hover > .about-us {
   padding: 47px 40px;
 }
 
-.advantages .quality-wrapper .quality .quality__description-block .quality__epigraph {
+#advantages .quality-wrapper .quality .quality__description-block .quality__epigraph {
   color: orange;
   font-family: 'Kaushan Script', cursive;
   font-size: 1.6rem;
@@ -630,7 +629,7 @@ body:hover > .about-us {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-.advantages .quality-wrapper .quality .quality__description-block .quality__title {
+#advantages .quality-wrapper .quality .quality__description-block .quality__title {
   color: #4f4b48;
   font-family: 'Open Sans', Verdana, sans-serif;
   font-weight: bold;
@@ -638,76 +637,76 @@ body:hover > .about-us {
   text-transform: uppercase;
 }
 
-.advantages .quality-wrapper .quality .quality__description-block:after {
+#advantages .quality-wrapper .quality .quality__description-block:after {
   content: '';
   position: absolute;
   border: 25px solid transparent;
 }
 
-.advantages .quality-wrapper .quality:hover > .quality__image {
+#advantages .quality-wrapper .quality:hover > .quality__image {
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-play-state: running;
 }
 
-.advantages .quality-wrapper .quality--1 {
+#advantages .quality-wrapper .quality--1 {
   grid-row: 1;
 }
 
-.advantages .quality-wrapper .quality--1 .quality__image {
+#advantages .quality-wrapper .quality--1 .quality__image {
   grid-column: 1;
   background: url("../img/price.jpg");
   animation-name: moveLeft;
 }
 
-.advantages .quality-wrapper .quality--1 .quality__description-block {
+#advantages .quality-wrapper .quality--1 .quality__description-block {
   grid-column: 2;
 }
 
-.advantages .quality-wrapper .quality--1 .quality__description-block:after {
+#advantages .quality-wrapper .quality--1 .quality__description-block:after {
   left: -50px;
   top: 70px;
   border-right: 25px solid white;
 }
 
-.advantages .quality-wrapper .quality--1:hover > .quality__image {
+#advantages .quality-wrapper .quality--1:hover > .quality__image {
   animation-name: moveLeft;
 }
 
-.advantages .quality-wrapper .quality--2 {
+#advantages .quality-wrapper .quality--2 {
   grid-row: 2;
 }
 
-.advantages .quality-wrapper .quality--2 .quality__image {
+#advantages .quality-wrapper .quality--2 .quality__image {
   grid-column: 2;
   background: url("../img/technology.jpg") right;
   animation-name: technoMove;
 }
 
-.advantages .quality-wrapper .quality--2 .quality__description-block {
+#advantages .quality-wrapper .quality--2 .quality__description-block {
   grid-column: 1;
   grid-row: 1;
 }
 
-.advantages .quality-wrapper .quality--2 .quality__description-block:after {
+#advantages .quality-wrapper .quality--2 .quality__description-block:after {
   right: -50px;
   top: 70px;
   border-left: 25px solid white;
 }
 
-.advantages .quality-wrapper .quality--2:hover > .quality__image {
+#advantages .quality-wrapper .quality--2:hover > .quality__image {
   animation-name: technoMove;
 }
 
-.advantages .quality-wrapper .quality--3 {
+#advantages .quality-wrapper .quality--3 {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   grid-column: 3;
   grid-row: 1/span 2;
 }
 
-.advantages .quality-wrapper .quality--3 .quality__image {
+#advantages .quality-wrapper .quality--3 .quality__image {
   grid-column: 1;
   grid-row: 1;
   background-image: radial-gradient(farthest-corner at 10% 100%, black 40%, black 40%, black 40%), url("../img/clean.jpg");
@@ -716,33 +715,33 @@ body:hover > .about-us {
   animation-name: searchCode;
 }
 
-.advantages .quality-wrapper .quality--3 .quality__description-block {
+#advantages .quality-wrapper .quality--3 .quality__description-block {
   grid-column: 1;
   grid-row: 2;
 }
 
-.advantages .quality-wrapper .quality--3 .quality__description-block:after {
+#advantages .quality-wrapper .quality--3 .quality__description-block:after {
   left: 70px;
   top: -50px;
   border-bottom: 25px solid white;
 }
 
-.advantages .quality-wrapper .quality--3:hover > .quality__image {
+#advantages .quality-wrapper .quality--3:hover > .quality__image {
   animation-name: searchCode;
 }
 
-.tech-bar {
+#tech-bar {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 110px 60px auto 130px;
 }
 
-.tech-bar .tech-bar-title {
+#tech-bar .tech-bar-title {
   grid-column: 2;
   grid-row: 1;
 }
 
-.tech-bar .tech-list {
+#tech-bar .tech-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -751,7 +750,7 @@ body:hover > .about-us {
   grid-row: 3;
 }
 
-.tech-bar .tech-list .tech-item {
+#tech-bar .tech-list .tech-item {
   display: flex;
   width: 45%;
   align-items: center;
@@ -760,7 +759,7 @@ body:hover > .about-us {
   transition: 1s;
 }
 
-.tech-bar .tech-list .tech-item i {
+#tech-bar .tech-list .tech-item i {
   width: 30%;
   text-align: center;
   font-weight: normal;
@@ -768,7 +767,7 @@ body:hover > .about-us {
   padding: 0 10px;
 }
 
-.tech-bar .tech-list .tech-item img {
+#tech-bar .tech-list .tech-item img {
   width: 8.3rem;
   text-align: center;
   font-weight: normal;
@@ -776,48 +775,48 @@ body:hover > .about-us {
   tex-shadow: 0 0 15px black;
 }
 
-.tech-bar .tech-list .tech-item p {
+#tech-bar .tech-list .tech-item p {
   width: 75%;
   font-family: 'Alegreya Sans';
   font-size: 1.9rem;
 }
 
-.tech-bar .tech-list .tech-item p span {
+#tech-bar .tech-list .tech-item p span {
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.tech-bar .tech-list .tech-item:last-of-type {
+#tech-bar .tech-list .tech-item:last-of-type {
   border-bottom: 1px solid #949494;
 }
 
-.tech-bar .tech-list .tech-item:nth-of-type(5) {
+#tech-bar .tech-list .tech-item:nth-of-type(5) {
   border-bottom: 1px solid #949494;
 }
 
-.tech-bar .tech-list .tech-item:hover {
+#tech-bar .tech-list .tech-item:hover {
   background-color: orange;
   transition: 1s;
   color: #fff;
 }
 
-.tech-bar .tech-list .tech-item .size {
+#tech-bar .tech-list .tech-item .size {
   position: relative;
   text-align: center;
   font-size: 8.2rem;
 }
 
-.team-wrapper {
+#team-wrapper {
   display: grid;
   grid-template-rows: 110px 100px auto 100px;
   background-color: #e8e8e8;
 }
 
-.team-wrapper .team-title {
+#team-wrapper .team-title {
   grid-row: 1;
 }
 
-.team-wrapper .team {
+#team-wrapper .team {
   display: grid;
   grid-template-columns: repeat(6, minmax(180px, 270px));
   justify-content: space-between;
@@ -825,7 +824,7 @@ body:hover > .about-us {
   grid-row: 3;
 }
 
-.team-wrapper .team .associate {
+#team-wrapper .team .associate {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -841,7 +840,7 @@ body:hover > .about-us {
   background-size: cover;
 }
 
-.team-wrapper .team .associate .social {
+#team-wrapper .team .associate .social {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -854,11 +853,11 @@ body:hover > .about-us {
   color: #ffffff;
 }
 
-.team-wrapper .team .associate .social i {
+#team-wrapper .team .associate .social i {
   cursor: pointer;
 }
 
-.team-wrapper .team .associate .position {
+#team-wrapper .team .associate .position {
   color: orange;
   font-family: 'Kaushan Script', cursive;
   font-size: 18px;
@@ -868,7 +867,7 @@ body:hover > .about-us {
   padding-right: 5px;
 }
 
-.team-wrapper .team .associate .name {
+#team-wrapper .team .associate .name {
   background-color: rgba(0, 0, 0, 0.4);
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -877,47 +876,47 @@ body:hover > .about-us {
   padding: 20px 10px;
 }
 
-.team-wrapper .team .associate:hover i:nth-child(1) {
+#team-wrapper .team .associate:hover i:nth-child(1) {
   animation: socialColor 2s linear infinite;
 }
 
-.team-wrapper .team .associate:hover i:nth-child(2) {
+#team-wrapper .team .associate:hover i:nth-child(2) {
   animation: socialColor 2s linear 0.7s infinite;
 }
 
-.team-wrapper .team .associate:hover i:nth-child(3) {
+#team-wrapper .team .associate:hover i:nth-child(3) {
   animation: socialColor 2s linear 1.4s infinite;
 }
 
-.team-wrapper .team .sed {
+#team-wrapper .team .sed {
   background-image: url("../img/sed.jpg");
 }
 
-.team-wrapper .team .zoom {
+#team-wrapper .team .zoom {
   background-image: url("../img/zoom.jpg");
 }
 
-.team-wrapper .team .backend {
+#team-wrapper .team .backend {
   background-image: url("../img/jchan.jpg");
 }
 
-.team-wrapper .team .design {
+#team-wrapper .team .design {
   background-image: url("../img/eniston.jpg");
 }
 
-.team-wrapper .team .seo {
+#team-wrapper .team .seo {
   background-image: url("../img/lourens.jpg");
 }
 
-.team-wrapper .team .support {
+#team-wrapper .team .support {
   background-image: url("../img/support.jpg");
 }
 
-.team-wrapper .team #showMore, .team-wrapper .team label {
+#team-wrapper .team #showMore, #team-wrapper .team label {
   display: none;
 }
 
-.portfolio {
+#portfolio {
   display: grid;
   grid-template-columns: 100px  30px 1fr;
   grid-template-rows: 110px auto auto 50px;
@@ -925,12 +924,12 @@ body:hover > .about-us {
   position: relative;
 }
 
-.portfolio .portfolio-title {
+#portfolio .portfolio-title {
   grid-row: 1;
   grid-column: 1/span 3;
 }
 
-.portfolio .portfolio-filter {
+#portfolio .portfolio-filter {
   display: grid;
   grid-row-gap: 10px;
   align-content: start;
@@ -938,15 +937,15 @@ body:hover > .about-us {
   grid-row: 2;
 }
 
-.portfolio .portfolio-filter input {
+#portfolio .portfolio-filter input {
   display: none;
 }
 
-.portfolio .portfolio-filter input:checked + label {
+#portfolio .portfolio-filter input:checked + label {
   background-color: #ff6c08;
 }
 
-.portfolio .portfolio-filter label {
+#portfolio .portfolio-filter label {
   display: grid;
   align-content: center;
   width: 100px;
@@ -957,11 +956,11 @@ body:hover > .about-us {
   text-align: center;
 }
 
-.portfolio .portfolio-filter label:hover {
+#portfolio .portfolio-filter label:hover {
   background: orange;
 }
 
-.portfolio-gallery {
+#portfolio .portfolio-gallery {
   display: flex;
   flex-wrap: wrap;
   flex-flow: column wrap;
@@ -973,7 +972,7 @@ body:hover > .about-us {
   padding-top: 5px;
 }
 
-.portfolio-gallery .examples {
+#portfolio .portfolio-gallery .examples {
   position: relative;
   height: 330px;
   width: 30%;
@@ -984,29 +983,29 @@ body:hover > .about-us {
   cursor: pointer;
 }
 
-.portfolio-gallery .examples .icon-site {
+#portfolio .portfolio-gallery .examples .icon-site {
   height: 100%;
   overflow: hidden;
 }
 
-.portfolio-gallery .examples .icon-site img {
+#portfolio .portfolio-gallery .examples .icon-site img {
   width: 100%;
   height: auto;
 }
 
-.portfolio-gallery .examples .project-detailed {
+#portfolio .portfolio-gallery .examples .project-detailed {
   display: none;
 }
 
-.portfolio-gallery .examples:nth-child(odd) {
+#portfolio .portfolio-gallery .examples:nth-child(odd) {
   height: 270px;
 }
 
-.portfolio-gallery .examples:hover {
+#portfolio .portfolio-gallery .examples:hover {
   box-shadow: 0 0 3px 3px rgba(255, 165, 0, 0.5);
 }
 
-.portfolio-gallery .examples:after {
+#portfolio .portfolio-gallery .examples:after {
   content: "";
   font-family: "Font Awesome\ 5 Free";
   font-weight: 900;
@@ -1022,7 +1021,7 @@ body:hover > .about-us {
   transition: 1s;
 }
 
-.portfolio-gallery .examples:hover:after {
+#portfolio .portfolio-gallery .examples:hover:after {
   content: "\f06e";
   background: rgba(0, 0, 0, 0.4);
   transition: 1s;
@@ -1174,7 +1173,7 @@ body:hover > .about-us {
   font-size: 1.3em;
 }
 
-.feedback {
+#feedback {
   display: grid;
   grid-template-rows: 110px 70px auto 40px auto 100px;
   grid-template-columns: 100%;
@@ -1182,11 +1181,11 @@ body:hover > .about-us {
   background: #e8e8e8;
 }
 
-.feedback .feedback-title {
+#feedback .feedback-title {
   grid-row: 1;
 }
 
-.feedback .contact {
+#feedback .contact {
   display: grid;
   grid-template-columns: 1fr 600px;
   grid-template-rows: repeat(3, 50px) 10px 60px;
@@ -1194,7 +1193,7 @@ body:hover > .about-us {
   grid-row: 3;
 }
 
-.feedback .contact .input {
+#feedback .contact .input {
   border: 0;
   padding: 20px 20px;
   text-align: justify;
@@ -1202,41 +1201,41 @@ body:hover > .about-us {
   border-radius: 10px;
 }
 
-.feedback .contact .input:hover, .feedback .contact .textarea-wrapper:hover {
+#feedback .contact .input:hover, #feedback .contact .textarea-wrapper:hover {
   box-shadow: 0 0 2px 2px rgba(255, 165, 0, 0.5);
   transition: 0.5s;
 }
 
-.feedback .contact .input:focus, .feedback .contact .textarea-wrapper:focus {
+#feedback .contact .input:focus, #feedback .contact .textarea-wrapper:focus {
   box-shadow: 0 0 2px 2px rgba(255, 165, 0, 0.5);
 }
 
-.feedback .contact .input::-webkit-input-placeholder, .feedback .contact textarea-wrapper::-webkit-input-placeholder {
+#feedback .contact .input::-webkit-input-placeholder, #feedback .contact textarea-wrapper::-webkit-input-placeholder {
   opacity: 1;
   transition: opacity 0.5s ease;
 }
 
-.feedback .contact .input:focus::-webkit-input-placeholder, .feedback .contact .textarea-wrapper:focus::-webkit-input-placeholder {
+#feedback .contact .input:focus::-webkit-input-placeholder, #feedback .contact .textarea-wrapper:focus::-webkit-input-placeholder {
   opacity: 0;
   transition: opacity 0.5s ease;
 }
 
-.feedback .contact .user-name {
+#feedback .contact .user-name {
   grid-column: 1;
   grid-row: 1;
 }
 
-.feedback .contact .user-phone {
+#feedback .contact .user-phone {
   grid-column: 1;
   grid-row: 2;
 }
 
-.feedback .contact .user-mail {
+#feedback .contact .user-mail {
   grid-column: 1;
   grid-row: 3;
 }
 
-.feedback .contact .textarea-wrapper {
+#feedback .contact .textarea-wrapper {
   grid-column: 2;
   grid-row: 1/span 3;
   position: relative;
@@ -1244,7 +1243,7 @@ body:hover > .about-us {
   border-radius: 10px;
 }
 
-.feedback .contact .textarea-wrapper .user-message {
+#feedback .contact .textarea-wrapper .user-message {
   height: 100%;
   width: 100%;
   resize: none;
@@ -1254,7 +1253,7 @@ body:hover > .about-us {
   text-align: justify;
 }
 
-.feedback .contact .textarea-wrapper:before, .feedback .contact .textarea-wrapper:after {
+#feedback .contact .textarea-wrapper:before, #feedback .contact .textarea-wrapper:after {
   content: '';
   display: block;
   background: white;
@@ -1264,15 +1263,15 @@ body:hover > .about-us {
   right: 20px;
 }
 
-.feedback .contact .textarea-wrapper:before {
+#feedback .contact .textarea-wrapper:before {
   top: 0;
 }
 
-.feedback .contact .textarea-wrapper:after {
+#feedback .contact .textarea-wrapper:after {
   bottom: 0;
 }
 
-.feedback .contact .counter {
+#feedback .contact .counter {
   grid-column: 2;
   grid-row: 4;
   text-align: right;
@@ -1282,12 +1281,12 @@ body:hover > .about-us {
   transition: opacity 1s ease;
 }
 
-.feedback .contact .counterVisible {
+#feedback .contact .counterVisible {
   opacity: 1;
   transition: opacity 1s ease;
 }
 
-.feedback .contact .contact-send {
+#feedback .contact .contact-send {
   grid-column: 2;
   grid-row: 5;
   justify-self: end;
@@ -1295,7 +1294,7 @@ body:hover > .about-us {
   width: 200px;
 }
 
-.feedback .reviews-block {
+#feedback .reviews-block {
   display: grid;
   grid-template-columns: 35px 1fr 35px;
   grid-row: 5;
@@ -1304,11 +1303,11 @@ body:hover > .about-us {
   justify-content: center;
 }
 
-.feedback .reviews-block .arrow-up, .feedback .reviews-block .arrow-down {
+#feedback .reviews-block .arrow-up, #feedback .reviews-block .arrow-down {
   display: none;
 }
 
-.feedback .reviews-block .arrow-left, .feedback .reviews-block .arrow-right {
+#feedback .reviews-block .arrow-left, #feedback .reviews-block .arrow-right {
   display: block;
   grid-column: 1;
   justify-self: center;
@@ -1316,18 +1315,18 @@ body:hover > .about-us {
   cursor: pointer;
 }
 
-.feedback .reviews-block .arrow-right {
+#feedback .reviews-block .arrow-right {
   grid-column: 3;
   text-shadow: -8px 0 5px -5px #333;
 }
 
-.feedback .reviews-block .activeReview {
+#feedback .reviews-block .activeReview {
   grid-column: 2;
   display: inline-block;
   overflow: hidden;
 }
 
-.feedback .reviews-block .activeReview .allReviews {
+#feedback .reviews-block .activeReview .allReviews {
   display: grid;
   grid-template-columns: repeat(12, 50%);
   position: relative;
@@ -1336,7 +1335,7 @@ body:hover > .about-us {
   transition: 1s;
 }
 
-.feedback .reviews-block .activeReview .allReviews .review {
+#feedback .reviews-block .activeReview .allReviews .review {
   display: grid;
   grid-template-rows: 25px 18px 20px 20px auto;
   grid-template-columns: auto 1fr;
@@ -1346,13 +1345,13 @@ body:hover > .about-us {
   color: #bcbcbc;
 }
 
-.feedback .reviews-block .activeReview .allReviews .review .avatar {
+#feedback .reviews-block .activeReview .allReviews .review .avatar {
   grid-row: 1/span 3;
   grid-column: 1;
   border-radius: 50%;
 }
 
-.feedback .reviews-block .activeReview .allReviews .review .author-name, .feedback .reviews-block .activeReview .allReviews .review .author-position {
+#feedback .reviews-block .activeReview .allReviews .review .author-name, #feedback .reviews-block .activeReview .allReviews .review .author-position {
   grid-row: 1;
   grid-column: 2;
   display: inline-block;
@@ -1361,13 +1360,13 @@ body:hover > .about-us {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.feedback .reviews-block .activeReview .allReviews .review .author-position {
+#feedback .reviews-block .activeReview .allReviews .review .author-position {
   font-size: 0.9em;
   grid-row: 2;
   color: rgba(255, 165, 0, 0.7);
 }
 
-.feedback .reviews-block .activeReview .allReviews .review .comment-body {
+#feedback .reviews-block .activeReview .allReviews .review .comment-body {
   grid-row: 5;
   grid-column: 1/span 2;
   padding: 0 10px;
@@ -1375,7 +1374,7 @@ body:hover > .about-us {
   line-height: 33px;
 }
 
-.footer {
+#footer {
   display: grid;
   grid-template-columns: auto 200px 200px;
   grid-template-rows: 50px repeat(2, 20px) repeat(2, 30px) 40px;
@@ -1384,28 +1383,28 @@ body:hover > .about-us {
   color: white;
 }
 
-.footer .footer__contact-name {
+#footer .footer__contact-name {
   grid-column: 1;
   grid-row: 2;
 }
 
-.footer .footer__contact-address {
+#footer .footer__contact-address {
   grid-column: 1;
   grid-row: 3;
 }
 
-.footer .footer__contact-phone {
+#footer .footer__contact-phone {
   grid-column: 1;
   grid-row: 5;
 }
 
-.footer .footer__friendly {
+#footer .footer__friendly {
   grid-column: 2;
   grid-row: 2;
   text-align: center;
 }
 
-.footer .footer__contact-social {
+#footer .footer__contact-social {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column: 2;
@@ -1413,14 +1412,14 @@ body:hover > .about-us {
   grid-column-gap: 6px;
 }
 
-.footer .footer__contact-social .footer__social-img {
+#footer .footer__contact-social .footer__social-img {
   display: grid;
   justify-content: center;
   align-items: center;
   border: 1px solid #3e3e3e;
 }
 
-.footer .footer__create-by {
+#footer .footer__create-by {
   display: grid;
   grid-column: 3;
   grid-row: 2;
@@ -1428,7 +1427,7 @@ body:hover > .about-us {
   font-size: 1.3rem;
 }
 
-.footer .footer__development-name {
+#footer .footer__development-name {
   display: grid;
   grid-row: 4/span 2;
   grid-column: 3;
@@ -1447,7 +1446,7 @@ body:hover > .about-us {
   .quality__description {
     font-size: 1.1rem;
   }
-  .team-wrapper .team {
+  #team-wrapper .team {
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 270px));
     justify-content: space-around;
@@ -1472,51 +1471,51 @@ body:hover > .about-us {
     padding: 0 12px;
     grid-column-gap: 12px;
   }
-  .tech-bar .tech-list .tech-item {
+  #tech-bar .tech-list .tech-item {
     width: 100%;
     font-size: 1.5rem;
   }
-  .tech-bar .tech-list .tech-item:nth-of-type(5) {
+  #tech-bar .tech-list .tech-item:nth-of-type(5) {
     border-bottom: none;
   }
-  .tech-bar .tech-list .tech-item i {
+  #tech-bar .tech-list .tech-item i {
     width: 30%;
     text-align: center;
     font-weight: normal;
     text-shadow: 0 0 15px black;
     padding: 0 10px;
   }
-  .tech-bar .tech-list .tech-item img {
+  #tech-bar .tech-list .tech-item img {
     width: 8.3rem;
     text-align: center;
     font-weight: normal;
     margin-left: 80px;
     margin-right: 70px;
   }
-  .tech-bar .tech-list .tech-item p {
+  #tech-bar .tech-list .tech-item p {
     width: 75%;
     font-family: 'Alegreya Sans';
     font-size: 1.9rem;
   }
-  .tech-bar .tech-list .tech-item p span {
+  #tech-bar .tech-list .tech-item p span {
     font-size: 2.2rem;
     text-transform: uppercase;
     font-weight: bold;
   }
-  .portfolio {
+  #portfolio {
     grid-template-columns: 1fr;
     grid-template-rows: 110px 15px auto 15px auto 100px;
   }
-  .portfolio .portfolio-title {
+  #portfolio .portfolio-title {
     grid-column: 1;
   }
-  .portfolio .portfolio-filter {
+  #portfolio .portfolio-filter {
     grid-column: 1;
     grid-row: 3;
     justify-content: space-between;
     grid-auto-flow: column;
   }
-  .portfolio-gallery {
+  #portfolio .portfolio-gallery {
     grid-row: 5;
     grid-column: 1;
   }
@@ -1550,39 +1549,39 @@ body:hover > .about-us {
     grid-column: 2;
     min-width: 230px;
   }
-  .feedback .contact {
+  #feedback .contact {
     grid-template-columns: 1fr 500px;
     grid-template-rows: repeat(3, 65px) 10px 60px;
   }
-  .footer {
+  #footer {
     grid-template-columns: 1fr 1fr auto 210px;
     grid-template-rows: 40px 45px 30px 30px 50px 100px 60px;
   }
-  .footer .footer__contact-name {
+  #footer .footer__contact-name {
     grid-column: 1;
     grid-row: 2;
   }
-  .footer .footer__contact-address {
+  #footer .footer__contact-address {
     grid-column: 1;
     grid-row: 3;
   }
-  .footer .footer__contact-phone {
+  #footer .footer__contact-phone {
     grid-column: 1;
     grid-row: 4;
   }
-  .footer .footer__friendly {
+  #footer .footer__friendly {
     display: none;
   }
-  .footer .footer__contact-social {
+  #footer .footer__contact-social {
     grid-column: 1/span 4;
     grid-row: 6;
     grid-column-gap: 0;
   }
-  .footer .footer__create-by {
+  #footer .footer__create-by {
     grid-column: 4;
     grid-row: 2;
   }
-  .footer .footer__development-name {
+  #footer .footer__development-name {
     grid-column: 4;
     grid-row: 3/ span 2;
   }
@@ -1656,6 +1655,9 @@ body:hover > .about-us {
   .header .nav-bar .mini-menu-link, .header .fix-nav .mini-menu-link {
     top: 75px;
   }
+  .header .fix-nav .mini-menu-link {
+    position: fixed;
+  }
   .header .header-content {
     margin: 0 50px;
   }
@@ -1681,91 +1683,91 @@ body:hover > .about-us {
     transform: rotate(130deg);
     transition: 1s;
   }
-  .advantages .quality-wrapper {
+  #advantages .quality-wrapper {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 300px);
   }
-  .advantages .quality-wrapper .quality--2 {
+  #advantages .quality-wrapper .quality--2 {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     grid-column: 1;
     grid-row: 2/span 3;
   }
-  .advantages .quality-wrapper .quality--2 .quality__image {
+  #advantages .quality-wrapper .quality--2 .quality__image {
     grid-column: 1;
     grid-row: 2;
   }
-  .advantages .quality-wrapper .quality--2 .quality__description-block {
+  #advantages .quality-wrapper .quality--2 .quality__description-block {
     grid-column: 1;
     grid-row: 1;
   }
-  .advantages .quality-wrapper .quality--2 .quality__description-block:after {
+  #advantages .quality-wrapper .quality--2 .quality__description-block:after {
     right: 50px;
     top: 300px;
     border: 25px solid transparent;
     border-top: 25px solid white;
   }
-  .advantages .quality-wrapper .quality--3 {
+  #advantages .quality-wrapper .quality--3 {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     grid-column: 2;
     grid-row: 2/span 3;
   }
-  .advantages .quality-wrapper .quality--3 .quality__image {
+  #advantages .quality-wrapper .quality--3 .quality__image {
     grid-column: 1;
     grid-row: 1;
   }
-  .advantages .quality-wrapper .quality--3 .quality__description-block {
+  #advantages .quality-wrapper .quality--3 .quality__description-block {
     grid-column: 1;
     grid-row: 2;
   }
-  .advantages .quality-wrapper .quality--3 .quality__description-block:after {
+  #advantages .quality-wrapper .quality--3 .quality__description-block:after {
     left: 50px;
     top: -50px;
     border-bottom: 25px solid white;
   }
-  .team-wrapper .team {
+  #team-wrapper .team {
     justify-content: space-between;
   }
-  .feedback .contact {
+  #feedback .contact {
     grid-template-columns: 1fr 400px;
     grid-template-rows: repeat(3, 65px) 50px;
   }
-  .feedback .contact .counter {
+  #feedback .contact .counter {
     text-align: left;
   }
-  .feedback .contact .contact-send {
+  #feedback .contact .contact-send {
     grid-row: 4;
     height: 50px;
   }
-  .feedback .reviews-block {
+  #feedback .reviews-block {
     grid-template-columns: 1fr;
     grid-template-rows: 35px auto 35px;
   }
-  .feedback .reviews-block .arrow-up, .feedback .reviews-block .arrow-down {
+  #feedback .reviews-block .arrow-up, #feedback .reviews-block .arrow-down {
     display: block;
     grid-row: 1;
     justify-self: center;
     text-shadow: 0 8px 5px -5px #333;
     cursor: pointer;
   }
-  .feedback .reviews-block .arrow-down {
+  #feedback .reviews-block .arrow-down {
     grid-row: 3;
     text-shadow: 0 -8px 5px -5px #333;
   }
-  .feedback .reviews-block .arrow-left, .feedback .reviews-block .arrow-right {
+  #feedback .reviews-block .arrow-left, #feedback .reviews-block .arrow-right {
     display: none;
   }
-  .feedback .reviews-block .activeReview {
+  #feedback .reviews-block .activeReview {
     grid-column: 1;
   }
-  .feedback .reviews-block .activeReview .allReviews {
+  #feedback .reviews-block .activeReview .allReviews {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: repeat(12, 50%);
     grid-auto-flow: column;
   }
-  .feedback .reviews-block .activeReview .allReviews .review {
+  #feedback .reviews-block .activeReview .allReviews .review {
     padding: 20px 0;
   }
 }
@@ -1777,60 +1779,60 @@ body:hover > .about-us {
   .header .header-content .heading {
     font-size: 4rem;
   }
-  .about-us {
+  #about-us {
     grid-template-rows: 110px 40px repeat(6, auto) 100px;
   }
-  .about-us .description-heading1 {
+  #about-us .description-heading1 {
     grid-column: 1 / sapn 2;
     grid-row: 3;
   }
-  .about-us .description-heading2 {
+  #about-us .description-heading2 {
     grid-column: 1 / sapn 2;
     grid-row: 5;
   }
-  .about-us .description-heading3 {
+  #about-us .description-heading3 {
     grid-column: 1 / sapn 2;
     grid-row: 7;
   }
-  .about-us .about-description1 {
+  #about-us .about-description1 {
     grid-column: 1 / sapn 2;
     grid-row: 4;
   }
-  .about-us .about-description2 {
+  #about-us .about-description2 {
     grid-column: 1 / sapn 2;
     grid-row: 6;
   }
-  .about-us .about-description3 {
+  #about-us .about-description3 {
     grid-column: 1 / sapn 2;
     grid-row: 8;
   }
-  .tech-bar .tech-list .tech-item img {
+  #tech-bar .tech-list .tech-item img {
     width: 8.3rem;
     text-align: center;
     font-weight: normal;
     margin-left: 50px;
     margin-right: 40px;
   }
-  .team-wrapper .team {
+  #team-wrapper .team {
     grid-template-columns: repeat(2, minmax(200px, 270px));
     justify-content: space-around;
   }
-  .portfolio .portfolio-filter {
+  #portfolio .portfolio-filter {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  .portfolio .portfolio-filter label {
+  #portfolio .portfolio-filter label {
     margin: 5px 0;
     width: 85px;
   }
-  .portfolio-gallery {
+  #portfolio .portfolio-gallery {
     max-height: 1000px;
   }
-  .portfolio-gallery .examples {
+  #portfolio .portfolio-gallery .examples {
     width: 45%;
   }
-  .portfolio-gallery .examples:last-child {
+  #portfolio .portfolio-gallery .examples:last-child {
     height: 270px;
   }
   .examples-detailed .notebook {
@@ -1846,61 +1848,61 @@ body:hover > .about-us {
     min-width: 150px;
     margin-bottom: 10px;
   }
-  .feedback .contact {
+  #feedback .contact {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 30px) 200px 10px 60px;
     grid-row-gap: 20px;
   }
-  .feedback .contact .textarea-wrapper {
+  #feedback .contact .textarea-wrapper {
     grid-column: 1;
     grid-row: 4;
   }
-  .feedback .contact .counter {
+  #feedback .contact .counter {
     grid-column: 1;
     grid-row: 5;
     text-align: left;
   }
-  .feedback .contact .contact-send {
+  #feedback .contact .contact-send {
     grid-column: 1;
     grid-row: 5;
     justify-self: end;
     border-radius: 20px;
     width: 200px;
   }
-  .footer {
+  #footer {
     grid-template-columns: 1fr;
     grid-template-rows: 35px 20px 20px 50px 100px 20px 50px  50px;
     grid-row-gap: 10px;
     justify-content: center;
     text-align: center;
   }
-  .footer .footer__contact-name {
+  #footer .footer__contact-name {
     grid-column: 1;
     grid-row: 2;
   }
-  .footer .footer__contact-address {
+  #footer .footer__contact-address {
     grid-column: 1;
     grid-row: 3;
   }
-  .footer .footer__contact-phone {
+  #footer .footer__contact-phone {
     display: flex;
     align-items: center;
     justify-content: center;
     grid-column: 1;
     grid-row: 4;
   }
-  .footer .footer__friendly {
+  #footer .footer__friendly {
     display: none;
   }
-  .footer .footer__contact-social {
+  #footer .footer__contact-social {
     grid-column: 1;
     grid-row: 5;
   }
-  .footer .footer__create-by {
+  #footer .footer__create-by {
     grid-column: 1;
     grid-row: 6;
   }
-  .footer .footer__development-name {
+  #footer .footer__development-name {
     grid-column: 1;
     grid-row: 7;
   }
@@ -1939,24 +1941,24 @@ body:hover > .about-us {
   .header-small {
     grid-template-rows: auto 250px 300px 20px;
   }
-  .advantages {
+  #advantages {
     grid-template-columns: auto;
     grid-template-rows: 110px 30px auto 100px;
   }
-  .advantages .quality-wrapper {
+  #advantages .quality-wrapper {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
     grid-row-gap: 40px;
     box-shadow: none;
     width: 100%;
   }
-  .advantages .quality-wrapper .quality {
+  #advantages .quality-wrapper .quality {
     grid-template-rows: 200px auto;
     border-radius: 10px;
     box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.4);
     overflow: hidden;
   }
-  .advantages .quality-wrapper .quality .quality__image {
+  #advantages .quality-wrapper .quality .quality__image {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1964,94 +1966,94 @@ body:hover > .about-us {
     border-radius: 10px;
     cursor: pointer;
   }
-  .advantages .quality-wrapper .quality .quality__image i {
+  #advantages .quality-wrapper .quality .quality__image i {
     display: block;
     font-size: 34px;
     color: rgba(255, 165, 0, 0.8);
   }
-  .advantages .quality-wrapper .quality .quality__image:hover > i {
+  #advantages .quality-wrapper .quality .quality__image:hover > i {
     display: none;
   }
-  .advantages .quality-wrapper .quality .quality__description-block {
+  #advantages .quality-wrapper .quality .quality__description-block {
     display: none;
   }
-  .advantages .quality-wrapper .quality--1 {
+  #advantages .quality-wrapper .quality--1 {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
     grid-column: 1;
     grid-row: 1;
   }
-  .advantages .quality-wrapper .quality--1 .quality__image {
+  #advantages .quality-wrapper .quality--1 .quality__image {
     grid-column: 1;
     grid-row: 1;
   }
-  .advantages .quality-wrapper .quality--1 .quality__description-block {
+  #advantages .quality-wrapper .quality--1 .quality__description-block {
     grid-column: 1;
     grid-row: 2;
   }
-  .advantages .quality-wrapper .quality--1 .quality__description-block:after {
+  #advantages .quality-wrapper .quality--1 .quality__description-block:after {
     display: none;
   }
-  .advantages .quality-wrapper .quality--2 {
+  #advantages .quality-wrapper .quality--2 {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
     grid-column: 1;
     grid-row: 2;
   }
-  .advantages .quality-wrapper .quality--2 .quality__image {
+  #advantages .quality-wrapper .quality--2 .quality__image {
     grid-column: 1;
     grid-row: 1;
   }
-  .advantages .quality-wrapper .quality--2 .quality__description-block {
+  #advantages .quality-wrapper .quality--2 .quality__description-block {
     grid-column: 1;
     grid-row: 2;
   }
-  .advantages .quality-wrapper .quality--2 .quality__description-block:after {
+  #advantages .quality-wrapper .quality--2 .quality__description-block:after {
     display: none;
   }
-  .advantages .quality-wrapper .quality--3 {
+  #advantages .quality-wrapper .quality--3 {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
     grid-column: 1;
     grid-row: 3;
   }
-  .advantages .quality-wrapper .quality--3 .quality__image {
+  #advantages .quality-wrapper .quality--3 .quality__image {
     grid-column: 1;
     grid-row: 1;
   }
-  .advantages .quality-wrapper .quality--3 .quality__description-block {
+  #advantages .quality-wrapper .quality--3 .quality__description-block {
     grid-column: 1;
     grid-row: 2;
   }
-  .advantages .quality-wrapper .quality--3 .quality__description-block:after {
+  #advantages .quality-wrapper .quality--3 .quality__description-block:after {
     display: none;
   }
-  .portfolio {
+  #portfolio {
     grid-template-rows: 110px auto auto 100px;
   }
-  .portfolio .portfolio-filter {
+  #portfolio .portfolio-filter {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: 30px 30px;
     grid-row: 2;
   }
-  .portfolio .portfolio-filter label {
+  #portfolio .portfolio-filter label {
     margin: 5px 0;
     width: 100px;
   }
-  .portfolio-gallery {
+  #portfolio .portfolio-gallery {
     grid-row: 3;
     flex-wrap: nowrap;
     max-height: 2000px;
   }
-  .portfolio-gallery .examples {
+  #portfolio .portfolio-gallery .examples {
     width: 75%;
     margin: 20px auto;
   }
-  .portfolio-gallery .examples:last-child {
+  #portfolio .portfolio-gallery .examples:last-child {
     height: 320px;
   }
-  .portfolio-gallery .examples:after {
+  #portfolio .portfolio-gallery .examples:after {
     padding-top: 35%;
   }
   .examples-detailed .notebook {
@@ -2078,11 +2080,11 @@ body:hover > .about-us {
   .examples-detailed .project-detailed .project-technology li {
     margin: 0 3px;
   }
-  .team-wrapper .team {
+  #team-wrapper .team {
     grid-template-columns: 350px;
     justify-content: center;
   }
-  .feedback .contact {
+  #feedback .contact {
     grid-template-rows: repeat(3, 30px) 250px 40px;
   }
 }
@@ -2107,23 +2109,23 @@ body:hover > .about-us {
   .header-small {
     grid-template-rows: 75px 250px 300px 20px;
   }
-  .team-wrapper .team {
+  #team-wrapper .team {
     grid-template-columns: minmax(200px, 300px);
     justify-content: center;
   }
-  .tech-bar .tech-list .tech-item span {
+  #tech-bar .tech-list .tech-item span {
     font-size: 1rem;
   }
-  .tech-bar .tech-list .tech-item .size {
+  #tech-bar .tech-list .tech-item .size {
     position: relative;
     text-align: center;
     font-size: 5rem;
   }
-  .portfolio .portfolio-filter {
+  #portfolio .portfolio-filter {
     grid-template-columns: repeat(2, 100px);
     grid-template-rows: repeat(3, 30px);
   }
-  .portfolio-gallery .examples {
+  #portfolio .portfolio-gallery .examples {
     width: 85%;
   }
   .examples-detailed {
