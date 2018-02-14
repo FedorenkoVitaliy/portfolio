@@ -287,7 +287,7 @@ button{
             display:grid;
             grid-column: 2;
             grid-template-columns: repeat(6,auto);
-            grid-column-gap: 15px;
+            grid-column-gap: 12px;
             justify-content: end;
 
             li {
@@ -295,33 +295,32 @@ button{
                 position:relative;
             }
 
-            /*li:after{
+            li:after{
                 display: block;
                 position: absolute;
-                top:0;
+                bottom: -2px;
                 content: '';
                 width: 0;
-                height: 100%;
-                background-color: transparent;
-                border-bottom: 2px solid white;
+                height: 2px;
+                background-color: white;
                 transition: 0.5s;
             }
 
             li:hover:after{
                 width: 100%;
                 transition: 0.7s;
-            }*/
+            }
         }
 
         .mini-menu-link{
             top:120px;
         }
 
-        a{
+        a {
             text-decoration: none;
             color:#f8f9fa;
             font-size: 1.3rem;
-           /// text-transform: uppercase;
+            text-transform: capitalize;
         }
 
         .button--header{
@@ -1439,19 +1438,10 @@ body:hover>#about-us{
         .nav-bar {
             padding: $main-middle-indent;
 
-            a {
-                text-transform: none;
-            }
-
             .button--header {
                 height: 40px;
                 width: 125px;
             }
-        }
-
-        .fix-nav{
-            padding: 0 12px;
-            grid-column-gap: 12px;
         }
     }
 
@@ -1610,13 +1600,15 @@ body:hover>#about-us{
         display:grid;
         grid-column: 2;
         width: auto;
-        height: 50px;
+        height: 54px;
         justify-self: center;
     }
 
     .header{
         grid-template-rows: auto 100px 450px 100px;
         .nav-bar{
+            grid-template-columns: 125px 1fr 125px;
+            padding: 0;
             .logo{
                 display:none;
             }
@@ -1664,7 +1656,6 @@ body:hover>#about-us{
 
                     a {
                         position:relative;
-                        left: -22px;
                         color:#f8f9fa;
                         text-decoration: none;
                         text-transform: uppercase;
@@ -1691,12 +1682,6 @@ body:hover>#about-us{
         .nav-bar{
             .mini-menu-link{
                 top: 75px;
-            }
-        }
-
-        .fix-nav{
-            .mini-menu-link{
-                position: fixed;
             }
         }
 
@@ -1850,10 +1835,20 @@ body:hover>#about-us{
     padding: 0 30px;
     }
     .header {
-
+        grid-template-rows:  auto 100px 350px 100px;
         .header-content {
+            font-size: 1.1em;
+
             .heading{
-                font-size: 4rem;
+                font-size: 3.5rem;
+            }
+
+            .description{
+                font-size: 1.5rem;
+            }
+
+            #write-us{
+                    width: 200px;
             }
         }
     }
@@ -2038,17 +2033,23 @@ body:hover>#about-us{
         grid-template-rows: auto 120px 300px 100px;
 
         .nav-bar{
+            grid-template-columns: 90px 1fr 90px;
             padding: 0 10px;
-            grid-column-gap: 10px;
+            grid-column-gap: 7px;
 
             .button--header{
                 width: 90px;
             }
+
+            .logo-description{
+                height: 47px;
+            }
+
         }
 
         .header-content {
             grid-template-rows: 2fr 1fr 5fr 1fr 1fr;
-            margin: 0 30px;
+            margin: 0 20px;
             padding: 30px 20px;
 
             .heading {

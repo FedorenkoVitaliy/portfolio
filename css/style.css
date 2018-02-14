@@ -396,29 +396,29 @@ button {
   display: grid;
   grid-column: 2;
   grid-template-columns: repeat(6, auto);
-  grid-column-gap: 15px;
+  grid-column-gap: 12px;
   justify-content: end;
-  /*li:after{
-                display: block;
-                position: absolute;
-                top:0;
-                content: '';
-                width: 0;
-                height: 100%;
-                background-color: transparent;
-                border-bottom: 2px solid white;
-                transition: 0.5s;
-            }
-
-            li:hover:after{
-                width: 100%;
-                transition: 0.7s;
-            }*/
 }
 
 .header .nav-bar .menu-link li, .header .fix-nav .menu-link li {
   display: inline;
   position: relative;
+}
+
+.header .nav-bar .menu-link li:after, .header .fix-nav .menu-link li:after {
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.header .nav-bar .menu-link li:hover:after, .header .fix-nav .menu-link li:hover:after {
+  width: 100%;
+  transition: 0.7s;
 }
 
 .header .nav-bar .mini-menu-link, .header .fix-nav .mini-menu-link {
@@ -429,6 +429,7 @@ button {
   text-decoration: none;
   color: #f8f9fa;
   font-size: 1.3rem;
+  text-transform: capitalize;
 }
 
 .header .nav-bar .button--header, .header .fix-nav .button--header {
@@ -1460,16 +1461,9 @@ body:hover > #about-us {
   .header .nav-bar, .header .fix-nav {
     padding: 0 50px;
   }
-  .header .nav-bar a, .header .fix-nav a {
-    text-transform: none;
-  }
   .header .nav-bar .button--header, .header .fix-nav .button--header {
     height: 40px;
     width: 125px;
-  }
-  .header .fix-nav {
-    padding: 0 12px;
-    grid-column-gap: 12px;
   }
   #tech-bar .tech-list .tech-item {
     width: 100%;
@@ -1592,11 +1586,15 @@ body:hover > #about-us {
     display: grid;
     grid-column: 2;
     width: auto;
-    height: 50px;
+    height: 54px;
     justify-self: center;
   }
   .header {
     grid-template-rows: auto 100px 450px 100px;
+  }
+  .header .nav-bar, .header .fix-nav {
+    grid-template-columns: 125px 1fr 125px;
+    padding: 0;
   }
   .header .nav-bar .logo, .header .fix-nav .logo {
     display: none;
@@ -1638,7 +1636,6 @@ body:hover > #about-us {
   }
   .header .nav-bar .mini-menu-link li a, .header .fix-nav .mini-menu-link li a {
     position: relative;
-    left: -22px;
     color: #f8f9fa;
     text-decoration: none;
     text-transform: uppercase;
@@ -1654,9 +1651,6 @@ body:hover > #about-us {
   }
   .header .nav-bar .mini-menu-link, .header .fix-nav .mini-menu-link {
     top: 75px;
-  }
-  .header .fix-nav .mini-menu-link {
-    position: fixed;
   }
   .header .header-content {
     margin: 0 50px;
@@ -1776,8 +1770,20 @@ body:hover > #about-us {
   body > * {
     padding: 0 30px;
   }
+  .header {
+    grid-template-rows: auto 100px 350px 100px;
+  }
+  .header .header-content {
+    font-size: 1.1em;
+  }
   .header .header-content .heading {
-    font-size: 4rem;
+    font-size: 3.5rem;
+  }
+  .header .header-content .description {
+    font-size: 1.5rem;
+  }
+  .header .header-content #write-us {
+    width: 200px;
   }
   #about-us {
     grid-template-rows: 110px 40px repeat(6, auto) 100px;
@@ -1916,15 +1922,19 @@ body:hover > #about-us {
     grid-template-rows: auto 120px 300px 100px;
   }
   .header .nav-bar, .header .fix-nav {
+    grid-template-columns: 90px 1fr 90px;
     padding: 0 10px;
-    grid-column-gap: 10px;
+    grid-column-gap: 7px;
   }
   .header .nav-bar .button--header, .header .fix-nav .button--header {
     width: 90px;
   }
+  .header .nav-bar .logo-description, .header .fix-nav .logo-description {
+    height: 47px;
+  }
   .header .header-content {
     grid-template-rows: 2fr 1fr 5fr 1fr 1fr;
-    margin: 0 30px;
+    margin: 0 20px;
     padding: 30px 20px;
   }
   .header .header-content .heading {

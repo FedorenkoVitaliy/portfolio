@@ -1,10 +1,12 @@
 $(document).ready(function () {
-    $(".logo-menu, .menu-link li").click(function () {
-        $(".hatchet").toggleClass("hatchetRotate");
-        $(".hammer").toggleClass("hammerRotate");
-        $(".menu-link").toggleClass("mini-menu-link", 1000);
-        $(".header").toggleClass("header-small");
-    })
+    if($(window).outerWidth() <= 900) {
+        $(".logo-menu, .menu-link li").click(function () {
+            $(".hatchet").toggleClass("hatchetRotate");
+            $(".hammer").toggleClass("hammerRotate");
+            $(".menu-link").toggleClass("mini-menu-link", 1000);
+            $(".header").toggleClass("header-small");
+        })
+    }
     //portfolio
     var filter = $(".siteType");
     //all examples visible
@@ -51,7 +53,7 @@ $(document).ready(function () {
     var reviewWidth = $(".review").outerWidth();
     var reviewHeight = $(".review").outerHeight();
     var iteration=0;
-    if($(window).width() < 900) {
+    if($(window).outerWidth() <= 900) {
         $(".activeReview").css("height", reviewHeight * 2 + "px");
     }
     $(".arrow").click(function(){

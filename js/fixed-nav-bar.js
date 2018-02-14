@@ -3,6 +3,7 @@ $(document).ready(function(){
     $(".fix-nav .logo").attr("src", "img/logo-description.png").css("height", "60px");
     if($(document).scrollTop()>$("#header").outerHeight()){
         $('.fix-nav').addClass("fixed");
+
     }
     $(window).scroll(function () {
         if($(document).scrollTop()>$("#header").outerHeight()){
