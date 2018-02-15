@@ -1,10 +1,10 @@
 $(document).ready(function () {
+    $(".header>.nav-bar .menu-link").children().clone().appendTo(".drop-down-menu");
     if($(window).outerWidth() <= 900) {
-        $(".logo-menu, .menu-link li").click(function () {
+        $(".logo-menu, .drop-down-menu li").click(function () {
             $(".hatchet").toggleClass("hatchetRotate");
             $(".hammer").toggleClass("hammerRotate");
-            $(".menu-link").toggleClass("mini-menu-link", 1000);
-            $(".header").toggleClass("header-small");
+            $(".drop-down-menu").toggleClass("show-menu");
         })
     }
     //portfolio

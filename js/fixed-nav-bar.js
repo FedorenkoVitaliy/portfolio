@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    $(".nav-bar").children().clone().appendTo(".fix-nav");
+    $(".nav-bar").clone().appendTo(".fix-nav");
+    $(".drop-down-menu").clone().appendTo(".fix-nav");
     $(".fix-nav .logo").attr("src", "img/logo-description.png").css("height", "60px");
     if($(document).scrollTop()>$("#header").outerHeight()){
         $('.fix-nav').addClass("fixed");
