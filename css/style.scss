@@ -345,6 +345,26 @@ button{
     }
     .drop-down-menu{
         display: none;
+        li {
+            display: inline;
+            position:relative;
+        }
+
+        li:after{
+            display: block;
+            position: absolute;
+            bottom: -2px;
+            content: '';
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: 0.5s;
+        }
+
+        li:hover:after{
+            width: 100%;
+            transition: 0.7s;
+        }
     }
 
     .header-content{
@@ -1677,7 +1697,7 @@ button{
             }
         }
         .show-menu{
-            height: auto;
+            height: 245px;
             transition: 1s;
         }
         .header-content{

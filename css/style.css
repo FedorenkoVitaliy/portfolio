@@ -455,6 +455,27 @@ button {
   display: none;
 }
 
+.header .drop-down-menu li {
+  display: inline;
+  position: relative;
+}
+
+.header .drop-down-menu li:after {
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.header .drop-down-menu li:hover:after {
+  width: 100%;
+  transition: 0.7s;
+}
+
 .header .header-content {
   display: flex;
   flex-direction: column;
@@ -1672,7 +1693,7 @@ button {
     color: orange;
   }
   .header .show-menu {
-    height: auto;
+    height: 245px;
     transition: 1s;
   }
   .header .header-content {
