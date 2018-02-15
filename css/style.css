@@ -852,7 +852,9 @@ button {
   color: #ffffff;
 }
 
-#team-wrapper .team .associate .social i {
+#team-wrapper .team .associate .social a {
+  color: white;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -875,15 +877,15 @@ button {
   padding: 20px 10px;
 }
 
-#team-wrapper .team .associate:hover i:nth-child(1) {
+#team-wrapper .team .associate:hover a:nth-child(1) {
   animation: socialColor 2s linear infinite;
 }
 
-#team-wrapper .team .associate:hover i:nth-child(2) {
+#team-wrapper .team .associate:hover a:nth-child(2) {
   animation: socialColor 2s linear 0.7s infinite;
 }
 
-#team-wrapper .team .associate:hover i:nth-child(3) {
+#team-wrapper .team .associate:hover a:nth-child(3) {
   animation: socialColor 2s linear 1.4s infinite;
 }
 
@@ -1418,6 +1420,17 @@ button {
   border: 1px solid #3e3e3e;
 }
 
+#footer .footer__contact-social .footer__social-img a {
+  font-size: 38px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#footer .footer__contact-social .footer__social-img a:hover {
+  color: #ff6c08;
+}
+
 #footer .footer__create-by {
   display: grid;
   grid-column: 3;
@@ -1457,7 +1470,8 @@ button {
     padding: 0 50px;
   }
   .header .nav-bar {
-    padding: 0 20px;
+    grid-column-gap: 12px;
+    padding: 0 10px;
   }
   .header .nav-bar .button--header {
     height: 40px;
@@ -1569,6 +1583,15 @@ button {
     grid-row: 6;
     grid-column-gap: 0;
   }
+  #footer .footer__contact-social .footer__social-img {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #3e3e3e;
+  }
+  #footer .footer__contact-social .footer__social-img a {
+    font-size: 46px;
+  }
   #footer .footer__create-by {
     grid-column: 4;
     grid-row: 2;
@@ -1649,7 +1672,7 @@ button {
     color: orange;
   }
   .header .show-menu {
-    height: 200px;
+    height: auto;
     transition: 1s;
   }
   .header .header-content {
@@ -1763,6 +1786,9 @@ button {
   }
   #feedback .reviews-block .activeReview .allReviews .review {
     padding: 20px 0;
+  }
+  #footer .footer__contact-address {
+    grid-column: 1/span 2;
   }
 }
 
