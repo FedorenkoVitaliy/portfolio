@@ -6,6 +6,12 @@ $(document).ready(function () {
             $(".hammer").toggleClass("hammerRotate");
             $(".drop-down-menu").toggleClass("show-menu");
         });
+
+        $(window).scroll(function () {
+            $(".hatchet").removeClass("hatchetRotate");
+            $(".hammer").removeClass("hammerRotate");
+            $(".drop-down-menu").removeClass("show-menu");
+        });
     }
     //portfolio
     var filter = $(".siteType");

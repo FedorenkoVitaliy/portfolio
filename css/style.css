@@ -435,6 +435,7 @@ button {
   text-decoration: none;
   color: #f8f9fa;
   font-size: 1.3rem;
+  text-align: center;
 }
 
 .header .nav-bar .button--header {
@@ -1629,7 +1630,7 @@ button {
     justify-self: center;
   }
   .header {
-    grid-template-rows: auto minmax(100px, auto) 400px 100px;
+    grid-template-rows: auto 240px 400px 100px;
   }
   .header .nav-bar {
     grid-template-columns: 125px 1fr 125px;
@@ -1675,13 +1676,16 @@ button {
     justify-content: center;
     height: 40px;
     background: #404040;
-    border-bottom: 1px solid orange;
+    border-top: 0;
+    border-bottom: 2px solid orange;
   }
   .header .drop-down-menu li a {
     position: relative;
     color: #f8f9fa;
     text-decoration: none;
     text-transform: uppercase;
+    width: 100%;
+    text-align: center;
   }
   .header .drop-down-menu li:hover {
     color: orange;
@@ -1690,7 +1694,7 @@ button {
     color: orange;
   }
   .header .show-menu {
-    height: 245px;
+    height: 240px;
     transition: 1s;
   }
   .header .header-content {
@@ -1842,7 +1846,7 @@ button {
     padding: 0 30px;
   }
   .header {
-    grid-template-rows: auto minmax(100px, auto) 350px 100px;
+    grid-template-rows: auto 240px 350px 100px;
   }
   .header .header-content {
     font-size: 1.1em;
@@ -1963,7 +1967,7 @@ button {
     padding: 0 20px;
   }
   .header {
-    grid-template-rows: auto minmax(100px, auto) 300px 100px;
+    grid-template-rows: auto 240px 300px 100px;
   }
   .header .nav-bar {
     grid-template-columns: 90px 1fr 90px;
@@ -2142,7 +2146,7 @@ button {
 
 @media screen and (max-width: 400px) {
   .header {
-    grid-template-rows: auto minmax(100px, auto) 300px 20px;
+    grid-template-rows: auto 240px 300px 20px;
   }
   .header .logo-description {
     display: none;

@@ -7,7 +7,7 @@ $(document).ready(function(){
 
     }
     $(window).scroll(function () {
-        if($(document).scrollTop()>$("#header").outerHeight()){
+        if($(document).scrollTop()>=$("#header").outerHeight()-20){
             $('.fix-nav').addClass("fixed");
         }
         if($(document).scrollTop()<$("#header").outerHeight()){

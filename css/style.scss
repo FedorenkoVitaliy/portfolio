@@ -326,6 +326,7 @@ button{
             text-decoration: none;
             color:#f8f9fa;
             font-size: 1.3rem;
+            text-align: center;
         }
 
         .button--header{
@@ -1624,7 +1625,7 @@ button{
     }
 
     .header{
-        grid-template-rows: auto minmax(100px, auto) 400px 100px;
+        grid-template-rows: auto 240px 400px 100px;
         .nav-bar{
             grid-template-columns: 125px 1fr 125px;
             padding: $main-middle-indent;
@@ -1677,13 +1678,16 @@ button{
                 height: 40px;
 
                 background: rgb(64, 64, 64);
-                border-bottom:1px solid $main-color;
+                border-top: 0;
+                border-bottom: 2px solid $main-color;
 
                 a {
                     position:relative;
                     color:#f8f9fa;
                     text-decoration: none;
                     text-transform: uppercase;
+                    width: 100%;
+                    text-align: center;
                 }
             }
 
@@ -1695,7 +1699,7 @@ button{
             }
         }
         .show-menu{
-            height: 245px;
+            height: 240px;
             transition: 1s;
         }
         .header-content{
@@ -1887,7 +1891,7 @@ button{
     padding: 0 30px;
     }
     .header {
-        grid-template-rows:  auto minmax(100px, auto) 350px 100px;
+        grid-template-rows:  auto 240px 350px 100px;
         .header-content {
             font-size: 1.1em;
 
@@ -2048,7 +2052,7 @@ button{
     }
 
     .header {
-        grid-template-rows: auto minmax(100px, auto) 300px 100px;
+        grid-template-rows: auto 240px 300px 100px;
 
         .nav-bar{
             grid-template-columns: 90px 1fr 90px;
@@ -2270,7 +2274,7 @@ button{
 }
 @media screen and (max-width: 400px) {
     .header{
-        grid-template-rows: auto minmax(100px, auto) 300px 20px;
+        grid-template-rows: auto 240px 300px 20px;
         .logo-description{
             display: none;
         }
