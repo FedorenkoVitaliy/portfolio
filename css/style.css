@@ -384,6 +384,10 @@ button {
   background: black;
 }
 
+.header .fix-nav .nav-bar {
+  padding: 0 55px;
+}
+
 .header .nav-bar {
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -785,14 +789,6 @@ button {
   padding: 0 10px;
 }
 
-#tech-bar .tech-list .tech-item img {
-  width: 8.3rem;
-  text-align: center;
-  font-weight: normal;
-  margin: 0 20px;
-  tex-shadow: 0 0 15px black;
-}
-
 #tech-bar .tech-list .tech-item p {
   width: 75%;
   font-family: 'Alegreya Sans';
@@ -822,6 +818,12 @@ button {
   position: relative;
   text-align: center;
   font-size: 8.2rem;
+}
+
+#tech-bar .tech-list .tech-item .sass-size {
+  position: relative;
+  text-align: center;
+  font-size: 6.2rem;
 }
 
 #team-wrapper {
@@ -1193,7 +1195,7 @@ button {
   font-size: 1.3em;
 }
 
-#feedback {
+#contact {
   display: grid;
   grid-template-rows: 110px 70px auto 40px auto 100px;
   grid-template-columns: 100%;
@@ -1201,11 +1203,11 @@ button {
   background: #e8e8e8;
 }
 
-#feedback .feedback-title {
+#contact .contact-title {
   grid-row: 1;
 }
 
-#feedback .contact {
+#contact .callback {
   display: grid;
   grid-template-columns: 1fr 600px;
   grid-template-rows: repeat(3, 50px) 10px 60px;
@@ -1213,7 +1215,7 @@ button {
   grid-row: 3;
 }
 
-#feedback .contact .input {
+#contact .callback .input {
   border: 0;
   padding: 20px 20px;
   text-align: justify;
@@ -1221,41 +1223,41 @@ button {
   border-radius: 10px;
 }
 
-#feedback .contact .input:hover, #feedback .contact .textarea-wrapper:hover {
+#contact .callback .input:hover, #contact .callback .textarea-wrapper:hover {
   box-shadow: 0 0 2px 2px rgba(255, 165, 0, 0.5);
   transition: 0.5s;
 }
 
-#feedback .contact .input:focus, #feedback .contact .textarea-wrapper:focus {
+#contact .callback .input:focus, #contact .callback .textarea-wrapper:focus {
   box-shadow: 0 0 2px 2px rgba(255, 165, 0, 0.5);
 }
 
-#feedback .contact .input::-webkit-input-placeholder, #feedback .contact textarea-wrapper::-webkit-input-placeholder {
+#contact .callback .input::-webkit-input-placeholder, #contact .callback textarea-wrapper::-webkit-input-placeholder {
   opacity: 1;
   transition: opacity 0.5s ease;
 }
 
-#feedback .contact .input:focus::-webkit-input-placeholder, #feedback .contact .textarea-wrapper:focus::-webkit-input-placeholder {
+#contact .callback .input:focus::-webkit-input-placeholder, #contact .callback .textarea-wrapper:focus::-webkit-input-placeholder {
   opacity: 0;
   transition: opacity 0.5s ease;
 }
 
-#feedback .contact .user-name {
+#contact .callback .user-name {
   grid-column: 1;
   grid-row: 1;
 }
 
-#feedback .contact .user-phone {
+#contact .callback .user-phone {
   grid-column: 1;
   grid-row: 2;
 }
 
-#feedback .contact .user-mail {
+#contact .callback .user-mail {
   grid-column: 1;
   grid-row: 3;
 }
 
-#feedback .contact .textarea-wrapper {
+#contact .callback .textarea-wrapper {
   grid-column: 2;
   grid-row: 1/span 3;
   position: relative;
@@ -1263,7 +1265,7 @@ button {
   border-radius: 10px;
 }
 
-#feedback .contact .textarea-wrapper .user-message {
+#contact .callback .textarea-wrapper .user-message {
   height: 100%;
   width: 100%;
   resize: none;
@@ -1273,7 +1275,7 @@ button {
   text-align: justify;
 }
 
-#feedback .contact .textarea-wrapper:before, #feedback .contact .textarea-wrapper:after {
+#contact .callback .textarea-wrapper:before, #contact .callback .textarea-wrapper:after {
   content: '';
   display: block;
   background: white;
@@ -1283,15 +1285,15 @@ button {
   right: 20px;
 }
 
-#feedback .contact .textarea-wrapper:before {
+#contact .callback .textarea-wrapper:before {
   top: 0;
 }
 
-#feedback .contact .textarea-wrapper:after {
+#contact .callback .textarea-wrapper:after {
   bottom: 0;
 }
 
-#feedback .contact .counter {
+#contact .callback .counter {
   grid-column: 2;
   grid-row: 4;
   text-align: right;
@@ -1301,12 +1303,12 @@ button {
   transition: opacity 1s ease;
 }
 
-#feedback .contact .counterVisible {
+#contact .callback .counterVisible {
   opacity: 1;
   transition: opacity 1s ease;
 }
 
-#feedback .contact .contact-send {
+#contact .callback .contact-send {
   grid-column: 2;
   grid-row: 5;
   justify-self: end;
@@ -1314,20 +1316,127 @@ button {
   width: 200px;
 }
 
-#feedback .reviews-block {
+#contact .contact-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 120px 60px 120px;
+  grid-row-gap: 30px;
+  grid-row: 5;
+}
+
+#contact .contact-content .phone-block {
+  display: grid;
+  grid-column: 1;
+  align-content: space-between;
+}
+
+#contact .contact-content .phone-block a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+#contact .contact-content .phone-block a:before {
+  margin-right: 14px;
+  font-family: "Font Awesome\ 5 brands";
+  font-size: 32px;
+}
+
+#contact .contact-content .phone-block .phone:before {
+  content: "\f098";
+  font-family: "Font Awesome\ 5 Free";
+  font-weight: 700;
+  color: orange;
+}
+
+#contact .contact-content .phone-block .viber:before {
+  content: "\f409";
+  color: purple;
+}
+
+#contact .contact-content .phone-block .skype:before {
+  content: "\f17e";
+  color: deepskyblue;
+}
+
+#contact .contact-content .other-block {
+  display: grid;
+  grid-column: 1;
+  grid-row: 3;
+  align-content: space-between;
+}
+
+#contact .contact-content .other-block .mail {
+  color: black;
+  text-decoration: none;
+}
+
+#contact .contact-content .other-block .mail:before {
+  content: "\f199";
+  font-family: "Font Awesome\ 5 Free";
+  font-weight: 700;
+  font-size: 20px;
+  margin-right: 14px;
+  color: black;
+}
+
+#contact .contact-content .other-block .address:before {
+  content: "\f041";
+  font-family: "Font Awesome\ 5 Free";
+  font-weight: 700;
+  font-size: 20px;
+  margin-right: 14px;
+  color: black;
+}
+
+#contact .contact-content .other-block .social-block {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+
+#contact .contact-content .other-block .social-block a {
+  color: black;
+}
+
+#contact .contact-content .other-block .social-block a:hover {
+  color: #ff6c08;
+}
+
+#contact .contact-content .timetable-block {
+  display: grid;
+  grid-column: 1;
+  align-content: space-between;
+}
+
+#contact .contact-content .map {
+  grid-column: 2;
+  grid-row: 1/span 3;
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+}
+
+#reviews {
+  display: grid;
+  grid-template-rows: 110px 75px auto 100px;
+}
+
+#reviews .reviews-block {
   display: grid;
   grid-template-columns: 35px 1fr 35px;
-  grid-row: 5;
+  grid-row: 3;
   grid-column-gap: 30px;
   align-items: center;
   justify-content: center;
 }
 
-#feedback .reviews-block .arrow-up, #feedback .reviews-block .arrow-down {
+#reviews .reviews-block .arrow-up, #reviews .reviews-block .arrow-down {
   display: none;
 }
 
-#feedback .reviews-block .arrow-left, #feedback .reviews-block .arrow-right {
+#reviews .reviews-block .arrow-left, #reviews .reviews-block .arrow-right {
   display: block;
   grid-column: 1;
   justify-self: center;
@@ -1335,18 +1444,18 @@ button {
   cursor: pointer;
 }
 
-#feedback .reviews-block .arrow-right {
+#reviews .reviews-block .arrow-right {
   grid-column: 3;
   text-shadow: -8px 0 5px -5px #333;
 }
 
-#feedback .reviews-block .activeReview {
+#reviews .reviews-block .activeReview {
   grid-column: 2;
   display: inline-block;
   overflow: hidden;
 }
 
-#feedback .reviews-block .activeReview .allReviews {
+#reviews .reviews-block .activeReview .allReviews {
   display: grid;
   grid-template-columns: repeat(12, 50%);
   position: relative;
@@ -1355,7 +1464,7 @@ button {
   transition: 1s;
 }
 
-#feedback .reviews-block .activeReview .allReviews .review {
+#reviews .reviews-block .activeReview .allReviews .review {
   display: grid;
   grid-template-rows: 25px 18px 20px 20px auto;
   grid-template-columns: auto 1fr;
@@ -1365,13 +1474,13 @@ button {
   color: #333333;
 }
 
-#feedback .reviews-block .activeReview .allReviews .review .avatar {
+#reviews .reviews-block .activeReview .allReviews .review .avatar {
   grid-row: 1/span 3;
   grid-column: 1;
   border-radius: 50%;
 }
 
-#feedback .reviews-block .activeReview .allReviews .review .author-name, #feedback .reviews-block .activeReview .allReviews .review .author-position {
+#reviews .reviews-block .activeReview .allReviews .review .author-name, #reviews .reviews-block .activeReview .allReviews .review .author-position {
   grid-row: 1;
   grid-column: 2;
   display: inline-block;
@@ -1380,121 +1489,18 @@ button {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-#feedback .reviews-block .activeReview .allReviews .review .author-position {
+#reviews .reviews-block .activeReview .allReviews .review .author-position {
   font-size: 0.9em;
   grid-row: 2;
   color: rgba(255, 165, 0, 0.7);
 }
 
-#feedback .reviews-block .activeReview .allReviews .review .comment-body {
+#reviews .reviews-block .activeReview .allReviews .review .comment-body {
   grid-row: 5;
   grid-column: 1/span 2;
   padding: 0 10px;
   text-align: justify;
   line-height: 33px;
-}
-
-#contact-block {
-  display: grid;
-  grid-template-rows: 110px 75px auto 100px;
-}
-
-#contact-block .contact-content {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 120px 60px 120px;
-  grid-row-gap: 30px;
-  grid-row: 3;
-}
-
-#contact-block .contact-content .phone-block {
-  display: grid;
-  grid-column: 1;
-  align-content: space-between;
-}
-
-#contact-block .contact-content .phone-block a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: black;
-}
-
-#contact-block .contact-content .phone-block a:before {
-  margin-right: 14px;
-  font-family: "Font Awesome\ 5 brands";
-  font-size: 32px;
-}
-
-#contact-block .contact-content .phone-block .phone:before {
-  content: "\f098";
-  font-family: "Font Awesome\ 5 Free";
-  font-weight: 700;
-  color: orange;
-}
-
-#contact-block .contact-content .phone-block .viber:before {
-  content: "\f409";
-  color: purple;
-}
-
-#contact-block .contact-content .phone-block .skype:before {
-  content: "\f17e";
-  color: deepskyblue;
-}
-
-#contact-block .contact-content .other-block {
-  display: grid;
-  grid-column: 1;
-  grid-row: 3;
-  align-content: space-between;
-}
-
-#contact-block .contact-content .other-block .mail {
-  color: black;
-  text-decoration: none;
-}
-
-#contact-block .contact-content .other-block .mail:before {
-  content: "\f199";
-  font-family: "Font Awesome\ 5 Free";
-  font-weight: 700;
-  font-size: 20px;
-  margin-right: 14px;
-  color: black;
-}
-
-#contact-block .contact-content .other-block .address:before {
-  content: "\f041";
-  font-family: "Font Awesome\ 5 Free";
-  font-weight: 700;
-  font-size: 20px;
-  margin-right: 14px;
-  color: black;
-}
-
-#contact-block .contact-content .other-block .social-block {
-  display: flex;
-  justify-content: space-between;
-  width: 150px;
-}
-
-#contact-block .contact-content .other-block .social-block a {
-  color: black;
-}
-
-#contact-block .contact-content .timetable-block {
-  display: grid;
-  grid-column: 1;
-  align-content: space-between;
-}
-
-#contact-block .contact-content .map {
-  grid-column: 2;
-  grid-row: 1/span 3;
-  width: 100%;
-  height: 100%;
-  background-color: grey;
 }
 
 #footer {
@@ -1677,11 +1683,11 @@ button {
     grid-column: 2;
     min-width: 230px;
   }
-  #feedback .contact {
+  #contact .callback {
     grid-template-columns: 1fr 500px;
     grid-template-rows: repeat(3, 65px) 10px 60px;
   }
-  #contact-block .contact-content {
+  #contact .contact-content {
     grid-template-columns: 2fr 3fr;
   }
   #footer {
@@ -1900,79 +1906,79 @@ button {
   #team-wrapper .team {
     justify-content: space-between;
   }
-  #feedback .contact {
+  #contact .callback {
     grid-template-columns: 1fr 400px;
     grid-template-rows: repeat(3, 65px) 50px;
   }
-  #feedback .contact .counter {
+  #contact .callback .counter {
     text-align: left;
   }
-  #feedback .contact .contact-send {
+  #contact .callback .contact-send {
     grid-row: 4;
     height: 50px;
   }
-  #feedback .reviews-block {
+  #contact .contact-content {
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 400px;
+  }
+  #contact .contact-content .phone-block {
+    grid-column: 1;
+    align-content: start;
+  }
+  #contact .contact-content .phone-block a:before {
+    font-size: 30px;
+  }
+  #contact .contact-content .other-block {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+  }
+  #contact .contact-content .other-block .social-block {
+    display: flex;
+    max-width: 200px;
+    justify-self: center;
+  }
+  #contact .contact-content .timetable-block {
+    grid-column: 3;
+    grid-row: 1;
+    align-content: start;
+  }
+  #contact .contact-content .timetable-block p {
+    margin-bottom: 10px;
+  }
+  #contact .contact-content .map {
+    grid-column: 1/span 3;
+    grid-row: 2;
+  }
+  #reviews .reviews-block {
     grid-template-columns: 1fr;
     grid-template-rows: 35px auto 35px;
   }
-  #feedback .reviews-block .arrow-up, #feedback .reviews-block .arrow-down {
+  #reviews .reviews-block .arrow-up, #reviews .reviews-block .arrow-down {
     display: block;
     grid-row: 1;
     justify-self: center;
     text-shadow: 0 8px 5px -5px #333;
     cursor: pointer;
   }
-  #feedback .reviews-block .arrow-down {
+  #reviews .reviews-block .arrow-down {
     grid-row: 3;
     text-shadow: 0 -8px 5px -5px #333;
   }
-  #feedback .reviews-block .arrow-left, #feedback .reviews-block .arrow-right {
+  #reviews .reviews-block .arrow-left, #reviews .reviews-block .arrow-right {
     display: none;
   }
-  #feedback .reviews-block .activeReview {
+  #reviews .reviews-block .activeReview {
     grid-column: 1;
   }
-  #feedback .reviews-block .activeReview .allReviews {
+  #reviews .reviews-block .activeReview .allReviews {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: repeat(12, 50%);
     grid-auto-flow: column;
   }
-  #feedback .reviews-block .activeReview .allReviews .review {
+  #reviews .reviews-block .activeReview .allReviews .review {
     padding: 20px 0;
-  }
-  #contact-block .contact-content {
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows: auto 400px;
-  }
-  #contact-block .contact-content .phone-block {
-    grid-column: 1;
-    align-content: start;
-  }
-  #contact-block .contact-content .phone-block a:before {
-    font-size: 30px;
-  }
-  #contact-block .contact-content .other-block {
-    grid-column: 2;
-    grid-row: 1;
-    justify-self: center;
-  }
-  #contact-block .contact-content .other-block .social-block {
-    display: flex;
-    max-width: 200px;
-    justify-self: center;
-  }
-  #contact-block .contact-content .timetable-block {
-    grid-column: 3;
-    grid-row: 1;
-    align-content: start;
-  }
-  #contact-block .contact-content .timetable-block p {
-    margin-bottom: 10px;
-  }
-  #contact-block .contact-content .map {
-    grid-column: 1/span 3;
-    grid-row: 2;
   }
   #footer .footer__contact-address {
     grid-column: 1/span 2;
@@ -2040,14 +2046,35 @@ button {
     min-width: 150px;
     margin-bottom: 10px;
   }
-  #contact-block .contact-content {
+  #contact .callback {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 30px) 200px 10px 60px;
+    grid-row-gap: 20px;
+  }
+  #contact .callback .textarea-wrapper {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  #contact .callback .counter {
+    grid-column: 1;
+    grid-row: 5;
+    text-align: left;
+  }
+  #contact .callback .contact-send {
+    grid-column: 1;
+    grid-row: 5;
+    justify-self: end;
+    border-radius: 20px;
+    width: 200px;
+  }
+  #contact .contact-content {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto 100px;
   }
-  #contact-block .contact-content .phone-block {
+  #contact .contact-content .phone-block {
     grid-column: 1;
   }
-  #contact-block .contact-content .other-block {
+  #contact .contact-content .other-block {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -2056,42 +2083,21 @@ button {
     grid-row: 3;
     width: 100%;
   }
-  #contact-block .contact-content .other-block .social-block {
+  #contact .contact-content .other-block .social-block {
     width: 100%;
   }
-  #contact-block .contact-content .timetable-block {
+  #contact .contact-content .timetable-block {
     grid-column: 2;
     grid-row: 1;
     align-content: start;
   }
-  #contact-block .contact-content .timetable-block p {
+  #contact .contact-content .timetable-block p {
     margin: 7px 0;
   }
-  #contact-block .contact-content .map {
+  #contact .contact-content .map {
     grid-column: 1/span 2;
     grid-row: 2;
     height: 400px;
-  }
-  #feedback .contact {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 30px) 200px 10px 60px;
-    grid-row-gap: 20px;
-  }
-  #feedback .contact .textarea-wrapper {
-    grid-column: 1;
-    grid-row: 4;
-  }
-  #feedback .contact .counter {
-    grid-column: 1;
-    grid-row: 5;
-    text-align: left;
-  }
-  #feedback .contact .contact-send {
-    grid-column: 1;
-    grid-row: 5;
-    justify-self: end;
-    border-radius: 20px;
-    width: 200px;
   }
   #footer {
     grid-template-columns: 1fr;
@@ -2309,33 +2315,33 @@ button {
     grid-template-columns: 350px;
     justify-content: center;
   }
-  #feedback .contact {
+  #contact .callback {
     grid-template-rows: repeat(3, 30px) 250px 40px;
   }
-  #contact-block {
-    grid-template-rows: 110px 45px auto 75px;
-  }
-  #contact-block .contact-content {
+  #contact .contact-content {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto 100px;
   }
-  #contact-block .contact-content .phone-block {
+  #contact .contact-content .phone-block {
     grid-column: 1;
     justify-self: center;
   }
-  #contact-block .contact-content .other-block {
+  #contact .contact-content .other-block {
     grid-column: 1;
     grid-row: 4;
   }
-  #contact-block .contact-content .timetable-block {
+  #contact .contact-content .timetable-block {
     grid-column: 1;
     grid-row: 2;
     justify-self: center;
   }
-  #contact-block .contact-content .map {
+  #contact .contact-content .map {
     grid-column: 1;
     grid-row: 3;
     height: 300px;
+  }
+  #reviews {
+    grid-template-rows: 110px 45px auto 75px;
   }
 }
 
@@ -2392,16 +2398,16 @@ button {
     max-height: 45px;
     max-width: 250px;
   }
-  #contact-block .contact-content .phone-block {
+  #contact .contact-content .phone-block {
     justify-self: start;
   }
-  #contact-block .contact-content .other-block .address {
+  #contact .contact-content .other-block .address {
     font-size: 1rem;
   }
-  #contact-block .contact-content .timetable-block {
+  #contact .contact-content .timetable-block {
     justify-self: start;
   }
-  #contact-block .contact-content .map {
+  #contact .contact-content .map {
     grid-column: 1;
     grid-row: 3;
     height: 300px;
