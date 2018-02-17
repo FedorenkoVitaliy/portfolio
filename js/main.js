@@ -1,18 +1,4 @@
 $(document).ready(function () {
-    $(".header>.nav-bar .menu-link").children().clone().appendTo(".drop-down-menu");
-    if($(window).outerWidth() <= 900) {
-        $(".logo-menu, .drop-down-menu li").click(function () {
-            $(".hatchet").toggleClass("hatchetRotate");
-            $(".hammer").toggleClass("hammerRotate");
-            $(".drop-down-menu").toggleClass("show-menu");
-        });
-
-        $(window).scroll(function () {
-            $(".hatchet").removeClass("hatchetRotate");
-            $(".hammer").removeClass("hammerRotate");
-            $(".drop-down-menu").removeClass("show-menu");
-        });
-    }
     //portfolio
     var filter = $(".siteType");
     //all examples visible
