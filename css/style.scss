@@ -1844,32 +1844,32 @@ button{
         grid-template-rows: 110px 40px repeat(6, auto) 100px;
 
         .description-heading1 {
-            grid-column: 1 / sapn 2;
+            grid-column: 1 / span 6;
             grid-row: 3;
         }
 
         .description-heading2 {
-            grid-column: 1 / sapn 2;
+            grid-column: 1 / span 6;
             grid-row: 5;
         }
 
         .description-heading3 {
-            grid-column: 1 / sapn 2;
+            grid-column: 1 / span 6;
             grid-row: 7;
         }
 
         .about-description1 {
-            grid-column: 1 / sapn 2;
+            grid-column: 1 / span 6;
             grid-row: 4;
         }
 
         .about-description2 {
-            grid-column: 1 / sapn 2;
+            grid-column: 1 / span 6;
             grid-row: 6;
         }
 
         .about-description3 {
-            grid-column: 1 / sapn 2;
+            grid-column: 1 / span 6;
             grid-row: 8;
         }
     }
@@ -2312,6 +2312,11 @@ button{
                         font-size: 34px;
                         color: rgba(255,165,0,0.8);
                     }
+
+                    i:before {
+                        margin-right: 10px;
+                    }
+
                 }
 
                 .quality__image:hover>i{
