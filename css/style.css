@@ -820,10 +820,8 @@ button {
   font-size: 8.2rem;
 }
 
-#tech-bar .tech-list .tech-item .sass-size {
-  position: relative;
-  text-align: center;
-  font-size: 6.2rem;
+#tech-bar .tech-list .tech-item .fa-sass {
+  font-size: 5.5rem;
 }
 
 #team-wrapper {
@@ -2379,6 +2377,9 @@ button {
     position: relative;
     text-align: center;
     font-size: 5rem;
+  }
+  #tech-bar .tech-list .tech-item .fa-sass {
+    font-size: 4.5rem;
   }
   #portfolio .portfolio-filter {
     grid-template-columns: repeat(2, 100px);
