@@ -1,0 +1,112 @@
+{
+  "about-descr": [
+    {
+      "number" : "1",
+      "about-title" : "no lucky guesses",
+      "about-text" : "We listen before we create. To drive change, boost revenue, and transform your digital marketing, we take the time to fully understand your goals or problems. Using a proven process, every ounce of effort is poured into creating quality digital experiences backed by sound research and strategy. Like you, we’re here to grow your business, not figure things out as we go along."
+    },
+    {
+      "number" : "2",
+      "about-title" : "no surprises",
+      "about-text" : "We don’t believe in setting up barriers. Our solutions are born from honest, collaborative client–agency partnerships—not unveiling solutions we’ve cooked up on our own. We build the best digital experiences for your audience through thoughtful, collaborative strategy sessions and deep research. Basically, we want you in our whiteboard room writing on the walls with us."
+    },
+    {
+      "number" : "3",
+      "about-title" : "never satisfied",
+      "about-text" : "We refine because we’re never satisfied. We test, hone, and customize our process to better suit your specific goals, and we work to redefine the digital experience in your industry. Plus, our work doesn’t end after launch. Every experience is continually refined based on website goal tracking, testing, and analytics to ensure that we’re creating intuitive experiences that transform your organization for the digital economy."
+    }
+  ],
+
+  "advantages-list" : [
+    {
+      "number" : "1",
+      "class" : "credit-card",
+      "card" : "price",
+      "epigraph" : "price",
+      "title" : "reasonable price policy",
+      "description" : "The cost of services directly depends on the work performed and no more."
+    },
+    {
+      "number" : "2",
+      "class" : "tachometer-alt",
+      "card" : "technology",
+      "epigraph" : "technology",
+      "title" : "modern website layout technology",
+      "description" : "Using HTML5 for layout, CSS3 for creating design, and dynamics for a site using jQuery."
+    },
+    {
+      "number" : "3",
+      "class" : "code",
+      "card" : "clean",
+      "epigraph" : "clean",
+      "title" : "clean code and adaptive layout",
+      "description" : "HTML code without all unnecessary, understandable class names and indentations. Adaptive layout makes it possible to view the site both on the computer and on mobile devices."
+    }
+
+  ],
+
+  "tech-bar-list" : [
+    {
+      "class" : "html5",
+      "title" : "html",
+      "description" : "The foundation and the frame are necessary for everything, a good site, especially"
+    },
+    {
+      "class" : "css3",
+      "title" : "css3",
+      "description" : "And of course, where without CSS"
+    },
+    {
+      "class" : "js",
+      "title" : "javascript",
+      "description" : "As without JavaScript'a, faithful assistant"
+    },
+    {
+      "class" : "gulp",
+      "title" : "gulp",
+      "description" : "For Landing Pages, we use a simple but very powerful collector"
+    },
+    {
+      "class" : "angular",
+      "title" : "anfular",
+      "description" : "In our projects we use only advanced technologies such as Angular 5"
+    },
+    {
+      "class" : "sass",
+      "title" : "sass",
+      "description" : "ipsum dolor sit amet excepturi"
+    }
+  ],
+  "team-list" : [
+    {
+      "nickName" : "sed",
+      "position" : "frontend developer",
+      "name" : "vitaliy fedorenko"
+    },
+    {
+      "nickName" : "zoom",
+      "position" : "frontend developer",
+      "name" : "kostiantyn polishchuk"
+    },
+    {
+      "nickName" : "backend",
+      "position" : "backend developer",
+      "name" : "maxym sliunin"
+    },
+    {
+      "nickName" : "associate design",
+      "position" : "graphic/web design",
+      "name" : "olga pylypchuk"
+    },
+    {
+      "nickName" : "seo",
+      "position" : "seo expert",
+      "name" : "tania domanova"
+    },
+    {
+      "nickName" : "associate support",
+      "position" : "support",
+      "name" : "vasya franko"
+    }
+  ]
+}

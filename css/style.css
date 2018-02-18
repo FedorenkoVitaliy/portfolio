@@ -441,6 +441,7 @@ button {
   color: #f8f9fa;
   font-size: 1.3rem;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .header .nav-bar .button--header {
