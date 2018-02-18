@@ -58,27 +58,14 @@
   }
 }
 
-@keyframes searchCode {
+@keyframes cleanCode {
   0% {
-    background-image: radial-gradient(farthest-corner at 10% 100%, black 40%, black 40%, black 40%);
-  }
-  15% {
-    background-image: radial-gradient(farthest-corner at 10% 10%, rgba(255, 255, 255, 0.5) 0%, transparent 20%, black 40%), url("../img/clean.jpg");
-  }
-  30% {
-    background-image: radial-gradient(farthest-corner at 10% 90%, rgba(255, 255, 255, 0.5) 0%, transparent 20%, black 40%), url("../img/clean.jpg");
-  }
-  45% {
-    background-image: radial-gradient(farthest-corner at 90% 90%, rgba(255, 255, 255, 0.5) 0%, transparent 20%, black 40%), url("../img/clean.jpg");
-  }
-  60% {
-    background-image: radial-gradient(farthest-corner at 90% 10%, rgba(255, 255, 255, 0.5) 0%, transparent 20%, black 40%), url("../img/clean.jpg");
-  }
-  75% {
-    background-image: radial-gradient(farthest-corner at 50% 50%, rgba(255, 255, 255, 0.5) 0%, transparent 20%, black 40%), url("../img/clean.jpg");
+    background: url("../img/dirtyCode.png") left;
+    background-size: cover;
   }
   100% {
-    background-image: radial-gradient(farthest-corner at 50% 50%, rgba(255, 255, 255, 0.5) 0%, transparent 20%, black 60%), url("../img/clean.jpg");
+    background: url("../img/clean.jpg") right;
+    background-size: cover;
   }
 }
 
@@ -732,10 +719,10 @@ button {
 #advantages .quality-wrapper .quality--3 .quality__image {
   grid-column: 1;
   grid-row: 1;
-  background-image: radial-gradient(farthest-corner at 10% 100%, black 40%, black 40%, black 40%), url("../img/clean.jpg");
+  background-image: url("../img/dirtyCode.png");
   background-position: center;
   background-size: 125%;
-  animation-name: searchCode;
+  animation-name: cleanCode;
 }
 
 #advantages .quality-wrapper .quality--3 .quality__description-block {
@@ -750,7 +737,7 @@ button {
 }
 
 #advantages .quality-wrapper .quality--3:hover > .quality__image {
-  animation-name: searchCode;
+  animation-name: cleanCode;
 }
 
 #tech-bar {

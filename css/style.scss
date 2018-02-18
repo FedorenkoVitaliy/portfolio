@@ -635,10 +635,10 @@ button{
             .quality__image {
                 grid-column: 1;
                 grid-row: 1;
-                background-image:  radial-gradient(farthest-corner at 10% 100%,black 40%, black 40%, black 40%), url("../img/clean.jpg");
+                background-image:  url("../img/dirtyCode.png");
                 background-position:center;
                 background-size: 125%;
-                animation-name: searchCode;
+                animation-name: cleanCode;
             }
 
             .quality__description-block {
@@ -654,7 +654,7 @@ button{
         }
 
         .quality--3:hover > .quality__image {
-            animation-name: searchCode;
+            animation-name: cleanCode;
         }
     }
 }
