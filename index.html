@@ -161,15 +161,9 @@
                     <p class="project-description">{{project-description}}</p>
 
                     <ul class="project-technology">
-                        <!--{{#each project-technology}}-->
-                        <!--<li>{{technology}}</li>-->
-                        <li>HTML</li>
-                        <li>SASS</li>
-                        <li>jQuery</li>
-                        <li>Modx</li>
-                        <li>AJAX</li>
-                        <li>JSON</li>
-                        <!--{{/each}}-->
+                        {{#each project-technology}}
+                            <li>{{technology}}</li>
+                        {{/each}}
                     </ul>
                 </div>
             </div>
