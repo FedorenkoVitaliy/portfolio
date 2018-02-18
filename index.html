@@ -152,107 +152,29 @@
     </div>
 
     <div class="portfolio-gallery">
-        <div class="examples" data-site-type="blog">
-            <div class="icon-site"><img src="img/portfolio/baxter.jpg" alt=""></div>
-            <div class="project-detailed">
-                <p class="project-name">Baxter</p>
-                <p class="project-description">Разработка корпоративного сайта. Верстка более 10 уникальных шаблонов,
-                    адаптация под мобильные устройства, програмирование, посадка на CMS Modx. SEO-оптимизация.</p>
+        <script id="portfolio-list" type="text/x-handlebars-template">
+            {{#each portfolio-list}}
+            <div class="examples" data-site-type="{{data-site-type}}">
+                <div class="icon-site"><img src="img/portfolio/{{icon-site}}.jpg" alt=""></div>
+                <div class="project-detailed">
+                    <p class="project-name">{{project-name}}</p>
+                    <p class="project-description">{{project-description}}</p>
 
-                <ul class="project-technology">
-                    <li>HTML</li>
-                    <li>SASS</li>
-                    <li>jQuery</li>
-                    <li>Modx</li>
-                    <li>AJAX</li>
-                    <li>JSON</li>
-                </ul>
+                    <ul class="project-technology">
+                        <!--{{#each project-technology}}-->
+                        <!--<li>{{technology}}</li>-->
+                        <li>HTML</li>
+                        <li>SASS</li>
+                        <li>jQuery</li>
+                        <li>Modx</li>
+                        <li>AJAX</li>
+                        <li>JSON</li>
+                        <!--{{/each}}-->
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="examples" data-site-type="business">
-            <div class="icon-site"><img src="img/portfolio/valgus.jpg" alt=""></div>
-            <div class="project-detailed">
-                <p class="project-name">wolff.com</p>
-                <p class="project-description">Разработка корпоративного сайта. Верстка более 10 уникальных шаблонов,
-                    адаптация под мобильные устройства, програмирование, посадка на CMS Modx. SEO-оптимизация.</p>
-
-                <ul class="project-technology">
-                    <li>HTML</li>
-                    <li>SASS</li>
-                    <li>jQuery</li>
-                    <li>Modx</li>
-                    <li>AJAX</li>
-                    <li>JSON</li>
-                </ul>
-            </div>
-        </div>
-        <div class="examples" data-site-type="commerce">
-            <div class="icon-site"><img src="img/portfolio/barbershop.jpg" alt=""></div>
-            <div class="project-detailed">
-                <p class="project-name">wolff.com</p>
-                <p class="project-description">Разработка корпоративного сайта. Верстка более 10 уникальных шаблонов,
-                    адаптация под мобильные устройства, програмирование, посадка на CMS Modx. SEO-оптимизация.</p>
-
-                <ul class="project-technology">
-                    <li>HTML</li>
-                    <li>SASS</li>
-                    <li>jQuery</li>
-                    <li>Modx</li>
-                    <li>AJAX</li>
-                    <li>JSON</li>
-                </ul>
-            </div>
-        </div>
-        <div class="examples" data-site-type="blog">
-            <div class="icon-site"><img src="img/portfolio/crios.jpg" alt=""></div>
-            <div class="project-detailed">
-                <p class="project-name">wolff.com</p>
-                <p class="project-description">Разработка корпоративного сайта. Верстка более 10 уникальных шаблонов,
-                    адаптация под мобильные устройства, програмирование, посадка на CMS Modx. SEO-оптимизация.</p>
-
-                <ul class="project-technology">
-                    <li>HTML</li>
-                    <li>SASS</li>
-                    <li>jQuery</li>
-                    <li>Modx</li>
-                    <li>AJAX</li>
-                    <li>JSON</li>
-                </ul>
-            </div>
-        </div>
-        <div class="examples" data-site-type="portfolio">
-            <div class="icon-site"><img src="img/portfolio/bussines.jpg" alt=""></div>
-            <div class="project-detailed">
-                <p class="project-name">wolff.com</p>
-                <p class="project-description">Разработка корпоративного сайта. Верстка более 10 уникальных шаблонов,
-                    адаптация под мобильные устройства, програмирование, посадка на CMS Modx. SEO-оптимизация.</p>
-                <ul class="project-technology">
-                    <li>HTML</li>
-                    <li>SASS</li>
-                    <li>jQuery</li>
-                    <li>Modx</li>
-                    <li>AJAX</li>
-                    <li>JSON</li>
-                </ul>
-            </div>
-        </div>
-        <div class="examples" data-site-type="personal">
-            <div class="icon-site"><img src="img/portfolio/bakery.jpg" alt=""></div>
-            <div class="project-detailed">
-                <p class="project-name">wolff.com</p>
-                <p class="project-description">Разработка корпоративного сайта. Верстка более 10 уникальных шаблонов,
-                    адаптация под мобильные устройства, програмирование, посадка на CMS Modx. SEO-оптимизация.</p>
-                <ul class="project-technology">
-                    <li>HTML</li>
-                    <li>SASS</li>
-                    <li>jQuery</li>
-                    <li>Modx</li>
-                    <li>AJAX</li>
-                    <li>JSON</li>
-                </ul>
-            </div>
-        </div>
-
+            {{/each}}
+        </script>
     </div>
 </section>
 
@@ -306,137 +228,16 @@
         <i class="fas fa-arrow-left fa-2x arrow-left arrow"></i>
         <div class="activeReview">
             <div class="allReviews">
-                <div class="review">
-                    <img class="avatar" src="img/pavliv-ava.jpg">
-                    <p class="author-name">Pavliv Yaroslav 1</p>
-                    <p class="author-position">Web designer</p>
-                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad
-                        minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute
-                        irure dolor in reprehenderit in voluptate velit esse </p>
-                </div>
-
-                <div class="review">
-                    <img class="avatar" src="img/scott-ava.jpg">
-                    <p class="author-name">John Scott 2</p>
-                    <p class="author-position">Web designer</p>
-                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad
-                        minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute
-                        irure dolor in reprehenderit in voluptate velit esse </p>
-                </div>
-
-                <div class="review">
-                    <img class="avatar" src="img/pavliv-ava.jpg">
-                    <p class="author-name">Pavliv Yaroslav 3</p>
-                    <p class="author-position">Web designer</p>
-                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad
-                        minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute
-                        irure dolor in reprehenderit in voluptate velit esse </p>
-                </div>
-
-                <div class="review">
-                    <img class="avatar" src="img/scott-ava.jpg">
-                    <p class="author-name">John Scott 4</p>
-                    <p class="author-position">Web designer</p>
-                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad
-                        minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute
-                        irure dolor in reprehenderit in voluptate velit esse </p>
-                </div>
-
-                <div class="review">
-                    <img class="avatar" src="img/pavliv-ava.jpg">
-                    <p class="author-name">Pavliv Yaroslav 5</p>
-                    <p class="author-position">Web designer</p>
-                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad
-                        minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute
-                        irure dolor in reprehenderit in voluptate velit esse </p>
-                </div>
-
-                <div class="review">
-                    <img class="avatar" src="img/scott-ava.jpg">
-                    <p class="author-name">John Scott 6</p>
-                    <p class="author-position">Web designer</p>
-                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad
-                        minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute
-                        irure dolor in reprehenderit in voluptate velit esse </p>
-                </div>
-                <div class="review">
-
-                    <img class="avatar" src="img/pavliv-ava.jpg">
-                    <p class="author-name">Pavliv Yaroslav 7</p>
-                    <p class="author-position">Web designer</p>
-                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad
-                        minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute
-                        irure dolor in reprehenderit in voluptate velit esse </p>
-                </div>
-
-                <div class="review">
-                    <img class="avatar" src="img/scott-ava.jpg">
-                    <p class="author-name">John Scott 8</p>
-                    <p class="author-position">Web designer</p>
-                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad
-                        minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute
-                        irure dolor in reprehenderit in voluptate velit esse </p>
-                </div>
-
-                <div class="review">
-                    <img class="avatar" src="img/pavliv-ava.jpg">
-                    <p class="author-name">Pavliv Yaroslav 9</p>
-                    <p class="author-position">Web designer</p>
-                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad
-                        minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute
-                        irure dolor in reprehenderit in voluptate velit esse </p>
-                </div>
-
-                <div class="review">
-                    <img class="avatar" src="img/pavliv-ava.jpg">
-                    <p class="author-name">Pavliv Yaroslav 10</p>
-                    <p class="author-position">Web designer</p>
-                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad
-                        minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute
-                        irure dolor in reprehenderit in voluptate velit esse </p>
-                </div>
-
-                <div class="review">
-                    <img class="avatar" src="img/pavliv-ava.jpg">
-                    <p class="author-name">Pavliv Yaroslav 11</p>
-                    <p class="author-position">Web designer</p>
-                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad
-                        minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute
-                        irure dolor in reprehenderit in voluptate velit esse </p>
-                </div>
-
-                <div class="review">
-                    <img class="avatar" src="img/scott-ava.jpg">
-                    <p class="author-name">John Scott 12</p>
-                    <p class="author-position">Web designer</p>
-                    <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad
-                        minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute
-                        irure dolor in reprehenderit in voluptate velit esse </p>
-                </div>
+                <script id="reviews-list" type="text/x-handlebars-template">
+                    {{#each reviews-list}}
+                        <div class="review">
+                            <img class="avatar" src="img/{{avatar}}.jpg">
+                            <p class="author-name">{{author}}</p>
+                            <p class="author-position">{{position}}</p>
+                            <p class="comment-body">{{text}}</p>
+                        </div>
+                    {{/each}}
+                </script>
             </div>
         </div>
         <i class="fas fa-arrow-right fa-2x arrow-right arrow"></i>
@@ -471,5 +272,7 @@
     <script src="js/portfolio.js"></script>
     <script src="js/advantages.js"></script>
     <script src="js/team-list.js"></script>
+    <script src="js/reviews-list.js"></script>
+    <script src="js/portfolio-list.js"></script>
 </body>
 </html>

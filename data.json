@@ -108,5 +108,119 @@
       "position" : "support",
       "name" : "vasya franko"
     }
+  ],
+
+  "portfolio-list" : [
+    {
+      "data-site-type" : "blog",
+      "icon-site" : "baxter",
+      "project-name": "Baxter",
+      "project-description" : "Development of corporate site. Layout of more than 10 unique templates, adaptation for mobile devices, programming, landing on CMS Modx. SEO-optimization."
+    },
+    {
+      "data-site-type" : "business",
+      "icon-site" : "valgus",
+      "project-name": "wolff.com",
+      "project-description" : "Development of corporate site. Layout of more than 10 unique templates, adaptation for mobile devices, programming, landing on CMS Modx. SEO-optimization."
+    },
+    {
+      "data-site-type" : "commerce",
+      "icon-site" : "barbershop",
+      "project-name": "wolff.com",
+      "project-description" : "Development of corporate site. Layout of more than 10 unique templates, adaptation for mobile devices, programming, landing on CMS Modx. SEO-optimization."
+    },
+    {
+      "data-site-type" : "blog",
+      "icon-site" : "crios",
+      "project-name": "wolff.com",
+      "project-description" : "Development of corporate site. Layout of more than 10 unique templates, adaptation for mobile devices, programming, landing on CMS Modx. SEO-optimization."
+    },
+    {
+      "data-site-type" : "portfolio",
+      "icon-site" : "bussines",
+      "project-name": "wolff.com",
+      "project-description" : "Development of corporate site. Layout of more than 10 unique templates, adaptation for mobile devices, programming, landing on CMS Modx. SEO-optimization."
+    },
+    {
+      "data-site-type" : "personal",
+      "icon-site" : "bakery",
+      "project-name": "wolff.com",
+      "project-description" : "Development of corporate site. Layout of more than 10 unique templates, adaptation for mobile devices, programming, landing on CMS Modx. SEO-optimization."
+    }
+  ],
+
+  "reviews-list" : [
+    {
+      "avatar" : "pavliv-ava",
+      "author" : "Pavliv Yaroslav",
+      "position" : "Web designer",
+      "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse"
+    },
+    {
+      "avatar" : "pavliv-ava",
+      "author" : "John Scott",
+      "position" : "Web designer",
+      "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse"
+    },
+    {
+      "avatar" : "pavliv-ava",
+      "author" : "Evheniy Ivanow",
+      "position" : "Web designer",
+      "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse"
+    },
+    {
+      "avatar" : "pavliv-ava",
+      "author" : "Pavliv Volya",
+      "position" : "Web designer",
+      "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse"
+    },
+    {
+      "avatar" : "pavliv-ava",
+      "author" : "Sergey Vlasov",
+      "position" : "Web designer",
+      "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse"
+    },
+    {
+      "avatar" : "pavliv-ava",
+      "author" : "Dmitriy Makeev",
+      "position" : "Web designer",
+      "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse"
+    },
+    {
+      "avatar" : "pavliv-ava",
+      "author" : "Mihail Ketchup",
+      "position" : "Web designer",
+      "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse"
+    },
+    {
+      "avatar" : "pavliv-ava",
+      "author" : "Pavliv Yaroslav",
+      "position" : "Web designer",
+      "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse"
+    },
+    {
+      "avatar" : "pavliv-ava",
+      "author" : "Olexand Kravcov",
+      "position" : "Web designer",
+      "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse"
+    },
+    {
+      "avatar" : "pavliv-ava",
+      "author" : "Nikita Malinin",
+      "position" : "Web designer",
+      "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse"
+    },
+    {
+      "avatar" : "pavliv-ava",
+      "author" : "Maks Barskih",
+      "position" : "Web designer",
+      "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse"
+    },
+    {
+      "avatar" : "pavliv-ava",
+      "author" : "Doctor Popov",
+      "position" : "Web designer",
+      "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse"
+    }
   ]
 }
