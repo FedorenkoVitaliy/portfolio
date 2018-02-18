@@ -1546,6 +1546,12 @@ button{
 
     //header
     .header {
+
+        .fix-nav {
+            .nav-bar {
+                padding: 0 30px;
+            }
+        }
         .nav-bar {
             grid-column-gap: 12px;
             padding: 0 10px;
