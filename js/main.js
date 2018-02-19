@@ -8,13 +8,13 @@ $(document).ready(function () {
         if($(this).is(':checked')){
             filter.each(function () {
                 $(this).prop('checked',false);
-            })
+            });
             $(".examples").show();
         }
         else{
             filter.each(function () {
                 $(this).prop('checked',false);
-            })
+            });
             $(".examples").hide();
         }
     });
